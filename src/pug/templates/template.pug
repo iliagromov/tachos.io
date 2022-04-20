@@ -1,0 +1,52 @@
+doctype html
+html(lang="ru") 
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible", content="ie=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="author" content="tg@gromov_ilia")
+        link(rel="icon", type="image/x-icon",  href="assets/img/favicon.ico")
+        block base
+        block title
+        block style
+            link(rel="stylesheet", href="css/base-styles.css", type="text/css")
+        block socialMetaTags
+
+            meta(property="fb:app_id" content="")
+            meta(property="og:locale", content="en_US")
+            meta(property="og:type", content="website")
+            meta(property="og:site_name", content="Ilia Gromov")
+
+            meta(property="og:title", content="Ilia Gromov")
+            meta(property="og:description", content="Frontend developer. Разработаю Вашу идею на профессиональном уровне!")
+            meta(property="og:url", content="https://iliagromov.github.io/")
+           
+            meta(property="og:image", content="https://iliagromov.github.io/assets/img/img-about-2.jpg")
+            meta(property="vk:image", content="https://iliagromov.github.io/assets/img/img-about-2-vk.jpg")
+            meta(property="fb:image", content="https://iliagromov.github.io/assets/img/img-about-4.jpg")
+            meta(property="twitter:image", content="https://iliagromov.github.io/assets/img/img-about-3.jpg")
+            
+            meta(property="og:image:secure_url", content="https://iliagromov.github.io/assets/img/img-about-2.jpg")
+            meta(property="og:image:type", content="image/jpeg")
+            meta(property="og:image:width", content="500")
+            meta(property="og:image:height", content="300")
+
+            meta(property="twitter:card", content="summary")
+            meta(property="twitter:site", content="https://iliagromov.github.io/")
+            meta(property="twitter:description", content="")
+            meta(property="twitter:creator", content="Ilia Gromov")
+    body
+        include ../variables/useVariables
+        include ../data/useDataJSON
+        
+        block content
+        block style
+            //- link(rel="stylesheet", href="css/viewport/mobileFirst-"+viewportWidth+"px.css", type="text/css")
+
+            link(rel="stylesheet", href="css/styles-calc.css", type="text/css")
+            link(rel="stylesheet", href="css/styles-sprites.css", type="text/css")
+            //- each breakPoint in breakPoints
+            //-     link(rel="stylesheet", type="text/css" , media="screen and (min-width:"+breakPoint.width+"px)",  href="css/viewport/media/"+breakPoint.width+"/"+breakPoint.width+"px.css")
+        
+        block script
+            script(src="js/main.js")

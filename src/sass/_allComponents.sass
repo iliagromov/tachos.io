@@ -1,0 +1,46 @@
+/* __debugGrid__ */
+.debugGrid
+    height: 100vh
+    position: fixed
+    width: 100%
+    
+    .wrapper
+        height: inherit
+        
+    .parentFlex
+        height: inherit
+        +row-flex()
+            
+    .childFlex
+        +col()
+        +size(1)
+        +size-md(1)
+        +size-lg(1)
+        height: inherit
+        outline:  1px solid #ff0
+        background: rgba(0, 0, 0, 0.4)
+    @include debugBtn()
+/* __debugGrid__ */
+.header
+    .parent
+        +row-flex()
+        width: 1000px
+        .child
+            /*child*/
+            +col()
+            +size(12)
+            // +size-sm(6)
+            font-size: 40px
+            width: 320px
+            margin: 1px 2px 1px
+            +xs-block
+                font-size: 50px
+                width: 567px
+                margin: 2px 3px 2px
+           
+            +sm-block
+                font-size: 60px
+                width: 768px
+                margin: 3px 4px 3px
+/*some*/
+/*some2*/

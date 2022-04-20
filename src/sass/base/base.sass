@@ -1,0 +1,32 @@
++reset()
+/* __reset__ */
+/* __base__ */
+.wrapper
+  +wrapper()
+
++scrollbar($color_scrollbar-track, $color_scrollbar-thumb)
+
+@font-face 
+  +font($font, $fontBold)
+
+@font-face 
+  +font($font, $fontRegular)
+
+
+body 
+  font-family: $fontRegular
+  background: #ccc
+  // margin: 0
+
+a, button
+  cursor: pointer
+  &:focus
+      outline: none
+  
+
+input
+  cursor: text
+  &:focus
+      outline: none
+
+/* __base__ */

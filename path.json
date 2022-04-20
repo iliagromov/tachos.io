@@ -1,0 +1,19 @@
+{
+    "root": "./",
+    "src": "src/",
+    "dist": "dist/",
+    "backend": "backend/wp-content/themes/factoring/",
+    "html":"**/*.html",
+    "pug": "**/*.pug",
+    "sass":"sass/**/*.sass",
+    "js":"js/**/*.js",
+    "assets":"assets/**/*",
+    "icons": "assets/icons/**/*",
+    "iconsSVG":" assets/icons/svg/",
+    "iconsPNG": "assets/icons/png/",
+    "iconsWEBP": "assets/icons/webp/",
+    "images": "assets/images/",
+    "libs": "libs/",
+    "sprite": "sass/sprite/",
+    "fonts": "fonts/"
+}

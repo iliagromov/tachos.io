@@ -1,0 +1,19 @@
+extends ../pug/templates/template
+block title
+	title Title Pages
+block append style
+block content
+	include ../components/debuggrid/debuggrid.component.pug
+	include ../components/header/header.component.pug
+	include ../components/some/some.component.pug
+	main.page
+		section.banner
+			.wrapper
+				h1.page__title-h1 Title h1 Index
+				p.page__text Any textp
+				a(href="page/page.html").page__text page2
+block append style
+	
+block append script
+	script(src="/js/debuggrid/debuggrid.component.js")
+	script(src="/js/header/header.component.js")
