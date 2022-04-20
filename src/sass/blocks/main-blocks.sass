@@ -1,1 +1,49 @@
 @import './someBlock'
+
+
+.page
+.banner
+  height: 100vh
+  &__title
+    font-size: 72px
+    line-height: 87px
+  &-advantages
+    +row-flex()
+    &__item
+      font-size: 56px
+      line-height: 68px
+
+.page-section
+  scroll-snap-align: start
+  scroll-snap-stop: normal
+  height: 100vh
+  color: $color_white
+  background: $color_black-2
+  &.banner
+    color: $color_black
+    background: $color_white
+  &.case-maginary
+    color: $color_black
+    background: $color_white
+  &__header
+    padding: 70px 0 120px
+    &-title
+      .title
+        font-size: 72px
+        line-height: 79px
+      .text
+        font-size: 24px
+        line-height: 29px
+    &-nav
+      +row-flex()
+  &__content
+    display: flex 
+    justify-content: center
+
+  
+@supports(scroll-snap-type: y mandatory) 
+  .no-support
+    display: none
+
+.y-mandatory
+  scroll-snap-type: y mandatory

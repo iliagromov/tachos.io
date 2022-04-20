@@ -5,17 +5,16 @@
             "width": "578px"
         },
         "sm": {
-            "width": "768px",
-            "fields": "15px"
+            "width": "768px"
         },
         "md": {
             "width": "992px"
         },
         "lg": {
-            "width": "1440px"
+            "width": "1280px"
         },
         "lgs": {
-            "width": "1940px"
+            "width": "1440px"
         }
     }
 }

@@ -1,19 +1,55 @@
 extends ../pug/templates/template
 block title
-	title Title Pages
+	title Tachos
 block append style
 block content
 	include ../components/debuggrid/debuggrid.component.pug
 	include ../components/header/header.component.pug
-	include ../components/some/some.component.pug
 	main.page
-		section.banner
-			.wrapper
-				h1.page__title-h1 Title h1 Index
-				p.page__text Any textp
-				a(href="page/page.html").page__text page2
+		.container.y-scroll.y-mandatory
+			section.page-section.banner
+				.wrapper
+					.banner-inner
+						.banner__title Команда разработчиков по IOS и Adroid
+						.banner-advantages
+							.banner-advantages__item 2000+ клиентов
+							.banner-advantages__item 400+ проектов
+
+			section.page-section.case-monte
+				header.page-section__header
+					.page-section__header-title
+						.title Monte Tunning
+						.text Web and app for IOS and Android. 200 hours
+					.page-section__header-nav 
+						a(href="") Site
+						a(href="") Get app
+				.page-section__content 
+					img(src="assets/images/png/img-case-monte-desktop.png", alt="")
+
+			section.page-section.case-maginary
+				header.page-section__header
+					.page-section__header-title
+						.title Maginary
+						.text Magic game app. 200 hours
+					.page-section__header-nav 
+						a(href="") IOS
+						a(href="") Android
+				.page-section__content 
+					img(src="assets/images/png/img-maginary.png", alt="")
+
+
+			section.page-section.case-hicebank
+				header.page-section__header
+					.page-section__header-title
+						.title Hicebank
+						.text Bank app. 200 hours
+					.page-section__header-nav 
+						a(href="") IOS
+						a(href="") Android
+				.page-section__content 
+					img(src="assets/images/png/img-hicebank.png", alt="")
+
 block append style
 	
 block append script
 	script(src="/js/debuggrid/debuggrid.component.js")
-	script(src="/js/header/header.component.js")

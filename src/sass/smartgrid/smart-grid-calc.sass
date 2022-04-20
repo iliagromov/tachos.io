@@ -4,10 +4,10 @@ $atom: (100% / $columns)
 $break_xs: 578px
 $break_sm: 768px
 $break_md: 992px
-$break_lg: 1440px
-$break_lgs: 1940px
+$break_lg: 1280px
+$break_lgs: 1440px
 
-$offset: 18px
+$offset: 20px
 $offset_xs: $offset
 $offset_sm: $offset
 $offset_md: $offset
@@ -21,16 +21,11 @@ $offset_md_one_side: ($offset_md / 2)
 $offset_lg_one_side: ($offset_lg / 2)
 $offset_lgs_one_side: ($offset_lgs / 2)
 
-$fields: 18px
-$fields_sm: 15px
+$fields: 20px
 
 =wrapper-full()
     padding-left: $fields
     padding-right: $fields
-
-    +sm-block()
-        padding-left: $fields_sm
-        padding-right: $fields_sm
 
 =row-offsets()
     margin-left: ($offset_one_side * -1)
@@ -41,7 +36,7 @@ $fields_sm: 15px
     #{$type}-right: $offset_one_side
 
 =wrapper()
-    max-width: 1920px
+    max-width: 1100px
     margin: 0 auto
     +wrapper-full()
 
