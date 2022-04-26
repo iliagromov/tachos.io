@@ -1,3 +1,20 @@
+/*banner*/
+/*banner-about*/
+.banner-about
+  position: relative
+  padding-bottom: 70px
+  &__img
+    display: flex
+    justify-content: center
+    img
+      width: 100%
+      object-fit: cover
+
+  .page__title-h1
+    color: $color_white
+    position: absolute
+    top: 120px
+    z-index: 1
 /* __debugGrid__ */
 .debugGrid
     height: 100vh
@@ -21,6 +38,24 @@
         background: rgba(0, 0, 0, 0.4)
     @include debugBtn()
 /* __debugGrid__ */
+/*footer*/
+.footer
+  padding: 120px 0 80px
+  &-inner
+    +row-flex
+  &__item
+    +col
+    +size(4)
+    font-size: 18px
+    line-height: 24px
+    color: #262829
+    div
+      +size(8)
+      
+  &_copy
+    +col
+    +size(12)
+    padding-top: 80px
 .header
     &-inner
         +row-flex()
@@ -55,3 +90,56 @@
                 font-size: 60px
                 width: 768px
                 margin: 3px 4px 3px
+/*our-platform*/
+.our-platform
+  padding: 70px 0
+  &__icons
+    padding-top: 50px
+    +row-flex
+  &__icon
+    +col
+    +size(2)
+    padding: 20px
+    img
+      cursor: pointer
+      filter: grayscale(1)
+      transition: all .5s ease
+      &:hover
+        filter: none
+/*our-team*/
+.our-team
+  &__items 
+    +row-flex
+    padding-top: 50px
+    
+  &__item
+    +col()
+    +size(4)
+  &-img
+    &__title
+      margin-top: 32px
+      font-size: 40px
+      line-height: 44px
+      text-transform: uppercase
+      color: #262829
+    &__description
+      margin-top: 5px
+      font-size: 20px
+      line-height: 24px
+      color: #262829
+/*section-partners*/
+.section-partners
+  padding: 70px 0
+  &__icons
+    +row-flex
+    justify-content: space-between
+    padding-top: 50px
+  &__icon
+    +col
+    +size(2)
+    img
+      cursor: pointer
+      filter: grayscale(1)
+      transition: all .5s ease
+      &:hover
+        filter: none

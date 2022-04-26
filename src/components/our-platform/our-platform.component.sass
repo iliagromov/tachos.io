@@ -1,0 +1,16 @@
+/*our-platform*/
+.our-platform
+  padding: 70px 0
+  &__icons
+    padding-top: 50px
+    +row-flex
+  &__icon
+    +col
+    +size(2)
+    padding: 20px
+    img
+      cursor: pointer
+      filter: grayscale(1)
+      transition: all .5s ease
+      &:hover
+        filter: none
