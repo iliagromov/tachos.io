@@ -15,6 +15,7 @@
     position: absolute
     top: 120px
     z-index: 1
+/*banner-monte*/
 /* __debugGrid__ */
 .debugGrid
     height: 100vh
@@ -57,19 +58,28 @@
     +size(12)
     padding-top: 80px
 .header
+    padding-top: 20px
+    +md-block
+        padding-top: 80px
     &-inner
         +row-flex()
         justify-content: space-between
     &__logo 
-        font-size: 32px
-        line-height: 35px
         text-transform: uppercase
+        font-size: 14px
+        line-height: 17px
+        +md-block
+            font-size: 32px
+            line-height: 35px
     &__nav
         nav
             a
                 text-transform: uppercase
-                font-size: 32px
-                line-height: 35px
+                font-size: 14px
+                line-height: 17px
+                +md-block
+                    font-size: 32px
+                    line-height: 35px
     .parent
         +row-flex()
         width: 1000px

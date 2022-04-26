@@ -2,14 +2,11 @@ extends ../../pug/templates/template
 block base
 	base(href="../")
 block title
-	title Monte
+	title Tachos | Monte
 block append style
 block content
-	include ../../pug/modules/header-module
-	section.banner
-		.wrapper
-			h1.page__title-h1 Page 2
-			a(href="../").page__text index
+	//- banner
+	include ../../components/banner-monte/banner-monte.component.pug
 block append style
 
 

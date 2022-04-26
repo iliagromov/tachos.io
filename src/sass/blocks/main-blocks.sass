@@ -3,15 +3,33 @@
 
 .page
 .banner
-  height: 100vh
+  padding-top: 115px
+  padding-bottom: 100px
+  +md-block
+    padding-top: 94px
+    
+  &-inner
+    +row-flex
   &__title
-    font-size: 72px
-    line-height: 87px
+    font-size: 32px
+    line-height: 40px
+    margin-bottom: 47%
+    +md-block
+      font-size: 72px
+      line-height: 87px
+      margin-bottom: 31px
   &-advantages
-    +row-flex()
+    display: flex
+    flex-wrap: wrap
     &__item
-      font-size: 56px
-      line-height: 68px
+      display: flex
+      font-size: 32px
+      line-height: 40px
+      +md-block
+        font-size: 56px
+        line-height: 68px
+        &:first-child
+          margin-right: 115px
 
 .page-section
   scroll-snap-align: start
@@ -25,8 +43,16 @@
   &.case-maginary
     color: $color_black
     background: $color_white
+    .page-section__header-title
+      a
+        &::after
+          background-image: url('../assets/images/svg/icon-arrow-black.svg')
   &__header
     padding: 70px 0 120px
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+
     &-title
       .title
         font-size: 72px
@@ -36,6 +62,25 @@
         line-height: 29px
     &-nav
       +row-flex()
+      a
+        margin: 0 20px
+        display: flex
+        align-items: center
+        font-size: 24px
+        line-height: 29px
+        transition: all .5s ease
+        &::after
+          content: ''
+          background-image: url('../assets/images/svg/icon-arrow.svg')
+          background-repeat: no-repeat
+          width: 32px
+          height: 18px
+          margin-left: 6px
+          transition: all .5s ease
+        &:hover
+          &::after
+            margin-right: -6px
+          
   &__content
     display: flex 
     justify-content: center
