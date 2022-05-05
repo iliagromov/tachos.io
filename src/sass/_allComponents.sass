@@ -15,7 +15,13 @@
     position: absolute
     top: 120px
     z-index: 1
+/*banner-maginary*/
+.banner-maginary
+  background: #F1F1F1 !important
 /*banner-monte*/
+.banner-monte
+  background-color: #191B23
+  padding: 140px 0
 /* __debugGrid__ */
 .debugGrid
     height: 100vh
@@ -137,6 +143,84 @@
       font-size: 20px
       line-height: 24px
       color: #262829
+/*section-maginary-about*/
+.section-maginary-about
+  background: #F1F1F1
+  padding-bottom: 120px
+  &__images
+    +row-flex
+    justify-content: center
+    padding: 130px 0
+  &__item
+    padding: 0 15px
+  &__content 
+    color: #262829
+    display: flex
+    flex-wrap: wrap
+    &-left
+      +size(6)
+    &-title
+      font-size: 56px
+      line-height: 68px
+    &-desc 
+      font-size: 24px
+      line-height: 29px
+    &-text
+      +size(6)
+      font-size: 24px
+      line-height: 32px
+/*section-maginary-footer*/
+/*section-maginary-imgs*/
+.section-maginary-imgs
+  padding: 120px 0
+
+  &-inner
+    +row-flex
+    justify-content: center
+    padding: 130px 0
+  
+  &__item
+    padding: 0 15px
+/*section-maginary-video*/
+.section-maginary-video
+  background: #F1F1F1
+  display: flex
+  &__left
+    +size(6)
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 80px 0
+  &__right
+    +size(6)
+    background: #252729
+    display: flex
+    align-items: center
+    justify-content: center
+/*section-maginary-video-2*/
+.section-maginary-video-2
+  padding: 80px 0
+  &-inner
+    display: flex
+    justify-content: center
+/*section-monte-imgs*/
+.section-monte-imgs
+  background-color: #191B23
+  &-inner
+    +row-flex
+    justify-content: center
+    padding: 130px 0
+  &__item
+    padding: 0 15px
+/*section-monte-imgs-2*/
+/*section-monte-video*/
+.section-monte-video
+  video
+    width: 100%
+/*section-monte-video-2*/
+.section-monte-video-2
+  video
+    width: 100%
 /*section-partners*/
 .section-partners
   padding: 70px 0

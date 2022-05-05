@@ -34,7 +34,7 @@
 .page-section
   scroll-snap-align: start
   scroll-snap-stop: normal
-  height: 100vh
+  // height: 100vh
   color: $color_white
   background: $color_black-2
   &.banner
@@ -83,8 +83,23 @@
           
   &__content
     display: flex 
+    flex-wrap: wrap
     justify-content: center
+    &__img
+      width: 100%
+      text-align: center
+    img
+      margin-bottom: 90px
+
+    &-text
+      +col()
+      +size(12)
+      +size-sm(6)
+      font-size: 24px
+      line-height: 32px
+      color: #ffffff
   &__title
+
     
 
 .page__title-h1
