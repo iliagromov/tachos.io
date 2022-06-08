@@ -18,6 +18,37 @@
 /*banner-maginary*/
 .banner-maginary
   background: #F1F1F1 !important
+/*banner-main*/
+.banner-main
+  padding-top: 115px
+  padding-bottom: 100px
+  +md-block
+    padding-top: 94px
+    
+  &-inner
+    +row-flex
+  &__title
+    font-family: AvantGardeGothicCTT
+    // font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
+    font-size: 32px
+    line-height: 40px
+    margin-bottom: 47%
+    +md-block
+      font-size: 72px
+      line-height: 87px
+      margin-bottom: 31px
+  &-advantages
+    display: flex
+    flex-wrap: wrap
+    &__item
+      display: flex
+      font-size: 32px
+      line-height: 40px
+      +md-block
+        font-size: 56px
+        line-height: 68px
+        &:first-child
+          margin-right: 115px
 /*banner-monte*/
 .banner-monte
   background-color: #191B23
@@ -143,6 +174,78 @@
       font-size: 20px
       line-height: 24px
       color: #262829
+/*page-section-main*/
+
+.page-section-main
+  // scroll-snap-align: start
+  // scroll-snap-stop: normal
+  // height: 100vh
+  color: $color_white
+  background: $color_black-2
+  &.banner
+    color: $color_black
+    background: $color_white
+  &.case-maginary
+    color: $color_black
+    background: $color_white
+    .page-section__header-nav
+      a
+        &::after
+          filter: invert(100%)
+          background-image: url('../assets/images/svg/icon-arrow.svg')
+  &__header
+    padding: 70px 0 120px
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+
+    &-title
+      .title
+        font-size: 72px
+        line-height: 79px
+      .text
+        font-size: 24px
+        line-height: 29px
+    &-nav
+      +row-flex()
+      a
+        margin: 0 20px
+        display: flex
+        align-items: center
+        font-size: 24px
+        line-height: 29px
+        transition: all .5s ease
+        &::after
+          content: ''
+          background-image: url('../assets/images/svg/icon-arrow.svg')
+          background-repeat: no-repeat
+          width: 32px
+          height: 18px
+          margin-left: 6px
+          transition: all .5s ease
+        &:hover
+          &::after
+            transform: translateX(12px)
+          
+  &__content
+    display: flex 
+    flex-wrap: wrap
+    justify-content: center
+    &__img
+      width: 100%
+      text-align: center
+    img
+      margin-bottom: 90px
+
+    &-text
+      +col()
+      +size(12)
+      +size-sm(6)
+      font-size: 24px
+      line-height: 32px
+      color: #ffffff
+  &__title
+
 /*section-maginary-about*/
 .section-maginary-about
   background: #F1F1F1

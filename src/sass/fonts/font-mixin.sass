@@ -1,6 +1,12 @@
 @mixin font($font, $fontName, $urlName: $fontName, $weight: normal, $style: normal) 
     font-family: '#{$fontName}'
-    src: url('../fonts/#{$font}/#{$urlName}.ttf') format('truetype')
+    src: url('../fonts/#{$font}/#{$urlName}.eot') // /* IE9 Compat Modes */
+    src: url('../fonts/#{$font}/#{$urlName}.eot?#iefix') format('embedded-opentype'), // /* IE6-IE8 */
+    url('../fonts/#{$font}/#{$urlName}.woff2') format('woff2'), // /* Super Modern Browsers */
+    url('../fonts/#{$font}/#{$urlName}.woff') format('woff'), ///* Pretty Modern Browsers */
+    url('../fonts/#{$font}/#{$urlName}.ttf')  format('truetype'), // /* Safari, Android, iOS */
+    url('../fonts/#{$font}/#{$urlName}.svg#svgFontName') format('svg') // /* Legacy iOS */
+    // src: url('../fonts/#{$font}/#{$urlName}.ttf') format('truetype')
     // url("../fonts/#{$font}/#{$urlName}.woff") format("woff"), 
     // url("../fonts/#{$font}/#{$urlName}.eot") format("eot")
     font-weight: #{$weight}
