@@ -1,11 +1,25 @@
 .header
+    font-family:  SKConcretica-Regular
     padding-top: 20px
+    position: sticky
+    top: 0
+    height: 0
+    z-index: 1
+    width: 100%
+ 
+    padding: 0
     +md-block
-        padding-top: 80px
+        // padding-top: 80px
+    .wrapper
+        height: 100px
+        // background: rgba(255, 255, 255, .9)
     &-inner
         +row-flex()
+        height: 100%
+        align-items: center
         justify-content: space-between
     &__logo 
+        font-family:  SKConcretica-Regular
         text-transform: uppercase
         font-size: 14px
         line-height: 17px
@@ -13,11 +27,15 @@
             font-size: 32px
             line-height: 35px
     &__nav
+        +col
         nav
+            margin: 0 -14px
             a
+                font-family: SKConcretica-RegularTrial
                 text-transform: uppercase
                 font-size: 14px
                 line-height: 17px
+                margin: 0 14px
                 +md-block
                     font-size: 32px
                     line-height: 35px

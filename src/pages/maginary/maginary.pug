@@ -5,13 +5,35 @@ block title
 	title Maginary
 block append style
 block content
-	include ../../components/banner-maginary/banner-maginary.component.pug
-	include ../../components/section-maginary-imgs/section-maginary-imgs.component.pug
-	include ../../components/section-maginary-video/section-maginary-video.component.pug
-	include ../../components/section-maginary-video-2/section-maginary-video-2.component.pug
-	include ../../components/section-maginary-about/section-maginary-about.component.pug
-	include ../../components/section-maginary-video-2/section-maginary-video-2.component.pug
-	include ../../components/section-maginary-footer/section-maginary-footer.component.pug
+	include ../../components/page-section-main/page-section-main.mixin.pug
+	main.page#fullpage
+		+sectionMain({
+				bgWhite: true,
+				headerTitle: 'Maginary',
+				headerText: 'Magic game app. 200 hours',
+				headerNav: [
+					{
+						href: '',
+						title: 'IOS'
+					},
+					{
+						href: '',
+						title: ' Android'
+					}
+				],
+				pageContentImg: 'assets/images/png/img-maginary.png',
+				pageAlt: 'img-maginary',
+				lottiePlayer: true,
+				lottiePlayerJSON: 'https://assets4.lottiefiles.com/packages/lf20_hrarw5jv.json',
+			})
+
+	
+		include ../../components/section-maginary-imgs/section-maginary-imgs.component.pug
+		include ../../components/section-maginary-video/section-maginary-video.component.pug
+		include ../../components/section-maginary-video-2/section-maginary-video-2.component.pug
+		include ../../components/section-maginary-about/section-maginary-about.component.pug
+		include ../../components/section-maginary-video-2/section-maginary-video-2.component.pug
+		include ../../components/section-maginary-footer/section-maginary-footer.component.pug
 
 block append style
 

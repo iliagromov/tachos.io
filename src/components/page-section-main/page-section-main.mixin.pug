@@ -1,13 +1,28 @@
 //-page-section-main
 mixin sectionMain(props)
-  section.page-section(class="page-section_white")
+  section.section.page-section-main(class=`${props.bgWhite?'page-section-main_white': ''}`)
     .wrapper
-      header.page-section__header
-        .page-section__header-title
-          .title Monte Tunning
-          .text Web and app for IOS and Android. 200 hours
-        .page-section__header-nav 
-          a(href="") Site
-          a(href="") Get app
-      .page-section__content 
-        img(src="assets/images/png/img-case-monte-desktop.png", alt="")
+      header.page-section-main__header
+        .page-section-main__header-title
+          .title !{props.headerTitle}
+          .text !{props.headerText}
+        .page-section-main__header-nav 
+          if props.headerNav
+            each link in props.headerNav
+              a(href=link.href target="_blank") !{link.title}
+      if props.pageContentImg2
+        picture
+          source(media="(min-width: 1024px)" srcset=props.pageContentImg )
+          img(src=props.pageContentImg2 alt=props.pageAlt)
+
+
+      else
+        a.page-section-main__content(href=props.projectHref) 
+          if props.lottiePlayer
+            lottie-player.lottie-player(src=props.lottiePlayerJSON background="transparent" speed="1" loop autoplay )
+          else
+            img(src=props.pageContentImg, alt=props.pageAlt)
+          
+          if props.contentText 
+            each text in props.contentText
+              .page-section-main__content-text #{text}

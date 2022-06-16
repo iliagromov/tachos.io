@@ -1,31 +1,45 @@
 /*banner-main*/
 .banner-main
   padding-top: 115px
-  padding-bottom: 100px
+  padding-bottom: 44px
+  
   +md-block
     padding-top: 94px
+    padding-bottom: 100px
     
   &-inner
     +row-flex
   &__title
+    width: 100%
     font-family: AvantGardeGothicCTT
+    width: 85%
     // font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
     font-size: 32px
     line-height: 40px
-    margin-bottom: 47%
+    margin-bottom: 61%
+    // margin-bottom: 47%
+    
     +md-block
       font-size: 72px
       line-height: 87px
-      margin-bottom: 31px
+      margin-bottom: 36px
   &-advantages
-    display: flex
-    flex-wrap: wrap
+    +row-flex
+    width: 100%
     &__item
+      +col
+      +size(12)
+      +size-md(6)
+      font-family: AvantGardeGothicCTT
       display: flex
       font-size: 32px
       line-height: 40px
+      margin-bottom: 8px
       +md-block
         font-size: 56px
         line-height: 68px
+        margin-bottom: 0
         &:first-child
-          margin-right: 115px
+          // margin-right: 115px
+          // width: 48.5%
+          margin-right: -0.5%

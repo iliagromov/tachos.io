@@ -1,1 +1,56 @@
 /*section-maginary-footer*/
+.section-maginary-footer
+  background: #F1F1F1
+  +md-block
+    padding: 120px 0
+
+  .page__title-h1
+    text-align: center
+    padding-top: 140px
+    padding-bottom: 50px
+
+  &-profile
+    text-align: center
+    &__img
+      margin-bottom: 51px
+
+    &__title
+      text-transform: uppercase
+      font-family:  SKConcretica-Regular
+      font-size: 32px
+      line-height: 40px
+      margin-bottom: 15px
+
+      +md-block
+        font-size: 72px
+
+    &__link 
+        font-family: AvantGardeGothicCTT
+        
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 24px
+        line-height: 29px
+        transition: all .5s ease
+        &::after
+          content: ''
+          background-image: url('../assets/images/svg/icon-arrow.svg')
+          background-repeat: no-repeat
+          width: 32px
+          height: 18px
+          margin-left: 6px
+          transition: all .5s ease
+          filter: invert(100%)
+        &:hover
+          &::after
+            transform: translateX(12px)
+  &-reviews
+    +row-flex
+    justify-content: center
+  &-review
+    +col
+    +size(12)
+    +size-md(4)
+    margin-bottom: 20px
+    text-align: center

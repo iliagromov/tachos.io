@@ -3,48 +3,85 @@ block title
 	title Tachos
 block append style
 block content
+	include ../components/page-section-main/page-section-main.mixin.pug
 	include ../components/header/header.component.pug
 	main.page
-		.container.y-scroll.y-mandatory
+		#fullpage
 			include ../components/banner-main/banner-main.component.pug
 			
+			+sectionMain({
+				bgWhite: false,
+				headerTitle: 'Monte Tunning',
+				headerText: 'Web and app for IOS and Android. 200 hours',
+				headerNav: [
+					{
+						href: 'https://montetuning.com/',
+						title: 'Site'
+					},
+					{
+						href: 'https://apps.apple.com/app/id1482772220',
+						title: ' Get app'
+					}
+				],
+				projectHref: '/monte/monte.html',
+				pageContentImg: 'assets/images/png/img-case-monte-desktop.png',
+				pageContentImg2: 'assets/images/png/img-case-monte-mobile.png',
+				pageAlt: 'img-case-monte-desktop',
+				slide: true,
+				slides: [
+					{
+						img: 'assets/images/png/img-case-monte-desktop.png',
+						anchor: 'slide1',
+					},
+					{
+						img: 'assets/images/png/img-case-monte-mobile.png',
+						anchor: 'slide2',
+					},
+				]
+			})
+			
+			
+			+sectionMain({
+				bgWhite: true,
+				headerTitle: 'Maginary',
+				headerText: 'Magic game app. 200 hours',
+				headerNav: [
+					{
+						href: '',
+						title: 'IOS'
+					},
+					{
+						href: '',
+						title: ' Android'
+					}
+				],
+				projectHref: '/maginary/maginary.html',
+				pageContentImg: 'assets/images/png/img-maginary.png',
+				pageAlt: 'img-maginary',
+				lottiePlayer: true,
+				lottiePlayerJSON: 'https://assets4.lottiefiles.com/packages/lf20_hrarw5jv.json',
+			})
+			
 
-			section.page-section.case-monte
-				.wrapper
-					header.page-section__header
-						.page-section__header-title
-							.title Monte Tunning
-							.text Web and app for IOS and Android. 200 hours
-						.page-section__header-nav 
-							a(href="") Site
-							a(href="") Get app
-					.page-section__content 
-						img(src="assets/images/png/img-case-monte-desktop.png", alt="")
-
-			section.page-section.case-maginary
-				.wrapper
-					header.page-section__header
-						.page-section__header-title
-							.title Maginary
-							.text Magic game app. 200 hours
-						.page-section__header-nav 
-							a(href="") IOS
-							a(href="") Android
-					.page-section__content 
-						img(src="assets/images/png/img-maginary.png", alt="")
-
-
-			section.page-section.case-hicebank
-				.wrapper
-					header.page-section__header
-						.page-section__header-title
-							.title Hicebank
-							.text Bank app. 200 hours
-						.page-section__header-nav 
-							a(href="") IOS
-							a(href="") Android
-					.page-section__content 
-						img(src="assets/images/png/img-hicebank.png", alt="")
+			
+			+sectionMain({
+				headerTitle: 'Hicebank',
+				headerText: 'Bank app. 200 hours',
+				headerNav: [
+					{
+						href: '',
+						title: 'IOS'
+					},
+					{
+						href: '',
+						title: ' Android'
+					}
+				],
+				projectHref: 'javascript:void(0)',
+				pageContentImg: 'assets/images/png/img-hicebank.png',
+				pageAlt: 'img-hicebank',
+				
+			})
 
 block append style
 	

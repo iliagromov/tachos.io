@@ -4,13 +4,27 @@
 .page
 
 .page__title-h1
+  font-family: AvantGardeGothicCTT
   color: #262829
-  font-size: 56px
-  line-height: 68px
+
+  font-size: 28px
+  line-height: 32px
+  +md-block
+    font-size: 56px
+    line-height: 68px
   
 @supports(scroll-snap-type: y mandatory) 
   .no-support
     display: none
 
+.container
+  overflow-y: auto
+  scroll-snap-type: y
+
 .y-mandatory
-  scroll-snap-type: y mandatory
+  // max-height: 100vh
+  // overflow-y: scroll
+  // scroll-snap-type: mandatory;
+  // scroll-snap-type: y mandatory
+.fp-watermark
+  display: none !important

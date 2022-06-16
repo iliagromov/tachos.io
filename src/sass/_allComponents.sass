@@ -13,46 +13,55 @@
   .page__title-h1
     color: $color_white
     position: absolute
-    top: 120px
+    top: 10px
     z-index: 1
-/*banner-maginary*/
-.banner-maginary
-  background: #F1F1F1 !important
+    +md-block
+      top: 120px
 /*banner-main*/
 .banner-main
   padding-top: 115px
-  padding-bottom: 100px
+  padding-bottom: 44px
+  
   +md-block
     padding-top: 94px
+    padding-bottom: 100px
     
   &-inner
     +row-flex
   &__title
+    width: 100%
     font-family: AvantGardeGothicCTT
+    width: 85%
     // font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
     font-size: 32px
     line-height: 40px
-    margin-bottom: 47%
+    margin-bottom: 61%
+    // margin-bottom: 47%
+    
     +md-block
       font-size: 72px
       line-height: 87px
-      margin-bottom: 31px
+      margin-bottom: 36px
   &-advantages
-    display: flex
-    flex-wrap: wrap
+    +row-flex
+    width: 100%
     &__item
+      +col
+      +size(12)
+      +size-md(6)
+      font-family: AvantGardeGothicCTT
       display: flex
       font-size: 32px
       line-height: 40px
+      margin-bottom: 8px
       +md-block
         font-size: 56px
         line-height: 68px
+        margin-bottom: 0
         &:first-child
-          margin-right: 115px
-/*banner-monte*/
-.banner-monte
-  background-color: #191B23
-  padding: 140px 0
+          // margin-right: 115px
+          // width: 48.5%
+          margin-right: -0.5%
 /* __debugGrid__ */
 .debugGrid
     height: 100vh
@@ -83,25 +92,42 @@
     +row-flex
   &__item
     +col
-    +size(4)
+    +size(12)
+    +size-md(4)
     font-size: 18px
     line-height: 24px
     color: #262829
+    margin-bottom: 24px
     div
-      +size(8)
+      +size(9)
+      +size-md(8)
       
   &_copy
     +col
     +size(12)
     padding-top: 80px
 .header
+    font-family:  SKConcretica-Regular
     padding-top: 20px
+    position: sticky
+    top: 0
+    height: 0
+    z-index: 1
+    width: 100%
+ 
+    padding: 0
     +md-block
-        padding-top: 80px
+        // padding-top: 80px
+    .wrapper
+        height: 100px
+        // background: rgba(255, 255, 255, .9)
     &-inner
         +row-flex()
+        height: 100%
+        align-items: center
         justify-content: space-between
     &__logo 
+        font-family:  SKConcretica-Regular
         text-transform: uppercase
         font-size: 14px
         line-height: 17px
@@ -109,11 +135,15 @@
             font-size: 32px
             line-height: 35px
     &__nav
+        +col
         nav
+            margin: 0 -14px
             a
+                font-family: SKConcretica-RegularTrial
                 text-transform: uppercase
                 font-size: 14px
                 line-height: 17px
+                margin: 0 14px
                 +md-block
                     font-size: 32px
                     line-height: 35px
@@ -145,7 +175,8 @@
     +row-flex
   &__icon
     +col
-    +size(2)
+    +size(6)
+    +size-md(2)
     padding: 20px
     img
       cursor: pointer
@@ -161,7 +192,8 @@
     
   &__item
     +col()
-    +size(4)
+    +size(12)
+    +size-md(4)
   &-img
     &__title
       margin-top: 32px
@@ -177,39 +209,79 @@
 /*page-section-main*/
 
 .page-section-main
-  // scroll-snap-align: start
+  scroll-snap-align: start
   // scroll-snap-stop: normal
-  // height: 100vh
+  // overflow: hidden
+  min-height: 100vh
   color: $color_white
   background: $color_black-2
-  &.banner
+  position: relative
+
+    
+  &_white
     color: $color_black
     background: $color_white
-  &.case-maginary
-    color: $color_black
-    background: $color_white
-    .page-section__header-nav
+    .page-section-main__header-nav
       a
         &::after
           filter: invert(100%)
           background-image: url('../assets/images/svg/icon-arrow.svg')
-  &__header
-    padding: 70px 0 120px
-    display: flex
-    align-items: flex-end
-    justify-content: space-between
 
+  &.banner
+    color: $color_black
+    background: $color_white
+  
+  &.case-maginary
+    color: $color_black
+    background: $color_white
+
+  &__header
+    position: relative
+    z-index: 1
+    padding: 18px 0 120px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    +md-block
+      padding: 70px 0 120px
+      flex-direction: row
+      align-items: flex-end
+
+ 
+    
     &-title
+      +size(12)
+      +size-md(6)
+
       .title
-        font-size: 72px
-        line-height: 79px
+        text-transform: uppercase
+        font-family:  SKConcretica-Regular
+        font-size: 32px
+        line-height: 40px
+        margin-bottom: 15px
+
+        +md-block
+          margin-bottom: 0
+          font-size: 72px
+          line-height: 79px
       .text
+        font-family: AvantGardeGothicCTT
         font-size: 24px
         line-height: 29px
+        margin-bottom: 15px
+        +md-block
+          margin-bottom: 0
+          font-size: 24px
+          line-height: 28px
     &-nav
-      +row-flex()
+      display: flex
+      +size(12)
+      +size-md(3)
+      // width: 100%
+      justify-content: space-between
       a
-        margin: 0 20px
+        font-family: AvantGardeGothicCTT
+        
         display: flex
         align-items: center
         font-size: 24px
@@ -231,11 +303,19 @@
     display: flex 
     flex-wrap: wrap
     justify-content: center
+
+    +md-block
     &__img
       width: 100%
       text-align: center
     img
       margin-bottom: 90px
+    .lottie-player
+      
+      +to($break_sm)
+        position: absolute
+        top: 100px
+        margin-left: -5px
 
     &-text
       +col()
@@ -244,8 +324,6 @@
       font-size: 24px
       line-height: 32px
       color: #ffffff
-  &__title
-
 /*section-maginary-about*/
 .section-maginary-about
   background: #F1F1F1
@@ -256,12 +334,14 @@
     padding: 130px 0
   &__item
     padding: 0 15px
+    width: auto
   &__content 
     color: #262829
     display: flex
     flex-wrap: wrap
     &-left
-      +size(6)
+      +size(12)
+      +size-md(6)
     &-title
       font-size: 56px
       line-height: 68px
@@ -269,13 +349,70 @@
       font-size: 24px
       line-height: 29px
     &-text
-      +size(6)
+      +size(12)
+      +size-md(6)
       font-size: 24px
       line-height: 32px
 /*section-maginary-footer*/
+.section-maginary-footer
+  background: #F1F1F1
+  +md-block
+    padding: 120px 0
+
+  .page__title-h1
+    text-align: center
+    padding-top: 140px
+    padding-bottom: 50px
+
+  &-profile
+    text-align: center
+    &__img
+      margin-bottom: 51px
+
+    &__title
+      text-transform: uppercase
+      font-family:  SKConcretica-Regular
+      font-size: 32px
+      line-height: 40px
+      margin-bottom: 15px
+
+      +md-block
+        font-size: 72px
+
+    &__link 
+        font-family: AvantGardeGothicCTT
+        
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 24px
+        line-height: 29px
+        transition: all .5s ease
+        &::after
+          content: ''
+          background-image: url('../assets/images/svg/icon-arrow.svg')
+          background-repeat: no-repeat
+          width: 32px
+          height: 18px
+          margin-left: 6px
+          transition: all .5s ease
+          filter: invert(100%)
+        &:hover
+          &::after
+            transform: translateX(12px)
+  &-reviews
+    +row-flex
+    justify-content: center
+  &-review
+    +col
+    +size(12)
+    +size-md(4)
+    margin-bottom: 20px
+    text-align: center
 /*section-maginary-imgs*/
 .section-maginary-imgs
-  padding: 120px 0
+  +md-block
+      padding: 120px 0
 
   &-inner
     +row-flex
@@ -284,20 +421,27 @@
   
   &__item
     padding: 0 15px
+    width: auto
 /*section-maginary-video*/
 .section-maginary-video
-  background: #F1F1F1
+  background: $color_black
   display: flex
+  &-inner
+    +row-flex
   &__left
-    +size(6)
-    display: flex
+    +size(12)
+    +size-md(6)
+    display: none
     align-items: center
     justify-content: center
     padding: 80px 0
+    +md-block
+      display: inline-flex
   &__right
-    +size(6)
+    +size(12)
+    +size-md(6)
     background: #252729
-    display: flex
+    display: inline-flex
     align-items: center
     justify-content: center
 /*section-maginary-video-2*/
@@ -315,14 +459,29 @@
     padding: 130px 0
   &__item
     padding: 0 15px
+    width: auto
 /*section-monte-imgs-2*/
-/*section-monte-video*/
-.section-monte-video
-  video
-    width: 100%
 /*section-monte-video-2*/
 .section-monte-video-2
+  background: #000
+  +to($break_md)
+    width: 1100px
+  
   video
+    +to($break_md)
+      left: -34%
+      position: absolute
+    width: 100%
+/*section-monte-video*/
+.section-monte-video
+  background: #000
+  +to($break_md)
+    width: 1100px
+  
+  video
+    +to($break_md)
+      left: -34%
+      position: absolute
     width: 100%
 /*section-partners*/
 .section-partners
