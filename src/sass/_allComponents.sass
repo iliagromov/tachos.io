@@ -85,6 +85,15 @@
         +col
         .page-link
             display: flex
+            svg
+                path
+                    +transitionBase(all, 0.5)
+            &:hover
+                svg
+                    path
+                        &:nth-child(5)
+                            fill: $color_orange
+                        
         z-index: 20
     &__nav
         position: absolute
@@ -99,7 +108,7 @@
        
 .nav
     .page-link
-        margin: 0 9px
+        margin: 0 16px
 /*projects*/
 // /*sing*/
 // $sing-x: 255px
