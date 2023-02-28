@@ -1,0 +1,43 @@
+//-projects
+//- imgSrc: '',
+//- video: '',
+//- date: '',
+//- title: '',
+//- subtitle: '',
+//- description: '',
+mixin project(props)
+    .project-card 
+        .project-card__img 
+            picture 
+                img(src=props.imgSrc, alt=props.title)
+        .project-card__text
+            .project-card__title #{props.title}
+                .project-card__date #{props.date}
+            .project-card__subtitle #{props.subtitle}
+            .project-card__description #{props.subtitle}
+
+mixin projects(array)
+    each object in array 
+        +project(object)
+
+section.projects
+    .wrapper
+        .projects-inner
+            +projects([
+                {
+                    imgSrc: '',
+                    video: '',
+                    date: '2022',
+                    title: 'Хайс банк',
+                    subtitle: 'Edtech - Swift – 6 month',
+                    description: 'EdTech platform which makes online learning engrossing.',
+                },
+                {
+                    imgSrc: '',
+                    video: '',
+                    date: '2022',
+                    title: 'Docmed',
+                    subtitle: 'Edtech - Swift – 6 month',
+                    description: 'EdTech platform which makes online learning engrossing.',
+                }
+            ])

@@ -85,18 +85,22 @@
         +col
         .page-link
             display: flex
+        z-index: 20
     &__nav
         position: absolute
         top: 16px
         width: 100%
         text-align: center
+        z-index: 10
 
     &__action
+        z-index: 20
 
        
 .nav
     .page-link
         margin: 0 9px
+/*projects*/
 // /*sing*/
 // $sing-x: 255px
 // $sing-y: 84px
@@ -261,3 +265,28 @@
 
 //         &:hover
 //             color: white
+
+/*ui*/
+.ui
+    &__spaceing
+        margin-bottom: 64px
+        &_text
+            .page-text
+                margin-bottom: 15px !important
+        &_caption
+            margin-bottom: 50px !important
+        .page-title
+            margin-bottom: 24px
+            &-h3
+                margin-bottom: 17px
+        
+        .page-link
+            margin-bottom: 15px
+        .page-title-caption
+            margin-bottom: 13px
+    &__block
+            width: 200px
+            height: 200px
+            display: inline-block
+    &__btns
+        display: flex
