@@ -35,8 +35,6 @@ html(lang="ru")
             meta(property="twitter:site", content="http://tachos.ru/")
             meta(property="twitter:description", content="Мы, молодая и гиперактивная команда разработчиков из Волгограда.")
             meta(property="twitter:creator", content="tachos")
-            script(src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js")
-            script(src="libs/js/_all/swiper-bundle.min.js")
     body
         //- include ../variables/useVariables
         //- include ../data/useDataJSON
@@ -44,8 +42,6 @@ html(lang="ru")
         block content
         block style
             //- link(rel="stylesheet", href="css/viewport/mobileFirst-"+viewportWidth+"px.css", type="text/css")
-            link(rel="stylesheet", href="libs/css/swiper-bundle.min.css", type="text/css")
-            link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.css", type="text/css")
             link(rel="stylesheet", href="css/styles-calc.css", type="text/css")
             link(rel="stylesheet", href="css/styles-sprites.css", type="text/css")
             //- each breakPoint in breakPoints
@@ -53,7 +49,6 @@ html(lang="ru")
         
         block script
             
-            script(src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js")
             script(src="js/main.js")
             script(src="js/debuggrid/debuggrid.component.js")
             

@@ -1,8 +1,17 @@
 header.header
     .wrapper
         .header-inner
-             a.header__logo(href="/") tachos
-             .header__nav
-                nav 
-                    a(href="/about/about.html") About
-                    a(href="") Telegram
+            .header__logo(href="/")
+                a.page-link
+                    img(src="assets/images/svg/logo-header.svg", alt="logo-header")
+            .header__nav
+                nav.nav 
+                    a.page-link(href="javascript:void(0)") Проекты 
+                        span.page-link_counter 10
+                    a.page-link(href="javascript:void(0)") Команда 
+                    a.page-link(href="javascript:void(0)") Услуги 
+                    a.page-link(href="javascript:void(0)") Отзывы 
+            .header__action
+                button.page-btn Обсудить проект
+            
+                    

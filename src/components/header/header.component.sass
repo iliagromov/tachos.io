@@ -1,61 +1,26 @@
 .header
-    font-family:  SKConcretica-Regular
-    padding-top: 20px
     position: sticky
     top: 0
-    height: 0
     z-index: 1
-    width: 100%
- 
-    padding: 0
-    +md-block
-        // padding-top: 80px
-    .wrapper
-        height: 100px
-        // background: rgba(255, 255, 255, .9)
+    padding: 23px 0
     &-inner
         +row-flex()
-        height: 100%
         align-items: center
         justify-content: space-between
+        position: relative
     &__logo 
-        font-family:  SKConcretica-Regular
-        text-transform: uppercase
-        font-size: 14px
-        line-height: 17px
-        +md-block
-            font-size: 32px
-            line-height: 35px
-    &__nav
         +col
-        nav
-            margin: 0 -14px
-            a
-                font-family: SKConcretica-RegularTrial
-                text-transform: uppercase
-                font-size: 14px
-                line-height: 17px
-                margin: 0 14px
-                +md-block
-                    font-size: 32px
-                    line-height: 35px
-    .parent
-        +row-flex()
-        width: 1000px
-        .child
-            /*child*/
-            +col()
-            +size(12)
-            // +size-sm(6)
-            font-size: 40px
-            width: 320px
-            margin: 1px 2px 1px
-            +xs-block
-                font-size: 50px
-                width: 567px
-                margin: 2px 3px 2px
-           
-            +sm-block
-                font-size: 60px
-                width: 768px
-                margin: 3px 4px 3px
+        .page-link
+            display: flex
+    &__nav
+        position: absolute
+        top: 16px
+        width: 100%
+        text-align: center
+
+    &__action
+
+       
+.nav
+    .page-link
+        margin: 0 9px

@@ -1,67 +1,32 @@
 /*banner*/
-/*banner-about*/
-.banner-about
-  position: relative
-  padding-bottom: 70px
-  &__img
-    display: flex
-    justify-content: center
-    img
-      width: 100%
-      object-fit: cover
+.banner
+    &__slogan
+        display: flex
+        justify-content: center
+        padding-top: 52px
+    &__description
+        text-align: center
 
-  .page__title-h1
-    color: $color_white
-    position: absolute
-    top: 10px
-    z-index: 1
-    +md-block
-      top: 120px
-/*banner-main*/
-.banner-main
-  padding-top: 115px
-  padding-bottom: 44px
-  
-  +md-block
-    padding-top: 94px
-    padding-bottom: 100px
-    
-  &-inner
-    +row-flex
-  &__title
-    width: 100%
-    font-family: AvantGardeGothicCTT
-    width: 85%
-    // font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
-    font-size: 32px
-    line-height: 40px
-    margin-bottom: 61%
-    // margin-bottom: 47%
-    
-    +md-block
-      font-size: 72px
-      line-height: 87px
-      margin-bottom: 36px
-  &-advantages
-    +row-flex
-    width: 100%
-    &__item
-      +col
-      +size(12)
-      +size-md(6)
-      font-family: AvantGardeGothicCTT
-      display: flex
-      font-size: 32px
-      line-height: 40px
-      margin-bottom: 8px
-      +md-block
-        font-size: 56px
-        line-height: 68px
-        margin-bottom: 0
-        &:first-child
-          // margin-right: 115px
-          // width: 48.5%
-          margin-right: -0.5%
+.page__subtitle
+    font-family: Caveat-Regular
+    color: $color_orange
+    font-size: 107.888px
+    line-height: 93px
+    letter-spacing: -0.085em
+    transform: rotate(-4.34deg)
+    position: relative
+    left: -4px
+    top: -4px
+
+.page__text
+    font-family: SuisseIntl-Regular
+    font-size: 40px
+    line-height: 46px
+    letter-spacing: 0.0041em
+    color: $color_black
+    width: 60%
+    margin: 10px auto
+
 /* __debugGrid__ */
 .debugGrid
     height: 100vh
@@ -107,395 +72,192 @@
     +size(12)
     padding-top: 80px
 .header
-    font-family:  SKConcretica-Regular
-    padding-top: 20px
     position: sticky
     top: 0
-    height: 0
     z-index: 1
-    width: 100%
- 
-    padding: 0
-    +md-block
-        // padding-top: 80px
-    .wrapper
-        height: 100px
-        // background: rgba(255, 255, 255, .9)
+    padding: 23px 0
     &-inner
         +row-flex()
-        height: 100%
         align-items: center
         justify-content: space-between
+        position: relative
     &__logo 
-        font-family:  SKConcretica-Regular
-        text-transform: uppercase
-        font-size: 14px
-        line-height: 17px
-        +md-block
-            font-size: 32px
-            line-height: 35px
-    &__nav
         +col
-        nav
-            margin: 0 -14px
-            a
-                font-family: SKConcretica-RegularTrial
-                text-transform: uppercase
-                font-size: 14px
-                line-height: 17px
-                margin: 0 14px
-                +md-block
-                    font-size: 32px
-                    line-height: 35px
-    .parent
-        +row-flex()
-        width: 1000px
-        .child
-            /*child*/
-            +col()
-            +size(12)
-            // +size-sm(6)
-            font-size: 40px
-            width: 320px
-            margin: 1px 2px 1px
-            +xs-block
-                font-size: 50px
-                width: 567px
-                margin: 2px 3px 2px
-           
-            +sm-block
-                font-size: 60px
-                width: 768px
-                margin: 3px 4px 3px
-/*our-platform*/
-.our-platform
-  padding: 70px 0
-  &__icons
-    padding-top: 50px
-    +row-flex
-  &__icon
-    +col
-    +size(6)
-    +size-md(2)
-    padding: 20px
-    img
-      cursor: pointer
-      filter: grayscale(1)
-      transition: all .5s ease
-      &:hover
-        filter: none
-/*our-team*/
-.our-team
-  &__items 
-    +row-flex
-    padding-top: 50px
-    
-  &__item
-    +col()
-    +size(12)
-    +size-md(4)
-  &-img
-    &__title
-      margin-top: 32px
-      font-size: 40px
-      line-height: 44px
-      text-transform: uppercase
-      color: #262829
-    &__description
-      margin-top: 5px
-      font-size: 20px
-      line-height: 24px
-      color: #262829
-/*page-section-main*/
-
-.page-section-main
-  scroll-snap-align: start
-  // scroll-snap-stop: normal
-  // overflow: hidden
-  min-height: 100vh
-  color: $color_white
-  background: $color_black-2
-  position: relative
-
-    
-  &_white
-    color: $color_black
-    background: $color_white
-    .page-section-main__header-nav
-      a
-        &::after
-          filter: invert(100%)
-          background-image: url('../assets/images/svg/icon-arrow.svg')
-
-  &.banner
-    color: $color_black
-    background: $color_white
-  
-  &.case-maginary
-    color: $color_black
-    background: $color_white
-
-  &__header
-    position: relative
-    z-index: 1
-    padding: 18px 0 120px
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    +md-block
-      padding: 70px 0 120px
-      flex-direction: row
-      align-items: flex-end
-
- 
-    
-    &-title
-      +size(12)
-      +size-md(6)
-
-      .title
-        text-transform: uppercase
-        font-family:  SKConcretica-Regular
-        font-size: 32px
-        line-height: 40px
-        margin-bottom: 15px
-
-        +md-block
-          margin-bottom: 0
-          font-size: 72px
-          line-height: 79px
-      .text
-        font-family: AvantGardeGothicCTT
-        font-size: 24px
-        line-height: 29px
-        margin-bottom: 15px
-        +md-block
-          margin-bottom: 0
-          font-size: 24px
-          line-height: 28px
-    &-nav
-      display: flex
-      +size(12)
-      +size-md(3)
-      // width: 100%
-      justify-content: space-between
-      a
-        font-family: AvantGardeGothicCTT
-        
-        display: flex
-        align-items: center
-        font-size: 24px
-        line-height: 29px
-        transition: all .5s ease
-        &::after
-          content: ''
-          background-image: url('../assets/images/svg/icon-arrow.svg')
-          background-repeat: no-repeat
-          width: 32px
-          height: 18px
-          margin-left: 6px
-          transition: all .5s ease
-        &:hover
-          &::after
-            transform: translateX(12px)
-          
-  &__content
-    display: flex 
-    flex-wrap: wrap
-    justify-content: center
-
-    +md-block
-    &__img
-      width: 100%
-      text-align: center
-    img
-      margin-bottom: 90px
-    .lottie-player
-      
-      +to($break_sm)
+        .page-link
+            display: flex
+    &__nav
         position: absolute
-        top: 100px
-        margin-left: -5px
+        top: 16px
+        width: 100%
+        text-align: center
 
-    &-text
-      +col()
-      +size(12)
-      +size-sm(6)
-      font-size: 24px
-      line-height: 32px
-      color: #ffffff
-/*section-maginary-about*/
-.section-maginary-about
-  background: #F1F1F1
-  padding-bottom: 120px
-  &__images
-    +row-flex
-    justify-content: center
-    padding: 130px 0
-  &__item
-    padding: 0 15px
-    width: auto
-  &__content 
-    color: #262829
-    display: flex
-    flex-wrap: wrap
-    &-left
-      +size(12)
-      +size-md(6)
-    &-title
-      font-size: 56px
-      line-height: 68px
-    &-desc 
-      font-size: 24px
-      line-height: 29px
-    &-text
-      +size(12)
-      +size-md(6)
-      font-size: 24px
-      line-height: 32px
-/*section-maginary-footer*/
-.section-maginary-footer
-  background: #F1F1F1
-  +md-block
-    padding: 120px 0
+    &__action
 
-  .page__title-h1
-    text-align: center
-    padding-top: 140px
-    padding-bottom: 50px
+       
+.nav
+    .page-link
+        margin: 0 9px
+// /*sing*/
+// $sing-x: 255px
+// $sing-y: 84px
+// $sing-frames: 85
+// $sing-duration: 3.5s
+// $sing-delay: .2s
+// #dex-sign
+//     display: inline-block
+//     margin: 30px 10px 15px 10px
+//     width: $sing-x
+//     height: $sing-y
+//     background: url(http://drygiel.com/projects/sign/frames.png) no-repeat;
 
-  &-profile
-    text-align: center
-    &__img
-      margin-bottom: 51px
+//     &.white
+//         background-image: url(http://drygiel.com/projects/sign/frames-255-white.png);
 
-    &__title
-      text-transform: uppercase
-      font-family:  SKConcretica-Regular
-      font-size: 32px
-      line-height: 40px
-      margin-bottom: 15px
+//     &.play
+//         animation: sign-anim $sing-duration $sing-delay steps($sing-frames) forwards
 
-      +md-block
-        font-size: 72px
+// a#dex-sign
+//     opacity: .9
 
-    &__link 
-        font-family: AvantGardeGothicCTT
+//     &:hover
         
-        display: flex
-        align-items: center
-        justify-content: center
-        font-size: 24px
-        line-height: 29px
-        transition: all .5s ease
-        &::after
-          content: ''
-          background-image: url('../assets/images/svg/icon-arrow.svg')
-          background-repeat: no-repeat
-          width: 32px
-          height: 18px
-          margin-left: 6px
-          transition: all .5s ease
-          filter: invert(100%)
-        &:hover
-          &::after
-            transform: translateX(12px)
-  &-reviews
-    +row-flex
-    justify-content: center
-  &-review
-    +col
-    +size(12)
-    +size-md(4)
-    margin-bottom: 20px
-    text-align: center
-/*section-maginary-imgs*/
-.section-maginary-imgs
-  +md-block
-      padding: 120px 0
+//         opacity: 1
+//         filter: invert(30%) brightness(80%) sepia(100%) contrast(110%) saturate(953%) hue-rotate(165deg)
 
-  &-inner
-    +row-flex
-    justify-content: center
-    padding: 130px 0
-  
-  &__item
-    padding: 0 15px
-    width: auto
-/*section-maginary-video*/
-.section-maginary-video
-  background: $color_black
-  display: flex
-  &-inner
-    +row-flex
-  &__left
-    +size(12)
-    +size-md(6)
-    display: none
-    align-items: center
-    justify-content: center
-    padding: 80px 0
-    +md-block
-      display: inline-flex
-  &__right
-    +size(12)
-    +size-md(6)
-    background: #252729
-    display: inline-flex
-    align-items: center
-    justify-content: center
-/*section-maginary-video-2*/
-.section-maginary-video-2
-  padding: 80px 0
-  &-inner
-    display: flex
-    justify-content: center
-/*section-monte-imgs*/
-.section-monte-imgs
-  background-color: #191B23
-  &-inner
-    +row-flex
-    justify-content: center
-    padding: 130px 0
-  &__item
-    padding: 0 15px
-    width: auto
-/*section-monte-imgs-2*/
-/*section-monte-video*/
-.section-monte-video
-  background: #000
-  +to($break_md)
-    width: 1100px
-  
-  video
-    +to($break_md)
-      left: -34%
-      position: absolute
-    width: 100%
-/*section-monte-video-2*/
-.section-monte-video-2
-  background: #000
-  +to($break_md)
-    width: 1100px
-  
-  video
-    +to($break_md)
-      left: -34%
-      position: absolute
-    width: 100%
-/*section-partners*/
-.section-partners
-  padding: 70px 0
-  &__icons
-    +row-flex
-    justify-content: space-between
-    padding-top: 50px
-  &__icon
-    +col
-    +size(2)
-    img
-      cursor: pointer
-      filter: grayscale(1)
-      transition: all .5s ease
-      &:hover
-        filter: none
+// @-webkit-keyframes sign-anim
+//     to 
+//         background-position: 0 $sing-frames * -$sing-y
+
+// @-moz-keyframes sign-anim
+//     to 
+//         background-position: 0 $sing-frames * -$sing-y
+
+// @keyframes sign-anim
+//     to 
+//         background-position: 0 $sing-frames * -$sing-y
+
+// // _____________________________________________ LAYOUT
+// *
+//     margin: 0
+//     padding: 0
+
+// body, html
+//     font-size: 1em
+//     color: #2C2C2C
+//     height: 100%
+//     font-family: 'Raleway', sans-serif
+
+// ::selection
+//     background: white
+
+// ::-moz-selection
+//     background: white
+
+// section
+
+//     $color1: #FFF
+//     $color2: #D6D6D6
+
+//     height: 100%
+//     min-height: 335px
+//     background-color: $color1
+//     background-image: radial-gradient(center top, circle cover, $color1, $color2)
+//     background-image: -o-radial-gradient(center top, circle cover, $color1, $color2)
+//     background-image: -ms-radial-gradient(center top, circle cover, $color1, $color2)
+//     background-image: -moz-radial-gradient(center top, circle cover, $color1, $color2)
+//     background-image: -webkit-radial-gradient(center top, circle cover, $color1, $color2)
+//     text-align: center
+
+//     &:before
+//         content: ''
+//         position: absolute
+//         left: 0
+//         top: 0
+//         width: 100%
+//         height: 100%
+//         min-height: 335px
+//         pointer-events: none
+//         opacity: .30
+//         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkYzRUQ1MTgxRjlBMTFFM0FGQjJCNDdCQ0I4MkE3RDUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkYzRUQ1MTkxRjlBMTFFM0FGQjJCNDdCQ0I4MkE3RDUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRjNFRDUxNjFGOUExMUUzQUZCMkI0N0JDQjgyQTdENSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCRjNFRDUxNzFGOUExMUUzQUZCMkI0N0JDQjgyQTdENSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvRiGgkAAAAkSURBVHjaYvj//z8DCKuqqqaBaEYQgQyY1NTU0pAFMFQABBgAKcEQowsz06AAAAAASUVORK5CYII=')
+
+//     #replay
+//         position: absolute
+//         z-index: 9999
+//         bottom: -45px
+//         left: 0
+//         display: inline-block
+//         padding: 10px
+//         background: rgba(240, 240, 240, 0.44)
+//         border: 1px solid #BABABA
+//         color: #696969
+//         text-transform: uppercase
+//         text-decoration: none
+//         font-size: .6em
+//         -moz-transition: left 6s cubic-bezier(1,.01,1,.01)
+//         -o-transition: left 6s cubic-bezier(1,.01,1,.01)
+//         -webkit-transition: left 6s cubic-bezier(1,.01,1,.01)
+//         transition: left 6s cubic-bezier(1,.01,1,.01)
+
+//         &:hover
+//             left: -100000%
+//             -moz-transition: none
+//             -o-transition: none
+//             -webkit-transition: none
+//             transition: none
+
+//             + .play
+//                 -moz-animation: none !important
+//                 -o-animation: none !important
+//                 -webkit-animation: none !important
+//                 animation: none !important
+
+//     .quote
+//         position: absolute
+//         left: 25%
+//         right: 25%
+//         top: 20%
+//         padding: 30px 0 15px 0
+
+//         cite
+//             color: #000
+//             font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif
+//             letter-spacing: 0.1em
+//             text-align: center
+//             line-height: 110%
+//             font-size: 1.7em
+//             font-variant: small-caps
+
+//             &:before
+//                 content: '’’'
+//                 position: absolute
+//                 left: -120px
+//                 top: 48px
+//                 width: 100%
+//                 height: 100%
+//                 pointer-events: none
+//                 font-size: 8em
+//                 text-align: left
+//                 font-family: Arial
+//                 letter-spacing: -16px
+//                 font-style: normal
+//                 font-weight: bold
+//                 color: rgba(0, 0, 0, 0.1)
+
+//         #dex-sign
+
+//             position: absolute
+//             bottom: -95px
+//             right: 0
+
+// footer
+//     background-color: #2C2C2C
+//     color: #8A8A8A
+//     padding: 25px
+//     text-align: center
+
+//     a
+//         text-decoration: none
+//         color: #4384E6
+
+//         &:hover
+//             color: white
