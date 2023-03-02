@@ -24,10 +24,16 @@
 @font-face 
   +font(SuisseIntl, SuisseIntl-Regular)
 
+
 html
   scrollbar-color: $color_orange #fff
   scrollbar-width: thin
+  &:not([data-scroll='0']) 
+    header
+      background: rgba(2, 2, 2, 0.4)
+      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1)
   
+
 body 
   font-family: SFMono-Regular
   color: $color_black

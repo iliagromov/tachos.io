@@ -8,13 +8,18 @@
 mixin project(props)
     .project-card 
         .project-card__img 
-            picture 
+            picture.page-picture 
                 img(src=props.imgSrc, alt=props.title)
         .project-card__text
-            .project-card__title #{props.title}
-                .project-card__date #{props.date}
-            .project-card__subtitle #{props.subtitle}
-            .project-card__description #{props.subtitle}
+            .project-card__title-box
+                .project-card__title 
+                    .page-title.page-title-h2 #{props.title}
+                    .project-card__date 
+                        .page-title-caption-4 #{props.date}
+                .project-card__subtitle 
+                    .page-title-caption.page-title-caption-3 #{props.subtitle}
+            .project-card__description 
+                .page-text #{props.description}
 
 mixin projects(array)
     each object in array 
@@ -25,7 +30,7 @@ section.projects
         .projects-inner
             +projects([
                 {
-                    imgSrc: '',
+                    imgSrc: '../../assets/images/png/project-1.png',
                     video: '',
                     date: '2022',
                     title: 'Хайс банк',
@@ -33,11 +38,59 @@ section.projects
                     description: 'EdTech platform which makes online learning engrossing.',
                 },
                 {
-                    imgSrc: '',
+                    imgSrc: '../../assets/images/png/project-2.png',
                     video: '',
                     date: '2022',
                     title: 'Docmed',
                     subtitle: 'Edtech - Swift – 6 month',
                     description: 'EdTech platform which makes online learning engrossing.',
-                }
+                },
+                {
+                    imgSrc: '../../assets/images/png/project-3.png',
+                    video: '',
+                    date: '2022',
+                    title: 'Складно',
+                    subtitle: 'Edtech - Swift – 6 month',
+                    description: 'EdTech platform which makes online learning engrossing.',
+                },
+                {
+                    imgSrc: '../../assets/images/png/project-4.png',
+                    video: '',
+                    date: '2022',
+                    title: 'Montetuning',
+                    subtitle: 'Edtech - Swift – 6 month',
+                    description: 'EdTech platform which makes online learning engrossing.',
+                },
+                {
+                    imgSrc: '../../assets/images/png/project-5.png',
+                    video: '',
+                    date: '2022',
+                    title: 'Life',
+                    subtitle: 'Edtech - Swift – 6 month',
+                    description: 'EdTech platform which makes online learning engrossing.',
+                },
+                {
+                    imgSrc: '../../assets/images/png/project-6.png',
+                    video: '',
+                    date: '2022',
+                    title: 'Полка',
+                    subtitle: 'Edtech - Swift – 6 month',
+                    description: 'EdTech platform which makes online learning engrossing.',
+                },
+                {
+                    imgSrc: '../../assets/images/png/project-7.png',
+                    video: '',
+                    date: '2022',
+                    title: 'Складно',
+                    subtitle: 'Edtech - Swift – 6 month',
+                    description: 'EdTech platform which makes online learning engrossing.',
+                },
+                {
+                    imgSrc: '../../assets/images/png/project-8.png',
+                    video: '',
+                    date: '2022',
+                    title: 'Maginary',
+                    subtitle: 'Edtech - Swift – 6 month',
+                    description: 'Иммерсивная книга-игра с волшебством внутри, Игра дня в США и многих других странах',
+                },
             ])

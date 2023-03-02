@@ -1,1 +1,145 @@
 /*projects*/
+.projects
+    padding: 34px 0
+    &-inner
+        +row-flex
+        padding: 0 40px
+.project
+    &-card
+        +col
+        display: flex
+        padding-top: 64px
+
+        &__text
+
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            box-sizing: border-box
+            padding: 0 12px 10px
+        &__title
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .page-title
+                padding-top: 25px
+        &__subtitle
+            padding-top: 3px
+
+        &:first-child,
+        &:last-child
+
+            .project-card
+                &__title
+                    flex-direction: column
+                    align-items: flex-start
+                    .project-card__date
+                        order: 0
+                    .page-title-h2
+                        order: 1
+                &__text
+                    +size(12)
+                    +size-md(3.8)
+                &__img
+                    +size(12)
+                    +size-md(8.2)
+        &:last-child
+            .project-card
+                &__title
+                    .page-title 
+                        padding-top: 19px
+                &__text
+                    padding: 0 23px 25px
+
+        &:nth-child(2)
+            +size-md(6)
+            +shift-md-right(1)
+            .project-card
+                &__text
+                    +size-md(12)
+
+                    padding: 0
+
+                &__description
+                    +size-md(8)
+
+        &:nth-child(3)
+            +size-md(5)
+            padding-top: 52px
+            padding-left: 10px
+            .project-card
+                &__title
+                    .page-title
+                        padding-top: 32px
+                &__text
+                    width: 75%
+                    padding: 0 0 0 62px
+        // ~50% card
+        &:nth-child(2),
+        &:nth-child(3)
+            flex-direction: column
+            .project-card
+                &__img
+                    +size-md(12)
+
+                &__description
+                    padding-top: 33px
+        // -full card            
+        &:nth-child(4)
+            flex-direction: column
+            // 
+            .project-card
+                &__title
+                    .page-title
+                        padding-top: 44px
+                &__img
+                    +size-md(12)
+                &__text
+                    +size-md(12)
+                    flex-direction: row
+                    align-items: flex-end
+                    padding: 0 8px 0px
+                &__description
+                    width: 28%
+        // -50% card            
+        &:nth-child(5)
+            +size-md(5)
+            +shift-md-right(1)
+            padding-top: 31px
+            flex-direction: column
+            .project-card
+                &__text
+                    padding: 0
+                &__title
+                    .page-title
+                        padding-top: 17px
+                &__description
+                    padding-top: 33px
+                    width: 70%
+        &:nth-child(6)
+            +size-md(6)
+            flex-direction: column
+            .project-card
+                &__text
+                    padding: 0
+                &__description
+                    padding-top: 33px
+                    width: 70%
+
+        &:nth-child(7)
+            +size-md(5)
+            flex-direction: column
+            margin: 0 auto
+            padding-top: 78px
+            position: relative
+            left: -17px
+
+            .project-card
+                &__title
+                    .page-title
+                        padding-top: 23px
+                &__text
+                    padding: 0
+                &__description
+                    padding-top: 33px
+                    width: 70%
