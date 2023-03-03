@@ -1,28 +1,3 @@
-/*banner*/
-.banner
-    &__slogan
-        display: flex
-        justify-content: center
-        padding-top: 52px
-    &__description
-        text-align: center
-        &-subtitle
-            .page-title-caption-1
-                position: relative
-                left: -4px
-                top: -4px
-                font-size: 107.888px
-                line-height: 93px
-                letter-spacing: -0.085em
-                transform: rotate(-4.34deg)
-        &-text 
-            .page-text 
-                font-size: 40px
-                line-height: 46px
-                width: 60%
-                margin: 10px auto
-    
-
 /* __debugGrid__ */
 .debugGrid
     height: 100vh
@@ -48,9 +23,51 @@
 /* __debugGrid__ */
 /*footer*/
 .footer
-  padding: 40px 0 80px
+  padding: 40px 0 0
   &-inner
-    +row-flex
+    position: relative
+
+  &__feedback
+    position: absolute
+    left: 128px
+    bottom: -36px
+    // visibility: hidden
+  &__row
+    display: flex
+    justify-content: space-between
+    padding-top: 18%
+   
+    .nav
+      display: flex
+      position: relative
+      z-index: 10
+      .page-link
+        margin: 0 13px
+/*banner*/
+.banner
+    &__slogan
+        display: flex
+        justify-content: center
+        padding-top: 52px
+    &__description
+        text-align: center
+        &-subtitle
+            .page-title-caption-1
+                position: relative
+                left: -4px
+                top: -4px
+                font-size: 107.888px
+                line-height: 93px
+                letter-spacing: -0.085em
+                transform: rotate(-4.34deg)
+        &-text 
+            .page-text 
+                font-size: 40px
+                line-height: 46px
+                width: 60%
+                margin: 10px auto
+    
+
 header
 .header
     position: sticky

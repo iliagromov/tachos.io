@@ -1,5 +1,22 @@
 /*footer*/
 .footer
-  padding: 40px 0 80px
+  padding: 40px 0 0
   &-inner
-    +row-flex
+    position: relative
+
+  &__feedback
+    position: absolute
+    left: 128px
+    bottom: -36px
+    // visibility: hidden
+  &__row
+    display: flex
+    justify-content: space-between
+    padding-top: 18%
+   
+    .nav
+      display: flex
+      position: relative
+      z-index: 10
+      .page-link
+        margin: 0 13px
