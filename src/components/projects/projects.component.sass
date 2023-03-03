@@ -10,6 +10,14 @@
         display: flex
         padding-top: 64px
 
+        &__img
+            overflow: hidden
+
+            border-radius: 26px
+            .page-picture
+                +transitionBase
+                img
+                    // background: rgba(0,0,0, .5)
         &__text
 
             display: flex
@@ -25,6 +33,11 @@
                 padding-top: 25px
         &__subtitle
             padding-top: 3px
+
+        &:hover
+            .project-card__img
+                .page-picture
+                    transform: scale(1.2)
 
         &:first-child,
         &:last-child
@@ -46,7 +59,7 @@
         &:last-child
             .project-card
                 &__title
-                    .page-title 
+                    .page-title
                         padding-top: 19px
                 &__text
                     padding: 0 23px 25px

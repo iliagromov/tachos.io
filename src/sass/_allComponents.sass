@@ -48,7 +48,7 @@
 /* __debugGrid__ */
 /*footer*/
 .footer
-  padding: 120px 0 80px
+  padding: 40px 0 80px
   &-inner
     +row-flex
 header
@@ -99,7 +99,6 @@ header
         &__items
             position: relative
             display: flex
-            overflow-x: scroll 
             padding: 64px 31px
             margin: 0 -20px 
         &__item
@@ -127,6 +126,40 @@ header
                         filter: grayscale(0)
 
 /*our-team*/
+.our-team
+    padding: 40px 0
+    .page-title
+        text-align: center
+    &-inner
+        position: relative
+        background: $color_light-gray
+        background: linear-gradient(180deg, #F6F5F0 30%, #15151E 49.14%)
+        border-radius: 26px
+        padding: 83px 0 33px
+        &_bg-bottom
+
+    &__info
+        position: relative
+        top: 33%
+
+        border-radius: 26px
+
+    &__img
+
+        display: flex
+        justify-content: center
+        margin-left: -24px
+        padding-top: 42px
+
+    &__some-text
+        padding: 4% 8%
+        text-align: center
+        .page-title-caption
+
+            display: inline-block
+            transform: rotate(-2.85deg)
+            letter-spacing: -0.05em
+            margin: 13px 20px
 /*projects*/
 .projects
     padding: 34px 0
@@ -139,6 +172,14 @@ header
         display: flex
         padding-top: 64px
 
+        &__img
+            overflow: hidden
+
+            border-radius: 26px
+            .page-picture
+                +transitionBase
+                img
+                    // background: rgba(0,0,0, .5)
         &__text
 
             display: flex
@@ -154,6 +195,11 @@ header
                 padding-top: 25px
         &__subtitle
             padding-top: 3px
+
+        &:hover
+            .project-card__img
+                .page-picture
+                    transform: scale(1.2)
 
         &:first-child,
         &:last-child
@@ -175,7 +221,7 @@ header
         &:last-child
             .project-card
                 &__title
-                    .page-title 
+                    .page-title
                         padding-top: 19px
                 &__text
                     padding: 0 23px 25px
@@ -272,6 +318,7 @@ header
                 &__description
                     padding-top: 33px
                     width: 70%
+
 // /*sing*/
 // $sing-x: 255px
 // $sing-y: 84px
