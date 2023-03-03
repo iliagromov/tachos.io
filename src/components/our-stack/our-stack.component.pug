@@ -1,0 +1,89 @@
+//-our-stack
+mixin svgIcon(index)
+    case index
+        when 0
+            include ../../assets/images/svg/technology-1.svg
+        when 1
+            include ../../assets/images/svg/technology-2.svg
+        when 2
+            include ../../assets/images/svg/technology-3.svg
+        when 3
+            include ../../assets/images/svg/technology-4.svg
+        when 4
+            include ../../assets/images/svg/technology-5.svg
+        when 5
+            include ../../assets/images/svg/technology-6.svg
+        when 6
+            include ../../assets/images/svg/technology-7.svg
+        when 7
+            include ../../assets/images/svg/technology-8.svg
+
+
+mixin item(props,index)
+    .our-stack-inner__item
+        .our-stack-inner__item-img
+            .page-svg 
+                +svgIcon(index)
+               
+                
+        .our-stack-inner__item-text
+            p.page-text
+                span.page_bold #{props.title} 
+                | #{props.description}
+
+mixin items(array)
+    each object, index in array
+        +item(object, index)
+
+section.our-stack
+    .wrapper
+        .our-stack-inner
+            .page-title.page-title-h1 Технологии <br> которыми владеем
+            .our-stack-inner__items
+                +items([
+                    {
+                        imgSrc: '../../assets/images/svg/technology-1.svg',
+                        title: 'Flutter',
+                        description: 'используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений.',
+                    },
+                    {
+                        imgSrc: '../../assets/images/svg/technology-2.svg',
+                        title: 'Flutter',
+                        description: 'используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений.',
+                    },
+                    {
+                        imgSrc: '../../assets/images/svg/technology-3.svg',
+                        title: 'Flutter',
+                        description: 'используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений.',
+                    },
+                    {
+                        imgSrc: '../../assets/images/svg/technology-4.svg',
+                        title: 'Flutter',
+                        description: 'используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений.',
+                    },
+                    {
+                        imgSrc: '../../assets/images/svg/technology-5.svg',
+                        title: 'Flutter',
+                        description: 'используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений.',
+                    },
+                    {
+                        imgSrc: '../../assets/images/svg/technology-6.svg',
+                        title: 'Flutter',
+                        description: 'используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений.',
+                    },
+                    {
+                        imgSrc: '../../assets/images/svg/technology-7.svg',
+                        title: 'Flutter',
+                        description: 'используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений.',
+                    },
+                    {
+                        imgSrc: '../../assets/images/svg/technology-8.svg',
+                        title: 'Flutter',
+                        description: 'используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений.',
+                    },
+                ])
+               
+
+                    
+            
+        

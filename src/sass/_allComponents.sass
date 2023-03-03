@@ -6,48 +6,51 @@
         padding-top: 52px
     &__description
         text-align: center
+        &-subtitle
+            .page-title-caption-1
+                position: relative
+                left: -4px
+                top: -4px
+                font-size: 107.888px
+                line-height: 93px
+                letter-spacing: -0.085em
+                transform: rotate(-4.34deg)
+        &-text 
+            .page-text 
+                font-size: 40px
+                line-height: 46px
+                width: 60%
+                margin: 10px auto
+    
 
-.page__subtitle
-    font-family: Caveat-Regular
-    color: $color_orange
-    font-size: 107.888px
-    line-height: 93px
-    letter-spacing: -0.085em
-    transform: rotate(-4.34deg)
-    position: relative
-    left: -4px
-    top: -4px
-
-.page__text
-    font-family: SuisseIntl-Regular
-    font-size: 40px
-    line-height: 46px
-    letter-spacing: 0.0041em
-    color: $color_black
-    width: 60%
-    margin: 10px auto
-
+/* __debugGrid__ */
+.debugGrid
+    height: 100vh
+    position: fixed
+    width: 100%
+    
+    .wrapper
+        height: inherit
+        
+    .parentFlex
+        height: inherit
+        +row-flex()
+            
+    .childFlex
+        +col()
+        +size(1)
+        +size-md(1)
+        +size-lg(1)
+        height: inherit
+        outline:  1px solid #ff0
+        background: rgba(0, 0, 0, 0.4)
+    @include debugBtn()
+/* __debugGrid__ */
 /*footer*/
 .footer
   padding: 120px 0 80px
   &-inner
     +row-flex
-  &__item
-    +col
-    +size(12)
-    +size-md(4)
-    font-size: 18px
-    line-height: 24px
-    color: #262829
-    margin-bottom: 24px
-    div
-      +size(9)
-      +size-md(8)
-      
-  &_copy
-    +col
-    +size(12)
-    padding-top: 80px
 header
 .header
     position: sticky
@@ -87,6 +90,43 @@ header
 .nav
     .page-link
         margin: 0 16px
+/*our-stack*/
+.our-stack
+    padding: 117px 0
+    .page-title
+        text-align: center
+    &-inner
+        &__items
+            position: relative
+            display: flex
+            overflow-x: scroll 
+            padding: 64px 31px
+            margin: 0 -20px 
+        &__item
+            margin: 0 20px
+            cursor: pointer
+            &-img
+                +transitionBase
+                filter: grayscale(100%)
+            &-text
+                visibility: hidden
+                opacity: 0
+                position: absolute
+                width: 77%
+                text-align: center
+                bottom: -13%
+                left: 50%
+                transform: translateX(-50%)
+                +transitionBase
+            &:hover
+                .our-stack-inner__item
+                    &-text
+                        visibility: visible
+                        opacity: 1
+                    &-img
+                        filter: grayscale(0)
+
+/*our-team*/
 /*projects*/
 .projects
     padding: 34px 0
@@ -232,29 +272,6 @@ header
                 &__description
                     padding-top: 33px
                     width: 70%
-/* __debugGrid__ */
-.debugGrid
-    height: 100vh
-    position: fixed
-    width: 100%
-    
-    .wrapper
-        height: inherit
-        
-    .parentFlex
-        height: inherit
-        +row-flex()
-            
-    .childFlex
-        +col()
-        +size(1)
-        +size-md(1)
-        +size-lg(1)
-        height: inherit
-        outline:  1px solid #ff0
-        background: rgba(0, 0, 0, 0.4)
-    @include debugBtn()
-/* __debugGrid__ */
 // /*sing*/
 // $sing-x: 255px
 // $sing-y: 84px
@@ -420,6 +437,9 @@ header
 //         &:hover
 //             color: white
 
+/*testimonials*/
+.testimonials
+    margin-top: 96px
 /*ui*/
 .ui
     &__spaceing

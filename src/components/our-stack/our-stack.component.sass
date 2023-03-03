@@ -1,0 +1,35 @@
+/*our-stack*/
+.our-stack
+    padding: 117px 0
+    .page-title
+        text-align: center
+    &-inner
+        &__items
+            position: relative
+            display: flex
+            overflow-x: scroll 
+            padding: 64px 31px
+            margin: 0 -20px 
+        &__item
+            margin: 0 20px
+            cursor: pointer
+            &-img
+                +transitionBase
+                filter: grayscale(100%)
+            &-text
+                visibility: hidden
+                opacity: 0
+                position: absolute
+                width: 77%
+                text-align: center
+                bottom: -13%
+                left: 50%
+                transform: translateX(-50%)
+                +transitionBase
+            &:hover
+                .our-stack-inner__item
+                    &-text
+                        visibility: visible
+                        opacity: 1
+                    &-img
+                        filter: grayscale(0)
