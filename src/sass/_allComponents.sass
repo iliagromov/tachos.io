@@ -1,3 +1,28 @@
+/*banner*/
+.banner
+    &__slogan
+        display: flex
+        justify-content: center
+        padding-top: 52px
+    &__description
+        text-align: center
+        &-subtitle
+            .page-title-caption-1
+                position: relative
+                left: -4px
+                top: -4px
+                font-size: 107.888px
+                line-height: 93px
+                letter-spacing: -0.085em
+                transform: rotate(-4.34deg)
+        &-text 
+            .page-text 
+                font-size: 40px
+                line-height: 46px
+                width: 60%
+                margin: 10px auto
+    
+
 /* __debugGrid__ */
 .debugGrid
     height: 100vh
@@ -43,31 +68,6 @@
       z-index: 10
       .page-link
         margin: 0 13px
-/*banner*/
-.banner
-    &__slogan
-        display: flex
-        justify-content: center
-        padding-top: 52px
-    &__description
-        text-align: center
-        &-subtitle
-            .page-title-caption-1
-                position: relative
-                left: -4px
-                top: -4px
-                font-size: 107.888px
-                line-height: 93px
-                letter-spacing: -0.085em
-                transform: rotate(-4.34deg)
-        &-text 
-            .page-text 
-                font-size: 40px
-                line-height: 46px
-                width: 60%
-                margin: 10px auto
-    
-
 header
 .header
     position: sticky
@@ -501,9 +501,64 @@ header
 //         &:hover
 //             color: white
 
+/*swiper*/
+
+.swiper
+    width: 50%
+    overflow: unset
+    &-wrapper
+        align-items: center
 /*testimonials*/
 .testimonials
     margin-top: 96px
+    background-color: $color_black
+
+    .page-title
+        color: $color_white
+    &-slide
+        display: flex
+        align-items: center
+        flex-direction: column
+        &.swiper-slide-active
+            .testimonials-slide__img-mask
+                max-width: 640px
+        &__img
+            width: 100%
+            &-mask
+                mask-size: 100%
+                max-width: 580px
+                max-height: 580px
+                width: 100%
+                height: 100%
+                min-width: 580px
+                min-height: 580px
+                margin: 0 auto
+                overflow: hidden
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.24%, rgba(0, 0, 0, 0.56) 73.1%), url()
+                background: #fff
+                border-radius: 100%
+                &.isActive
+                    max-width: 640px
+                    max-height: 740px
+
+                    -webkit-mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
+                    mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
+                    mask-repeat: no-repeat
+                    mask-position: center
+
+                    
+            .page-picture
+                justify-content: center
+                img
+
+                    width: 100%
+                    height: 100%
+                    // min-height: 740px
+                    object-fit: cover
+
+    &__name
+        text-align: center
+
 /*ui*/
 .ui
     &__spaceing

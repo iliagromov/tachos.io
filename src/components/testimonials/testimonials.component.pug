@@ -1,5 +1,48 @@
 //-testimonials
+mixin slide(props)
+    .testimonials-slide.swiper-slide 
+        .testimonials-slide__img
+            .testimonials-slide__img-mask(class=props.isActive1 && 'isActive' )
+                picture.page-picture
+                    img(src=props.imgPoster, alt="" )
+        .testimonials-slide__name
+            h3.page-title.page-title-h3 #{props.title}
+            .page-title-caption.page-title-caption-3 #{props.subtitle}
+                
+mixin slides(array)
+    each object in array
+        +slide(object)
+
 section.testimonials
     .wrapper
         .testimonials-inner
-            img(src="../../assets/images/png/img-testimonial.jpg", alt="")
+            //- img(src="../../assets/images/png/img-testimonial.jpg", alt="")
+            .page-title.page-title-h1 Отзывы
+            .testimonials-slider
+                .swiper.testimonialSwiper
+                    .testimonials-slider__toggles
+                        button.swiper-button-prev.page-btn.testimonials-slider__btn.testimonials-slider__btn-prev
+                        button.swiper-button-next.page-btn.testimonials-slider__btn.testimonials-slider__btn-next
+
+                    .testimonials-slider__items.swiper-wrapper
+                            +slides([
+                                {
+                                    title: 'Дима Энтелис',
+                                    subtitle: 'CTO Entelis team',
+                                    imgPoster: 'assets/images/png/testimonial-4.png',
+                                    video: ''
+                                },
+                                {
+                                    title: 'Дима Энтелис',
+                                    subtitle: 'CTO Entelis team',
+                                    imgPoster: 'assets/images/png/testimonial-1.png',
+                                    video: '',
+                                    isActive: true
+                                },
+                                {
+                                    title: 'Дима Энтелис',
+                                    subtitle: 'CTO Entelis team',
+                                    imgPoster: 'assets/images/png/testimonial-3.png',
+                                    video: ''
+                                },
+                            ])

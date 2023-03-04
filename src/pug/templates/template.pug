@@ -8,8 +8,14 @@ html(lang="ru" data-scroll="0")
         link(rel="icon", type="image/x-icon",  href="assets/img/favicon.ico")
         block base
         block title
+            title tachos
+        block styleLbs
+            link(rel="stylesheet", href="libs/css/swiper-bundle.min.css", type="text/css")
+        
         block style
             link(rel="stylesheet", href="css/base-styles.css", type="text/css")
+        
+        
         block socialMetaTags
 
             meta(property="fb:app_id" content="")
@@ -46,9 +52,11 @@ html(lang="ru" data-scroll="0")
             link(rel="stylesheet", href="css/styles-sprites.css", type="text/css")
             //- each breakPoint in breakPoints
             //-     link(rel="stylesheet", type="text/css" , media="screen and (min-width:"+breakPoint.width+"px)",  href="css/viewport/media/"+breakPoint.width+"/"+breakPoint.width+"px.css")
-        
-        block script
-            script(src="js/main.js")
+        block scriptLibs 
             script(src="libs/js/store-scroll.js")
+            script(src="libs/js/swiper-bundle.min.js")
+
+        block script
             script(src="js/debuggrid/debuggrid.component.js")
+            script(src="js/main.js")
             

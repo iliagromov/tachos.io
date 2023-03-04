@@ -2,6 +2,16 @@
 	background: url("../assets/icons/svg/spriteSVG.svg") no-repeat;
 }
 
+.svg-arrow-right {
+	@extend %svg-common;
+	background-position: 97.47222222222223% 0;
+}
+
+.svg-arrow-right-box {
+	width: 44px;
+	height: 44px;
+}
+
 .svg-mouse {
 	@extend %svg-common;
 	background-position: 0 0;
