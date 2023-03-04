@@ -2,7 +2,6 @@ var swiper = new Swiper(".testimonialSwiper", {
     // freeMode: true,
     slidesPerView: 1,
     initialSlide: 1,
-    spaceBetween: 10,
     centeredSlides: true,
     loop: true,
     

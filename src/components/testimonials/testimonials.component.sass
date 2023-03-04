@@ -1,17 +1,70 @@
 /*testimonials*/
 .testimonials
-    margin-top: 96px
-    background-color: $color_black
+    padding-top: 96px
 
     .page-title
         color: $color_white
+        &-h3
+            +md-block
+                font-size: 42px
+                line-height: 100%
+    .page-title-caption-3
+        letter-spacing: -0.05em !important
+        padding-top: 10px
+
+    &-inner
+        overflow: hidden
+        background-color: $color_black
+        padding: 84px 40px
+        border-radius: 26px
+    &-slider
+        padding-top: 72px
+        .swiper
+            position: relative
+            left: -32px
+
+        &__toggles
+            position: absolute
+            top: -17%
+            right: -43%
+            .swiper-button-prev
+                left: 0
+                
+            .swiper-button-next
+                right: 0
+
     &-slide
+        position: relative
         display: flex
         align-items: center
         flex-direction: column
+        z-index: 10
+        margin-right: -170px
+        margin-left: 170px
+
+        &.swiper-slide-prev,
+        &.swiper-slide-next
+            position: relative
+            z-index: 30
+        &.swiper-slide-prev
+
+        &.swiper-slide-next
+
         &.swiper-slide-active
+            right: 0
+            z-index: 50
+
+            margin-left: 0
+
+            ~ .testimonials-slide
+                // margin-left: -170px
+                margin-left: 12px
+            .testimonials-slide__name
+                display: block
             .testimonials-slide__img-mask
-                max-width: 640px
+                max-width: 620px
+                max-height: 620px
+                min-height: 620px
         &__img
             width: 100%
             &-mask
@@ -27,16 +80,16 @@
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.24%, rgba(0, 0, 0, 0.56) 73.1%), url()
                 background: #fff
                 border-radius: 100%
+                // +transitionBase
                 &.isActive
                     max-width: 640px
-                    max-height: 740px
+                    max-height: 740px !important
 
                     -webkit-mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
                     mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
                     mask-repeat: no-repeat
                     mask-position: center
 
-                    
             .page-picture
                 justify-content: center
                 img
@@ -46,5 +99,8 @@
                     // min-height: 740px
                     object-fit: cover
 
-    &__name
-        text-align: center
+        &__name
+            text-align: center
+            position: absolute
+            bottom: 40px
+            display: none

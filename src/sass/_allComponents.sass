@@ -177,165 +177,6 @@ header
             transform: rotate(-2.85deg)
             letter-spacing: -0.05em
             margin: 13px 20px
-/*projects*/
-.projects
-    padding: 34px 0
-    &-inner
-        +row-flex
-        padding: 0 40px
-.project
-    &-card
-        +col
-        display: flex
-        padding-top: 64px
-
-        &__img
-            overflow: hidden
-
-            border-radius: 26px
-            .page-picture
-                +transitionBase
-                img
-                    // background: rgba(0,0,0, .5)
-        &__text
-
-            display: flex
-            flex-direction: column
-            justify-content: space-between
-            box-sizing: border-box
-            padding: 0 12px 10px
-        &__title
-            display: flex
-            align-items: center
-            justify-content: space-between
-            .page-title
-                padding-top: 25px
-        &__subtitle
-            padding-top: 3px
-
-        &:hover
-            .project-card__img
-                .page-picture
-                    transform: scale(1.2)
-
-        &:first-child,
-        &:last-child
-
-            .project-card
-                &__title
-                    flex-direction: column
-                    align-items: flex-start
-                    .project-card__date
-                        order: 0
-                    .page-title-h2
-                        order: 1
-                &__text
-                    +size(12)
-                    +size-md(3.8)
-                &__img
-                    +size(12)
-                    +size-md(8.2)
-        &:last-child
-            .project-card
-                &__title
-                    .page-title
-                        padding-top: 19px
-                &__text
-                    padding: 0 23px 25px
-
-        &:nth-child(2)
-            +size-md(6)
-            +shift-md-right(1)
-            .project-card
-                &__text
-                    +size-md(12)
-
-                    padding: 0
-
-                &__description
-                    +size-md(8)
-
-        &:nth-child(3)
-            +size-md(5)
-            padding-top: 52px
-            padding-left: 10px
-            .project-card
-                &__title
-                    .page-title
-                        padding-top: 32px
-                &__text
-                    width: 75%
-                    padding: 0 0 0 62px
-        // ~50% card
-        &:nth-child(2),
-        &:nth-child(3)
-            flex-direction: column
-            .project-card
-                &__img
-                    +size-md(12)
-
-                &__description
-                    padding-top: 33px
-        // -full card            
-        &:nth-child(4)
-            flex-direction: column
-            // 
-            .project-card
-                &__title
-                    .page-title
-                        padding-top: 44px
-                &__img
-                    +size-md(12)
-                &__text
-                    +size-md(12)
-                    flex-direction: row
-                    align-items: flex-end
-                    padding: 0 8px 0px
-                &__description
-                    width: 28%
-        // -50% card            
-        &:nth-child(5)
-            +size-md(5)
-            +shift-md-right(1)
-            padding-top: 31px
-            flex-direction: column
-            .project-card
-                &__text
-                    padding: 0
-                &__title
-                    .page-title
-                        padding-top: 17px
-                &__description
-                    padding-top: 33px
-                    width: 70%
-        &:nth-child(6)
-            +size-md(6)
-            flex-direction: column
-            .project-card
-                &__text
-                    padding: 0
-                &__description
-                    padding-top: 33px
-                    width: 70%
-
-        &:nth-child(7)
-            +size-md(5)
-            flex-direction: column
-            margin: 0 auto
-            padding-top: 78px
-            position: relative
-            left: -17px
-
-            .project-card
-                &__title
-                    .page-title
-                        padding-top: 23px
-                &__text
-                    padding: 0
-                &__description
-                    padding-top: 33px
-                    width: 70%
-
 // /*sing*/
 // $sing-x: 255px
 // $sing-y: 84px
@@ -506,22 +347,253 @@ header
 .swiper
     width: 50%
     overflow: unset
+    position: relative
     &-wrapper
         align-items: center
+
+.page-btn.testimonials-slider__btn 
+    display: inline-block
+    position: relative
+    &-prev
+        &::after
+            transform: rotate(180deg)
+    &::after
+        display: flex
+        content: ''
+        background: url(../assets/icons/svg/spriteSVG.svg)
+        background-position: 97.47222222222223% 0
+        width: 44px
+        height: 44px
+        position: absolute
+        top: 0
+        left: 0
+
+/*projects*/
+.projects
+    padding: 34px 0
+    &-inner
+        +row-flex
+        padding: 0 40px
+.project
+    &-card
+        +col
+        display: flex
+        padding-top: 64px
+
+        &__img
+            overflow: hidden
+
+            border-radius: 26px
+            .page-picture
+                +transitionBase
+                img
+                    // background: rgba(0,0,0, .5)
+        &__text
+
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            box-sizing: border-box
+            padding: 0 12px 10px
+        &__title
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .page-title
+                padding-top: 25px
+        &__subtitle
+            padding-top: 3px
+
+        &:hover
+            .project-card__img
+                .page-picture
+                    transform: scale(1.2)
+
+        &:first-child,
+        &:last-child
+
+            .project-card
+                &__title
+                    flex-direction: column
+                    align-items: flex-start
+                    .project-card__date
+                        order: 0
+                    .page-title-h2
+                        order: 1
+                &__text
+                    +size(12)
+                    +size-md(3.8)
+                &__img
+                    +size(12)
+                    +size-md(8.2)
+        &:last-child
+            .project-card
+                &__title
+                    .page-title
+                        padding-top: 19px
+                &__text
+                    padding: 0 23px 25px
+
+        &:nth-child(2)
+            +size-md(6)
+            +shift-md-right(1)
+            .project-card
+                &__text
+                    +size-md(12)
+
+                    padding: 0
+
+                &__description
+                    +size-md(8)
+
+        &:nth-child(3)
+            +size-md(5)
+            padding-top: 52px
+            padding-left: 10px
+            .project-card
+                &__title
+                    .page-title
+                        padding-top: 32px
+                &__text
+                    width: 75%
+                    padding: 0 0 0 62px
+        // ~50% card
+        &:nth-child(2),
+        &:nth-child(3)
+            flex-direction: column
+            .project-card
+                &__img
+                    +size-md(12)
+
+                &__description
+                    padding-top: 33px
+        // -full card            
+        &:nth-child(4)
+            flex-direction: column
+            // 
+            .project-card
+                &__title
+                    .page-title
+                        padding-top: 44px
+                &__img
+                    +size-md(12)
+                &__text
+                    +size-md(12)
+                    flex-direction: row
+                    align-items: flex-end
+                    padding: 0 8px 0px
+                &__description
+                    width: 28%
+        // -50% card            
+        &:nth-child(5)
+            +size-md(5)
+            +shift-md-right(1)
+            padding-top: 31px
+            flex-direction: column
+            .project-card
+                &__text
+                    padding: 0
+                &__title
+                    .page-title
+                        padding-top: 17px
+                &__description
+                    padding-top: 33px
+                    width: 70%
+        &:nth-child(6)
+            +size-md(6)
+            flex-direction: column
+            .project-card
+                &__text
+                    padding: 0
+                &__description
+                    padding-top: 33px
+                    width: 70%
+
+        &:nth-child(7)
+            +size-md(5)
+            flex-direction: column
+            margin: 0 auto
+            padding-top: 78px
+            position: relative
+            left: -17px
+
+            .project-card
+                &__title
+                    .page-title
+                        padding-top: 23px
+                &__text
+                    padding: 0
+                &__description
+                    padding-top: 33px
+                    width: 70%
+
 /*testimonials*/
 .testimonials
-    margin-top: 96px
-    background-color: $color_black
+    padding-top: 96px
 
     .page-title
         color: $color_white
+        &-h3
+            +md-block
+                font-size: 42px
+                line-height: 100%
+    .page-title-caption-3
+        letter-spacing: -0.05em !important
+        padding-top: 10px
+
+    &-inner
+        overflow: hidden
+        background-color: $color_black
+        padding: 84px 40px
+        border-radius: 26px
+    &-slider
+        padding-top: 72px
+        .swiper
+            position: relative
+            left: -32px
+
+        &__toggles
+            position: absolute
+            top: -17%
+            right: -43%
+            .swiper-button-prev
+                left: 0
+                
+            .swiper-button-next
+                right: 0
+
     &-slide
+        position: relative
         display: flex
         align-items: center
         flex-direction: column
+        z-index: 10
+        margin-right: -170px
+        margin-left: 170px
+
+        &.swiper-slide-prev,
+        &.swiper-slide-next
+            position: relative
+            z-index: 30
+        &.swiper-slide-prev
+
+        &.swiper-slide-next
+
         &.swiper-slide-active
+            right: 0
+            z-index: 50
+
+            margin-left: 0
+
+            ~ .testimonials-slide
+                // margin-left: -170px
+                margin-left: 12px
+            .testimonials-slide__name
+                display: block
             .testimonials-slide__img-mask
-                max-width: 640px
+                max-width: 620px
+                max-height: 620px
+                min-height: 620px
         &__img
             width: 100%
             &-mask
@@ -537,16 +609,16 @@ header
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.24%, rgba(0, 0, 0, 0.56) 73.1%), url()
                 background: #fff
                 border-radius: 100%
+                // +transitionBase
                 &.isActive
                     max-width: 640px
-                    max-height: 740px
+                    max-height: 740px !important
 
                     -webkit-mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
                     mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
                     mask-repeat: no-repeat
                     mask-position: center
 
-                    
             .page-picture
                 justify-content: center
                 img
@@ -556,8 +628,11 @@ header
                     // min-height: 740px
                     object-fit: cover
 
-    &__name
-        text-align: center
+        &__name
+            text-align: center
+            position: absolute
+            bottom: 40px
+            display: none
 
 /*ui*/
 .ui
