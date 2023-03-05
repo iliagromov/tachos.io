@@ -3,8 +3,13 @@ mixin slide(props)
     .testimonials-slide.swiper-slide 
         .testimonials-slide__img
             .testimonials-slide__img-mask(class=props.isActive1 && 'isActive' )
-                picture.page-picture
-                    img(src=props.imgPoster, alt="" )
+                //- picture.page-picture
+                //-     img(src=props.imgPoster, alt="" )
+                video.page-picture(controls="true" poster=props.imgPoster) 
+                    source(src="../../assets/images/png/video-testimonial.mp4" type="video/mp4")
+                .testimonials-slide__img-btn-play
+                    #timer.testimonials-slide__img-btn-play
+                    button.page-btn(id="play" aria-label="Play" role="button") ►
         .testimonials-slide__name
             h3.page-title.page-title-h3 #{props.title}
             .page-title-caption.page-title-caption-3 #{props.subtitle}
@@ -16,6 +21,8 @@ mixin slides(array)
 section.testimonials
     .wrapper
         .testimonials-inner
+           
+  
             //- img(src="../../assets/images/png/img-testimonial.jpg", alt="")
             .page-title.page-title-h1 Отзывы
             //- slider
@@ -24,7 +31,7 @@ section.testimonials
                     .testimonials-slider__toggles
                         .testimonials-slider__btn
                             button.swiper-button-prev.page-btn.testimonials-slider__btn-prev
-                        .testimonials-slider__btn.testimonials-slider__btn_playing
+                        .testimonials-slider__btn#progress-bar
                             .testimonials-slider__btn-progress-bar
                             button.swiper-button-next.page-btn.testimonials-slider__btn-next
                             

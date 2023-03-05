@@ -50,7 +50,7 @@
                 width: 66px
                 height: 66px
                 border-radius: 100%
-                background: conic-gradient($color_orange 150.6deg, transparent 0deg)
+                // background: conic-gradient($color_orange 150.6deg, transparent 0deg)
                 transform: rotate(90deg)
             &_playing
                 .page-btn
@@ -131,6 +131,10 @@
                 background: #fff
                 border-radius: 100%
                 // +transitionBase
+                display: flex
+                align-items: center
+                position: relative
+
                 &.isActive
                     max-width: 640px
                     max-height: 740px !important
@@ -142,12 +146,18 @@
 
             .page-picture
                 justify-content: center
+                width: 70%
+                height: 79%
+                object-fit: cover
+                position: absolute
+                left: 87px
                 img
 
                     width: 100%
                     height: 100%
                     // min-height: 740px
                     object-fit: cover
+                v
 
         &__name
             text-align: center
@@ -205,4 +215,4 @@
             &.isActive
                 display: flex
                 // visibility: visible
-        
+
