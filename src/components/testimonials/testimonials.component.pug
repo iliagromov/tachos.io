@@ -18,6 +18,7 @@ section.testimonials
         .testimonials-inner
             //- img(src="../../assets/images/png/img-testimonial.jpg", alt="")
             .page-title.page-title-h1 Отзывы
+            //- slider
             .testimonials-slider
                 .swiper.testimonialSwiper
                     .testimonials-slider__toggles
@@ -50,3 +51,30 @@ section.testimonials
                                     video: ''
                                 },
                             ])
+            //- info-block
+            .testimonials__steps
+                .testimonials__steps-title
+                    .page-title.page-title-h1 Cоздаем решения, которые определяют и изменяют мир вокруг нас прямо здесь и сейчаc
+                    .testimonials__steps-title_marker-after
+                        include ../../assets/images/svg/marker-after.svg
+                .testimonials-steps
+                    .testimonials-steps__nav
+                        .tab-link.page-text.isActive Выстраиваем <br>процесс разработки 
+                        .tab-link.page-text Проводим <br>технический аудит
+                        .tab-link.page-text Запускаем с нуля, <br>поддерживаем и развиваем
+                        .tab-link.page-text Консультируем как лушче <br>запустить продукт, фичу, на каких технологиях
+
+                    .testimonials-steps__contents
+                        .testimonials-steps__content.isActive
+                            picture.page-picture
+                                img(src="../../assets/images/png/testimonial-steps.png", alt="testimonial-steps")
+                        .testimonials-steps__content
+                            picture.page-picture
+                                img(src="../../assets/images/png/testimonial-steps.png", alt="testimonial-steps")
+                        .testimonials-steps__content
+                            picture.page-picture
+                                    img(src="../../assets/images/png/testimonial-steps.png", alt="testimonial-steps")
+                        .testimonials-steps__content
+                            picture.page-picture
+                                    img(src="../../assets/images/png/testimonial-steps.png", alt="testimonial-steps")
+script(src="../../js/testimonials/testimonials.component.js") 
