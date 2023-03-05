@@ -1,10 +1,17 @@
 +reset()
 /* __reset__ */
 /* __base__ */
+//   font-family: var(--font-family,CircularSpTitle,CircularSpTitle-Tall,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,))
+// --fallback-fonts: Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic;
+// scrollbar-color: hsla(0,0%,100%,.3) transparent;
+// font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,));
+// font-size: 0.875rem;
+
+$fallback-fonts: Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic;
+
 .wrapper
   +wrapper()
-
-+scrollbar($color_scrollbar-track, $color_scrollbar-thumb)
+  +scrollbar($color_scrollbar-track, $color_scrollbar-thumb)
 
 @font-face 
   +font($font, $fontBold)
@@ -36,6 +43,7 @@ html
 
 body 
   font-family: SFMono-Regular
+  // font-family: $fallback-fonts,CircularSpTitle,CircularSpTitle-Tall,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva
   color: $color_black
   background: $color_white
   // margin: 0

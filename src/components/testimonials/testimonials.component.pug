@@ -21,8 +21,12 @@ section.testimonials
             .testimonials-slider
                 .swiper.testimonialSwiper
                     .testimonials-slider__toggles
-                        button.swiper-button-prev.page-btn.testimonials-slider__btn.testimonials-slider__btn-prev
-                        button.swiper-button-next.page-btn.testimonials-slider__btn.testimonials-slider__btn-next
+                        .testimonials-slider__btn
+                            button.swiper-button-prev.page-btn.testimonials-slider__btn-prev
+                        .testimonials-slider__btn.testimonials-slider__btn_playing
+                            .testimonials-slider__btn-progress-bar
+                            button.swiper-button-next.page-btn.testimonials-slider__btn-next
+                            
 
                     .testimonials-slider__items.swiper-wrapper
                             +slides([

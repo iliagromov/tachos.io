@@ -3,7 +3,7 @@ var swiper = new Swiper(".testimonialSwiper", {
     slidesPerView: 1,
     initialSlide: 1,
     centeredSlides: true,
-    loop: true,
+    loop: false,
     
     navigation: {
         nextEl: ".swiper-button-next",
