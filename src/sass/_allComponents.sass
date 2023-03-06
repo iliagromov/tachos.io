@@ -532,14 +532,15 @@ header
         padding: 84px 40px 48px
         border-radius: 26px
     &-slider
-        padding-top: 72px
+        padding-top: 12px
         .swiper
             position: relative
             left: -32px
-
+        &__items
+            min-height: 740px
         &__toggles
             position: absolute
-            top: -21%
+            top: -10%
             right: -55%
             display: flex
 
@@ -623,15 +624,54 @@ header
             ~ .testimonials-slide
                 // margin-left: -170px
                 margin-left: 12px
-            .testimonials-slide__name
-                display: block
-            .testimonials-slide__img-mask
-                max-width: 620px
-                max-height: 620px
-                min-height: 620px
+            .testimonials-slide
+                &__name
+                    display: block
+                &__img_mask
+                    max-width: 620px
+                    max-height: 620px
+                    min-height: 620px
+                &__img-poster
+                    display: none
+                &__img-video
+                    display: block
+
+        //- img and video
         &__img
             width: 100%
-            &-mask
+            height: 100%
+            &-poster
+                .page-picture
+                    // justify-content: center
+                    // width: 70%
+                    // height: 79%
+                    // object-fit: cover
+                    // position: absolute
+                    // left: 87px
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+            &-video
+                display: none
+                position: absolute
+                height: 100%
+                width: 100%
+                .page-video
+                    pointer-events: none
+                    object-fit: cover
+                    height: 100%
+                    width: 100%
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 3.24%, rgba(0, 0, 0, 0.56) 3.1%)
+                &-btn-play
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    #timer
+                        display: none
+            // mask for block img and video
+            &_mask
                 mask-size: 100%
                 max-width: 580px
                 max-height: 580px
@@ -641,10 +681,9 @@ header
                 min-height: 580px
                 margin: 0 auto
                 overflow: hidden
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.24%, rgba(0, 0, 0, 0.56) 73.1%), url()
-                background: #fff
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.24%, rgba(0, 0, 0, 0.56) 73.1%)
                 border-radius: 100%
-                // +transitionBase
+                +transitionBase
                 display: flex
                 align-items: center
                 position: relative
@@ -652,26 +691,12 @@ header
                 &.isActive
                     max-width: 640px
                     max-height: 740px !important
+                    min-height: 740px !important
 
                     -webkit-mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
                     mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
                     mask-repeat: no-repeat
                     mask-position: center
-
-            .page-picture
-                justify-content: center
-                width: 70%
-                height: 79%
-                object-fit: cover
-                position: absolute
-                left: 87px
-                img
-
-                    width: 100%
-                    height: 100%
-                    // min-height: 740px
-                    object-fit: cover
-                v
 
         &__name
             text-align: center
@@ -680,7 +705,7 @@ header
             display: none
 
     &__steps
-        padding-top: 12.5%
+        padding-top: 8%
         &-title
             width: 80%
             position: relative
@@ -729,7 +754,6 @@ header
             &.isActive
                 display: flex
                 // visibility: visible
-
 
 /*ui*/
 .ui

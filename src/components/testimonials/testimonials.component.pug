@@ -1,15 +1,16 @@
 //-testimonials
 mixin slide(props)
     .testimonials-slide.swiper-slide 
-        .testimonials-slide__img
-            .testimonials-slide__img-mask(class=props.isActive1 && 'isActive' )
-                //- picture.page-picture
-                //-     img(src=props.imgPoster, alt="" )
-                video.page-picture(controls="true" poster=props.imgPoster) 
+        .testimonials-slide__img.testimonials-slide__img_mask
+            .testimonials-slide__img-poster
+                picture.page-picture
+                    img(src=props.imgPoster, alt="" )
+            .testimonials-slide__img-video
+                video.page-video.page-picture(playsinline muted poster=props.imgPoster ) 
                     source(src="../../assets/images/png/video-testimonial.mp4" type="video/mp4")
-                .testimonials-slide__img-btn-play
-                    #timer.testimonials-slide__img-btn-play
-                    button.page-btn(id="play" aria-label="Play" role="button") ►
+                .testimonials-slide__img-video-btn-play
+                    #timer
+                    button.page-btn(aria-label="Play" role="button") ►
         .testimonials-slide__name
             h3.page-title.page-title-h3 #{props.title}
             .page-title-caption.page-title-caption-3 #{props.subtitle}
@@ -41,7 +42,7 @@ section.testimonials
                                 {
                                     title: 'Дима Энтелис',
                                     subtitle: 'CTO Entelis team',
-                                    imgPoster: 'assets/images/png/testimonial-4.png',
+                                    imgPoster: 'assets/images/png/testimonial-2.png',
                                     video: ''
                                 },
                                 {
