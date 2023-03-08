@@ -1,4 +1,7 @@
 //-testimonials
+
+
+
 mixin slide(props)
     .testimonials-slide.swiper-slide 
         .testimonials-slide__img.testimonials-slide__img_mask
@@ -7,7 +10,7 @@ mixin slide(props)
                     img(src=props.imgPoster, alt="" )
             .testimonials-slide__img-video
                 video.page-video.page-picture(playsinline muted poster=props.imgPoster ) 
-                    source(src="../../assets/images/png/video-testimonial.mp4" type="video/mp4")
+                    source(src="assets/images/png/video-testimonial.mp4" type="video/mp4")
                 .testimonials-slide__img-video-btn-play
                     #timer
                     button.page-btn(aria-label="Play" role="button") ►
@@ -75,14 +78,14 @@ section.testimonials
                     .testimonials-steps__contents
                         .testimonials-steps__content.isActive
                             picture.page-picture
-                                img(src="../../assets/images/png/testimonial-steps.png", alt="testimonial-steps")
+                                img(src="assets/images/png/testimonial-steps.png", alt="testimonial-steps")
                         .testimonials-steps__content
                             picture.page-picture
-                                img(src="../../assets/images/png/testimonial-steps.png", alt="testimonial-steps")
+                                img(src="assets/images/png/testimonial-steps.png", alt="testimonial-steps")
                         .testimonials-steps__content
                             picture.page-picture
-                                    img(src="../../assets/images/png/testimonial-steps.png", alt="testimonial-steps")
+                                    img(src="assets/images/png/testimonial-steps.png", alt="testimonial-steps")
                         .testimonials-steps__content
                             picture.page-picture
-                                    img(src="../../assets/images/png/testimonial-steps.png", alt="testimonial-steps")
-script(src="../../js/testimonials/testimonials.component.js") 
+                                    img(src="assets/images/png/testimonial-steps.png", alt="testimonial-steps")
+script(src="js/testimonials/testimonials.component.js") 

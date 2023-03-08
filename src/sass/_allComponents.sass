@@ -68,7 +68,7 @@
       z-index: 10
       .page-link
         margin: 0 13px
-header
+
 .header
     position: sticky
     top: 0
@@ -634,7 +634,8 @@ header
                 &__img-poster
                     display: none
                 &__img-video
-                    display: block
+                    // display: block
+                    visibility: visible
 
         //- img and video
         &__img
@@ -653,7 +654,7 @@ header
                         height: 100%
                         object-fit: cover
             &-video
-                display: none
+                visibility: hidden
                 position: absolute
                 height: 100%
                 width: 100%
@@ -691,10 +692,11 @@ header
                 &.isActive
                     max-width: 640px
                     max-height: 740px !important
-                    min-height: 740px !important
-
-                    -webkit-mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
-                    mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
+                    // @supports(-webkit-mask-image: url(../assets/images/svg/testimonial-mask-img.svg)) or (mask-image: url(../assets/images/svg/testimonial-mask-img.svg))
+                    // mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
+                    // mask-image: url(../assets/images/png/testimonial-mask-img.png)
+                    // mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%)
+                    // background-image: url(../assets/images/svg/testimonial-mask-img.svg)
                     mask-repeat: no-repeat
                     mask-position: center
 

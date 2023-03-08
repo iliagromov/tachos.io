@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // баг со свайпом на слайде
 
     function progressLoop() {
-        setInterval(function () {
+        
             const progressBar = document.querySelector("#progress-bar");
             const progressBarPlayingLine = document.querySelector(".testimonials-slider__btn-progress-bar");
             const timer = document.getElementById("timer");
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             let val = Math.round((video.currentTime / video.duration) * 360);
 
-            if (val > 0) {
+            if (val >= 0) {
                 console.log(val);
                 progressBar.classList.add('testimonials-slider__btn_playing')
             }
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
             timer.innerHTML = Math.round(video.currentTime) + " seconds";
-        });
+       
     }
 
     // function playPause() {
