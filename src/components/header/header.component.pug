@@ -6,13 +6,18 @@ header.header
                   include ../../assets/images/svg/logo-header.svg
                     
             .header__nav
-                nav.nav 
-                    a.page-link(href="javascript:void(0)") Проекты 
-                        span.page-link_counter 10
-                    a.page-link(href="javascript:void(0)") Команда 
-                    a.page-link(href="javascript:void(0)") Услуги 
-                    a.page-link(href="javascript:void(0)") Отзывы 
+                .header__nav_desktop
+                    nav.nav 
+                        a.page-link(href="javascript:void(0)") Проекты 
+                            span.page-link_counter 10
+                        a.page-link(href="javascript:void(0)") Команда 
+                        a.page-link(href="javascript:void(0)") Услуги 
+                        a.page-link(href="javascript:void(0)") Отзывы 
+                
+                .header__nav_mobile
+                    button.page-link.js-mobile-menu(href="/" type="button") Меню
+
             .header__action
-                button.page-btn Обсудить проект
+                button.page-btn(type="button") Обсудить проект
             
                     

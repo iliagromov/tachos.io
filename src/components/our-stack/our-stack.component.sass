@@ -7,11 +7,21 @@
         &__items
             position: relative
             display: flex
+            flex-wrap: wrap
             padding: 64px 31px
-            margin: 0 -20px 
+            margin: 0 -10px 
+            +md-block
+                flex-wrap: nowrap
+                margin: 0 -20px 
         &__item
-            margin: 0 20px
+           
             cursor: pointer
+            margin: 0 10px 10px
+            +to($break_sm)
+                width: calc(25% - 20px)
+            +md-block
+                margin: 0 20px
+            
             &-img
                 +transitionBase
                 filter: grayscale(100%)
@@ -21,8 +31,10 @@
                 position: absolute
                 width: 77%
                 text-align: center
-                bottom: -13%
+                bottom: -40%
                 left: 50%
+                +md-block
+                    bottom: -13%
                 transform: translateX(-50%)
                 +transitionBase
             &:hover

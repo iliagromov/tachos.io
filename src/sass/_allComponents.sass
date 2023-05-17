@@ -1,27 +1,48 @@
 /*banner*/
 .banner
+    padding-top: 110px
+    padding-bottom: 18px
+    +md-block
+        padding-top: 52px
+    &-inner
+        
     &__slogan
         display: flex
         justify-content: center
-        padding-top: 52px
+        +md-block
+            height: 301px
+
+        .page-svg
+            width: 100%
     &__description
         text-align: center
         &-subtitle
+            // FIXME: переопределение 
             .page-title-caption-1
-                position: relative
-                left: -4px
-                top: -4px
-                font-size: 107.888px
-                line-height: 93px
-                letter-spacing: -0.085em
-                transform: rotate(-4.34deg)
-        &-text 
-            .page-text 
-                font-size: 40px
-                line-height: 46px
-                width: 60%
-                margin: 10px auto
-    
+                font-size: 46px
+                line-height: 57px
+                transform: rotate(-3.85deg)
+
+                +md-block
+                    position: relative
+                    left: -4px
+                    top: -4px
+                    font-size: 107.888px
+                    line-height: 93px
+                    letter-spacing: -0.085em
+                    transform: rotate(-4.34deg)
+        &-text
+            // FIXME: переопределение 
+            .page-text
+                font-size: 24px
+                line-height: 28px
+                letter-spacing: 0.0041em
+                padding-top: 4px
+                +md-block
+                    font-size: 40px
+                    line-height: 46px
+                    width: 60%
+                    margin: 10px auto
 
 /* __debugGrid__ */
 .debugGrid
@@ -48,26 +69,44 @@
 /* __debugGrid__ */
 /*footer*/
 .footer
-  padding: 40px 0 0
+  padding: 30px 0 0
   &-inner
     position: relative
 
   &__feedback
-    position: absolute
-    left: 128px
-    bottom: -36px
+    +to($break_sm)
+      margin-top: 30px
+    +md-block
+      position: absolute
+      left: 128px
+      bottom: -36px
     // visibility: hidden
+  &__nav
+      width: 100%
+      +to($break_sm)
+        order: 0
+      .nav
+        display: flex
+        position: relative
+        z-index: 10
+        flex-direction: column
+        .page-link
+          margin: 12px 0
+          +md-block
+            margin: 0 13px
+  &__city 
+     +to($break_sm)
+        order: 1
+  &__author 
+     +to($break_sm)
+        order: 2
   &__row
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
     padding-top: 18%
    
-    .nav
-      display: flex
-      position: relative
-      z-index: 10
-      .page-link
-        margin: 0 13px
+   
 
 .header
     position: sticky
@@ -93,15 +132,27 @@
                             fill: $color_orange
                         
         z-index: 20
+
     &__nav
-        position: absolute
-        top: 16px
-        width: 100%
-        text-align: center
-        z-index: 10
+        +md-block
+            position: absolute
+            width: 100%
+        &_desktop
+            display: none
+            +md-block
+                display: block
+                top: 16px
+                text-align: center
+                z-index: 10
+        &_mobile
+            +md-block
+                display: none
 
     &__action
         z-index: 20
+        display: none
+        +md-block
+            display: block
 
        
 .nav
@@ -116,11 +167,21 @@
         &__items
             position: relative
             display: flex
+            flex-wrap: wrap
             padding: 64px 31px
-            margin: 0 -20px 
+            margin: 0 -10px 
+            +md-block
+                flex-wrap: nowrap
+                margin: 0 -20px 
         &__item
-            margin: 0 20px
+           
             cursor: pointer
+            margin: 0 10px 10px
+            +to($break_sm)
+                width: calc(25% - 20px)
+            +md-block
+                margin: 0 20px
+            
             &-img
                 +transitionBase
                 filter: grayscale(100%)
@@ -130,8 +191,10 @@
                 position: absolute
                 width: 77%
                 text-align: center
-                bottom: -13%
+                bottom: -40%
                 left: 50%
+                +md-block
+                    bottom: -13%
                 transform: translateX(-50%)
                 +transitionBase
             &:hover
@@ -144,9 +207,12 @@
 
 /*our-team*/
 .our-team
-    padding: 40px 0
+    padding: 48px 0
     .page-title
         text-align: center
+    .wrapper
+        +to($break_sm)
+            padding: 0
     &-inner
         position: relative
         background: $color_light-gray
@@ -179,162 +245,203 @@
             margin: 13px 20px
 /*projects*/
 .projects
-    padding: 34px 0
+    padding: 0
+    +md-block
+        padding: 34px 0
     &-inner
         +row-flex
-        padding: 0 40px
+        +md-block
+            padding: 0 40px
 .project
     &-card
         +col
         display: flex
-        padding-top: 64px
+        flex-wrap: wrap
+        padding-top: 45px
 
         &__img
             overflow: hidden
-
             border-radius: 26px
+            
+            +to($break_sm)
+                width: 335px
+                height: 360px
+
             .page-picture
                 +transitionBase
+                height: 100%
                 img
+                    width: 100%
+                    // object-fit: cover
                     // background: rgba(0,0,0, .5)
         &__text
 
             display: flex
-            flex-direction: column
+            flex-wrap: wrap
             justify-content: space-between
             box-sizing: border-box
-            padding: 0 12px 10px
+            
+            +md-block
+                flex-direction: column
+                padding: 0 12px 10px
         &__title
             display: flex
             align-items: center
             justify-content: space-between
+            &-box
+                width: 100%
+                padding-top: 15px
+                +md-block
+                    padding-top: 25px
+
             .page-title
-                padding-top: 25px
+                font-size: 32px
+                line-height: 100%
+
+
+
         &__subtitle
-            padding-top: 3px
+            padding-top: 6px
+            .page-title-caption-3
+                font-size: 42px
+
+        &__description 
+            padding-top: 22px
 
         &:hover
             .project-card__img
                 .page-picture
                     transform: scale(1.2)
-
-        &:first-child,
-        &:last-child
-
-            .project-card
-                &__title
-                    flex-direction: column
-                    align-items: flex-start
-                    .project-card__date
-                        order: 0
-                    .page-title-h2
-                        order: 1
-                &__text
-                    +size(12)
-                    +size-md(3.8)
-                &__img
-                    +size(12)
-                    +size-md(8.2)
-        &:last-child
-            .project-card
-                &__title
-                    .page-title
-                        padding-top: 19px
-                &__text
-                    padding: 0 23px 25px
-
-        &:nth-child(2)
-            +size-md(6)
-            +shift-md-right(1)
-            .project-card
-                &__text
-                    +size-md(12)
-
-                    padding: 0
-
-                &__description
-                    +size-md(8)
-
-        &:nth-child(3)
-            +size-md(5)
-            padding-top: 52px
-            padding-left: 10px
-            .project-card
-                &__title
-                    .page-title
-                        padding-top: 32px
-                &__text
-                    width: 75%
-                    padding: 0 0 0 62px
-        // ~50% card
-        &:nth-child(2),
-        &:nth-child(3)
-            flex-direction: column
-            .project-card
-                &__img
-                    +size-md(12)
-
-                &__description
-                    padding-top: 33px
-        // -full card            
-        &:nth-child(4)
-            flex-direction: column
-            // 
-            .project-card
-                &__title
-                    .page-title
-                        padding-top: 44px
-                &__img
-                    +size-md(12)
-                &__text
-                    +size-md(12)
-                    flex-direction: row
-                    align-items: flex-end
-                    padding: 0 8px 0px
-                &__description
-                    width: 28%
-        // -50% card            
+        
+        &:nth-child(3),
         &:nth-child(5)
-            +size-md(5)
-            +shift-md-right(1)
-            padding-top: 31px
-            flex-direction: column
             .project-card
-                &__text
-                    padding: 0
-                &__title
-                    .page-title
-                        padding-top: 17px
-                &__description
-                    padding-top: 33px
-                    width: 70%
-        &:nth-child(6)
-            +size-md(6)
-            flex-direction: column
-            .project-card
-                &__text
-                    padding: 0
-                &__description
-                    padding-top: 33px
-                    width: 70%
+                &__img
+                    margin-bottom: 30px
+                    +md-block
+                        margin-bottom: 0
+        +md-block
+            &:first-child,
+            &:last-child
 
-        &:nth-child(7)
-            +size-md(5)
-            flex-direction: column
-            margin: 0 auto
-            padding-top: 78px
-            position: relative
-            left: -17px
+                .project-card
+                    &__title
+                        flex-direction: column
+                        align-items: flex-start
+                        .project-card__date
+                            order: 0
+                        .page-title-h2
+                            order: 1
+                    &__text
+                        +size(12)
+                        +size-md(3.8)
+                    &__img
+                        +size(12)
+                        +size-md(8.2)
+            &:last-child
+                .project-card
+                    &__title
+                        .page-title
+                            padding-top: 19px
+                    &__text
+                        padding: 0 23px 25px
 
-            .project-card
-                &__title
-                    .page-title
-                        padding-top: 23px
-                &__text
-                    padding: 0
-                &__description
-                    padding-top: 33px
-                    width: 70%
+            &:nth-child(2)
+                +size-md(6)
+                +shift-md-right(1)
+                .project-card
+                    &__text
+                        +size-md(12)
+
+                        padding: 0
+
+                    &__description
+                        +size-md(8)
+
+            &:nth-child(3)
+                +size-md(5)
+                padding-top: 52px
+                padding-left: 10px
+                .project-card
+                    &__title
+                        .page-title
+                            padding-top: 32px
+                    &__text
+                        width: 75%
+                        padding: 0 0 0 62px
+            // ~50% card
+            &:nth-child(2),
+            &:nth-child(3)
+                flex-direction: column
+                .project-card
+                    &__img
+                        +size-md(12)
+                        margin-bottom: 30px
+                        +md-block
+                            margin-bottom: 0
+
+                    &__description
+                        padding-top: 33px
+            // -full card            
+            &:nth-child(4)
+                flex-direction: column
+                // 
+                .project-card
+                    &__title
+                        .page-title
+                            padding-top: 44px
+                    &__img
+                        +size-md(12)
+                       
+                    &__text
+                        +size-md(12)
+                        flex-direction: row
+                        align-items: flex-end
+                        padding: 0 8px 0px
+                    &__description
+                        width: 28%
+            // -50% card            
+            &:nth-child(5)
+                +size-md(5)
+                +shift-md-right(1)
+                padding-top: 31px
+                flex-direction: column
+                .project-card
+                    &__text
+                        padding: 0
+                    &__title
+                        .page-title
+                            padding-top: 17px
+                    &__description
+                        padding-top: 33px
+                        width: 70%
+            &:nth-child(6)
+                +size-md(6)
+                flex-direction: column
+                .project-card
+                    &__text
+                        padding: 0
+                    &__description
+                        padding-top: 33px
+                        width: 70%
+
+            &:nth-child(7)
+                +size-md(5)
+                flex-direction: column
+                margin: 0 auto
+                padding-top: 78px
+                position: relative
+                left: -17px
+
+                .project-card
+                    &__title
+                        .page-title
+                            padding-top: 23px
+                    &__text
+                        padding: 0
+                    &__description
+                        padding-top: 33px
+                        width: 70%
 
 // /*sing*/
 // $sing-x: 255px
@@ -504,9 +611,11 @@
 /*swiper*/
 
 .swiper
-    width: 50%
+    width: 80%
     overflow: unset
     position: relative
+    +md-block
+        width: 50%
     &-wrapper
         align-items: center
 .testimonials-slider__btn 
@@ -514,14 +623,25 @@
 
 /*testimonials*/
 .testimonials
-    padding-top: 96px
 
+    padding-top: 42px
+
+    +md-block
+        padding-top: 96px
+    .wrapper
+        +to($break_sm)
+            padding: 0
     .page-title
         color: $color_white
+        &-h1
+            +to($break_sm)
+                font-size: 32px
+
         &-h3
+            line-height: 100%
+
             +md-block
                 font-size: 42px
-                line-height: 100%
     .page-title-caption-3
         letter-spacing: -0.05em !important
         padding-top: 10px
@@ -529,31 +649,45 @@
     &-inner
         overflow: hidden
         background-color: $color_black
-        padding: 84px 40px 48px
+
         border-radius: 26px
+        padding: 71px 20px 48px
+        +md-block
+            padding: 84px 40px 48px
     &-slider
         padding-top: 12px
         .swiper
             position: relative
             left: -32px
         &__items
-            min-height: 740px
+            min-height: 387px
+            +md-block
+                min-height: 740px
         &__toggles
-            position: absolute
-            top: -10%
-            right: -55%
+
             display: flex
 
+            position: absolute
+
+            top: -51px
+            right: -68px
+            +md-block
+                top: -10%
+                right: -55%
             .swiper-button-prev
                 left: -11px
 
             .swiper-button-next
                 right: 0
         &__btn
-            width: 64px
-            height: 64px
+
             display: flex
             position: relative
+            width: 45px
+            height: 45px
+            +md-block
+                width: 64px
+                height: 64px
             &-prev
                 &::after
                     transform: translate(-50%, -50%) rotate(180deg) !important
@@ -577,8 +711,12 @@
 
                 background: #292930
                 border: 1px solid transparent
-                width: 64px
-                height: 64px
+                width: 45px
+                height: 45px
+                padding: 0
+                +md-block
+                    width: 64px
+                    height: 64px
                 top: 0
                 margin-top: 0
                 &[disabled]
@@ -604,8 +742,10 @@
         align-items: center
         flex-direction: column
         z-index: 10
-        margin-right: -170px
-        margin-left: 170px
+
+        +md-block
+            margin-right: -170px
+            margin-left: 170px
 
         &.swiper-slide-prev,
         &.swiper-slide-next
@@ -628,9 +768,13 @@
                 &__name
                     display: block
                 &__img_mask
-                    max-width: 620px
-                    max-height: 620px
-                    min-height: 620px
+                    max-width: 312px
+                    max-height: 312px
+                    min-height: 312px
+                    +md-block
+                        max-width: 620px
+                        max-height: 620px
+                        min-height: 620px
                 &__img-poster
                     display: none
                 &__img-video
@@ -673,32 +817,44 @@
                         display: none
             // mask for block img and video
             &_mask
-                mask-size: 100%
-                max-width: 580px
-                max-height: 580px
-                width: 100%
-                height: 100%
-                min-width: 580px
-                min-height: 580px
-                margin: 0 auto
-                overflow: hidden
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.24%, rgba(0, 0, 0, 0.56) 73.1%)
-                border-radius: 100%
-                +transitionBase
+
                 display: flex
                 align-items: center
                 position: relative
 
+                margin: 0 auto
+                overflow: hidden
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.24%, rgba(0, 0, 0, 0.56) 73.1%)
+                border-radius: 100%
+                mask-size: 100%
+
+                width: 100%
+                height: 100%
+
+                max-width: 312px
+                max-height: 312px
+                min-width: 312px
+                min-height: 312px
+                +md-block
+                    max-width: 580px
+                    max-height: 580px
+                    min-width: 580px
+                    min-height: 580px
+                +transitionBase
+
                 &.isActive
-                    max-width: 640px
-                    max-height: 740px !important
-                    // @supports(-webkit-mask-image: url(../assets/images/svg/testimonial-mask-img.svg)) or (mask-image: url(../assets/images/svg/testimonial-mask-img.svg))
-                    // mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
-                    // mask-image: url(../assets/images/png/testimonial-mask-img.png)
-                    // mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%)
-                    // background-image: url(../assets/images/svg/testimonial-mask-img.svg)
-                    mask-repeat: no-repeat
-                    mask-position: center
+                    max-width: 312px
+                    max-height: 312px
+                    +md-block
+                        max-width: 640px
+                        max-height: 740px !important
+                        // @supports(-webkit-mask-image: url(../assets/images/svg/testimonial-mask-img.svg)) or (mask-image: url(../assets/images/svg/testimonial-mask-img.svg))
+                        // mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
+                        // mask-image: url(../assets/images/png/testimonial-mask-img.png)
+                        // mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%)
+                        // background-image: url(../assets/images/svg/testimonial-mask-img.svg)
+                        mask-repeat: no-repeat
+                        mask-position: center
 
         &__name
             text-align: center
@@ -709,23 +865,35 @@
     &__steps
         padding-top: 8%
         &-title
-            width: 80%
+
             position: relative
+            +md-block
+                width: 80%
             &_marker-after
                 position: absolute
-                display: f
                 display: flex
                 width: 100%
                 height: 100%
                 background-repeat: no-repeat
-                max-width: 507px
-                top: -24%
-                right: -27%
-                max-height: 305px
+
+                max-width: 255px
+
+                max-height: 214px
+                top: 30%
+                right: 0
+                transform: rotate(342deg)
+                +md-block
+                    max-width: 507px
+                    max-height: 305px
+                    top: -24%
+                    right: -27%
         .page-title
             line-height: 105%
     &-steps
         display: flex
+        flex-wrap: wrap
+        +md-block
+            flex-wrap: nowrap
         padding-top: 9%
         &__nav
             display: flex
@@ -745,9 +913,12 @@
                     opacity: 1
                     border-bottom: 3px solid rgba($color_white, 1)
         &__contents
-            display: flex
+
             align-items: center
             justify-content: center
+            display: none
+            +md-block
+                display: flex
             +size(12)
             +size-md(6)
         &__content

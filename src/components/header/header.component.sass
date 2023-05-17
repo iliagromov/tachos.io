@@ -23,15 +23,27 @@
                             fill: $color_orange
                         
         z-index: 20
+
     &__nav
-        position: absolute
-        top: 16px
-        width: 100%
-        text-align: center
-        z-index: 10
+        +md-block
+            position: absolute
+            width: 100%
+        &_desktop
+            display: none
+            +md-block
+                display: block
+                top: 16px
+                text-align: center
+                z-index: 10
+        &_mobile
+            +md-block
+                display: none
 
     &__action
         z-index: 20
+        display: none
+        +md-block
+            display: block
 
        
 .nav

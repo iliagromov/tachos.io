@@ -1,13 +1,24 @@
 /*testimonials*/
 .testimonials
-    padding-top: 96px
 
+    padding-top: 42px
+
+    +md-block
+        padding-top: 96px
+    .wrapper
+        +to($break_sm)
+            padding: 0
     .page-title
         color: $color_white
+        &-h1
+            +to($break_sm)
+                font-size: 32px
+
         &-h3
+            line-height: 100%
+
             +md-block
                 font-size: 42px
-                line-height: 100%
     .page-title-caption-3
         letter-spacing: -0.05em !important
         padding-top: 10px
@@ -15,31 +26,45 @@
     &-inner
         overflow: hidden
         background-color: $color_black
-        padding: 84px 40px 48px
+
         border-radius: 26px
+        padding: 71px 20px 48px
+        +md-block
+            padding: 84px 40px 48px
     &-slider
         padding-top: 12px
         .swiper
             position: relative
             left: -32px
         &__items
-            min-height: 740px
+            min-height: 387px
+            +md-block
+                min-height: 740px
         &__toggles
-            position: absolute
-            top: -10%
-            right: -55%
+
             display: flex
 
+            position: absolute
+
+            top: -51px
+            right: -68px
+            +md-block
+                top: -10%
+                right: -55%
             .swiper-button-prev
                 left: -11px
 
             .swiper-button-next
                 right: 0
         &__btn
-            width: 64px
-            height: 64px
+
             display: flex
             position: relative
+            width: 45px
+            height: 45px
+            +md-block
+                width: 64px
+                height: 64px
             &-prev
                 &::after
                     transform: translate(-50%, -50%) rotate(180deg) !important
@@ -63,8 +88,12 @@
 
                 background: #292930
                 border: 1px solid transparent
-                width: 64px
-                height: 64px
+                width: 45px
+                height: 45px
+                padding: 0
+                +md-block
+                    width: 64px
+                    height: 64px
                 top: 0
                 margin-top: 0
                 &[disabled]
@@ -90,8 +119,10 @@
         align-items: center
         flex-direction: column
         z-index: 10
-        margin-right: -170px
-        margin-left: 170px
+
+        +md-block
+            margin-right: -170px
+            margin-left: 170px
 
         &.swiper-slide-prev,
         &.swiper-slide-next
@@ -114,9 +145,13 @@
                 &__name
                     display: block
                 &__img_mask
-                    max-width: 620px
-                    max-height: 620px
-                    min-height: 620px
+                    max-width: 312px
+                    max-height: 312px
+                    min-height: 312px
+                    +md-block
+                        max-width: 620px
+                        max-height: 620px
+                        min-height: 620px
                 &__img-poster
                     display: none
                 &__img-video
@@ -159,32 +194,44 @@
                         display: none
             // mask for block img and video
             &_mask
-                mask-size: 100%
-                max-width: 580px
-                max-height: 580px
-                width: 100%
-                height: 100%
-                min-width: 580px
-                min-height: 580px
-                margin: 0 auto
-                overflow: hidden
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.24%, rgba(0, 0, 0, 0.56) 73.1%)
-                border-radius: 100%
-                +transitionBase
+
                 display: flex
                 align-items: center
                 position: relative
 
+                margin: 0 auto
+                overflow: hidden
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.24%, rgba(0, 0, 0, 0.56) 73.1%)
+                border-radius: 100%
+                mask-size: 100%
+
+                width: 100%
+                height: 100%
+
+                max-width: 312px
+                max-height: 312px
+                min-width: 312px
+                min-height: 312px
+                +md-block
+                    max-width: 580px
+                    max-height: 580px
+                    min-width: 580px
+                    min-height: 580px
+                +transitionBase
+
                 &.isActive
-                    max-width: 640px
-                    max-height: 740px !important
-                    // @supports(-webkit-mask-image: url(../assets/images/svg/testimonial-mask-img.svg)) or (mask-image: url(../assets/images/svg/testimonial-mask-img.svg))
-                    // mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
-                    // mask-image: url(../assets/images/png/testimonial-mask-img.png)
-                    // mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%)
-                    // background-image: url(../assets/images/svg/testimonial-mask-img.svg)
-                    mask-repeat: no-repeat
-                    mask-position: center
+                    max-width: 312px
+                    max-height: 312px
+                    +md-block
+                        max-width: 640px
+                        max-height: 740px !important
+                        // @supports(-webkit-mask-image: url(../assets/images/svg/testimonial-mask-img.svg)) or (mask-image: url(../assets/images/svg/testimonial-mask-img.svg))
+                        // mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
+                        // mask-image: url(../assets/images/png/testimonial-mask-img.png)
+                        // mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%)
+                        // background-image: url(../assets/images/svg/testimonial-mask-img.svg)
+                        mask-repeat: no-repeat
+                        mask-position: center
 
         &__name
             text-align: center
@@ -195,23 +242,35 @@
     &__steps
         padding-top: 8%
         &-title
-            width: 80%
+
             position: relative
+            +md-block
+                width: 80%
             &_marker-after
                 position: absolute
-                display: f
                 display: flex
                 width: 100%
                 height: 100%
                 background-repeat: no-repeat
-                max-width: 507px
-                top: -24%
-                right: -27%
-                max-height: 305px
+
+                max-width: 255px
+
+                max-height: 214px
+                top: 30%
+                right: 0
+                transform: rotate(342deg)
+                +md-block
+                    max-width: 507px
+                    max-height: 305px
+                    top: -24%
+                    right: -27%
         .page-title
             line-height: 105%
     &-steps
         display: flex
+        flex-wrap: wrap
+        +md-block
+            flex-wrap: nowrap
         padding-top: 9%
         &__nav
             display: flex
@@ -231,9 +290,12 @@
                     opacity: 1
                     border-bottom: 3px solid rgba($color_white, 1)
         &__contents
-            display: flex
+
             align-items: center
             justify-content: center
+            display: none
+            +md-block
+                display: flex
             +size(12)
             +size-md(6)
         &__content
