@@ -20,7 +20,7 @@ const ProjectsComponent: FC = () => {
             project1:  file(relativePath: { eq: "project-1.png" }) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 500
+						
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 					)
@@ -29,7 +29,7 @@ const ProjectsComponent: FC = () => {
             project2:  file(relativePath: { eq: "project-2.png" }) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 500
+						
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 					)
@@ -38,7 +38,7 @@ const ProjectsComponent: FC = () => {
             project3:  file(relativePath: { eq: "project-3.png" }) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 500
+						
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 					)
@@ -47,7 +47,7 @@ const ProjectsComponent: FC = () => {
             project4:  file(relativePath: { eq: "project-4.png" }) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 500
+						
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 					)
@@ -56,7 +56,7 @@ const ProjectsComponent: FC = () => {
             project5:  file(relativePath: { eq: "project-5.png" }) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 500
+						
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 					)
@@ -65,7 +65,7 @@ const ProjectsComponent: FC = () => {
             project6:  file(relativePath: { eq: "project-6.png" }) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 500
+						
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 					)
@@ -74,7 +74,7 @@ const ProjectsComponent: FC = () => {
             project7:  file(relativePath: { eq: "project-7.png" }) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 500
+						
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 					)
@@ -83,7 +83,7 @@ const ProjectsComponent: FC = () => {
             project8:  file(relativePath: { eq: "project-8.png" }) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 500
+						
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 					)

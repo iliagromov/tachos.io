@@ -1,12 +1,28 @@
 import React, { FC } from 'react';
 import { TestimonialItem } from './TestimonialItem';
+import { useStaticQuery, graphql, Link, navigate } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import './Testimonials.sass';
 
 const TestimonialsComponent: FC = () => {
 
     // FIXME: сделать фабрику по созданию картинок
- 
+    const {
+        testimonialSteps,
+    } = useStaticQuery(graphql`
+        query  {  
+            testimonialSteps:  file(relativePath: { eq: "testimonial-steps.png" }) {
+                    childImageSharp {
+                        gatsbyImageData(
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP, AVIF]
+                        )
+                    }
+                }
+            }
+    `);
+    const image = getImage(testimonialSteps);
     return (
         <section className="testimonials">
             <div className="wrapper">
@@ -46,20 +62,16 @@ const TestimonialsComponent: FC = () => {
                             </div>
                             <div className="testimonials-steps__contents">
                                 <div className="testimonials-steps__content isActive">
-                                    <picture className="page-picture"><img src="assets/images/png/testimonial-steps.png"
-                                        alt="testimonial-steps" /></picture>
+                                    <GatsbyImage image={image} alt={'img'} />
                                 </div>
                                 <div className="testimonials-steps__content">
-                                    <picture className="page-picture"><img src="assets/images/png/testimonial-steps.png"
-                                        alt="testimonial-steps" /></picture>
+                                    <GatsbyImage image={image} alt={'img'} />
                                 </div>
                                 <div className="testimonials-steps__content">
-                                    <picture className="page-picture"><img src="assets/images/png/testimonial-steps.png"
-                                        alt="testimonial-steps" /></picture>
+                                    <GatsbyImage image={image} alt={'img'} />
                                 </div>
                                 <div className="testimonials-steps__content">
-                                    <picture className="page-picture"><img src="assets/images/png/testimonial-steps.png"
-                                        alt="testimonial-steps" /></picture>
+                                    <GatsbyImage image={image} alt={'img'} />
                                 </div>
                             </div>
                         </div>

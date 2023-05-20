@@ -14,7 +14,6 @@ const OurTeamComponent: FC = () => {
             imageTeam:  file(relativePath: { eq: "image-team.png" }) {
                     childImageSharp {
                         gatsbyImageData(
-                            width: 500
                             placeholder: BLURRED
                             formats: [AUTO, WEBP, AVIF]
                         )
