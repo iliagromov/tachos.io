@@ -25,7 +25,7 @@ const FooterComponent: FC<FooterProps> = () => {
 				<div className="footer-inner">
 					<div className="footer__slogan">
 						<div className="page-svg">
-							<ReactSVG src={logoFooter.publicURL} />
+							{/* <ReactSVG src={logoFooter.publicURL} /> */}
 						</div>
 					</div>
 					<div className="footer__row">

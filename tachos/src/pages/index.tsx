@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql, Link, PageProps } from "gatsby";
 import Layout from "../layouts/Default";
 import SEO from "../components/seo"
-import PageMain  from "../components/containers/PageMain/PageMain";
+import { PageMainContainer }  from "../components/containers/PageMain/PageMain";
 
 
 
@@ -12,7 +12,7 @@ const IndexPage: React.FC<PageProps> = (props) => {
     <Layout>
 
       <SEO title="Tachos main" />
-      <PageMain/>
+      <PageMainContainer/>
     </Layout>
   )
 }

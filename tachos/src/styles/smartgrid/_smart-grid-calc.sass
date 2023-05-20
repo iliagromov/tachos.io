@@ -180,7 +180,7 @@ $fields: 20px
     +md(margin-left, #{calc(#{$val} + #{$offset_md_one_side})})
 
 =shift-md-right($n)
-    $val: 100% / $columns * $n
+    $val: calc(100% / $columns * $n)
     +md(margin-right, #{calc(#{$val} + #{$offset_md_one_side})})
 
 =shift-md-padding($n)
