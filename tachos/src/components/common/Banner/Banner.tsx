@@ -3,9 +3,9 @@ import React, { FC } from 'react';
 import { ReactSVG } from 'react-svg';
 import { useStaticQuery, graphql, Link, navigate } from "gatsby";
 
-import './style.sass';
+import './Banner.sass';
 
-const Banner: FC = () => {
+const BannerComponent: FC = () => {
   const { 
     mainSlogan
   } = useStaticQuery(graphql`
@@ -53,5 +53,4 @@ const Banner: FC = () => {
 }
 
 
-export default Banner;
-
+export { BannerComponent }

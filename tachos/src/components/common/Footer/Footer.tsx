@@ -9,10 +9,10 @@ import './Footer.sass';
 type FooterProps = {
 }
 
-const Footer: FC<FooterProps> = () => {
-	const { 
+const FooterComponent: FC<FooterProps> = () => {
+	const {
 		logoFooter
-	  } = useStaticQuery(graphql`
+	} = useStaticQuery(graphql`
 		query  {
 			logoFooter: file(relativePath: { eq: "logo-footer.svg" }) {
 			  publicURL
@@ -25,7 +25,7 @@ const Footer: FC<FooterProps> = () => {
 				<div className="footer-inner">
 					<div className="footer__slogan">
 						<div className="page-svg">
-							<ReactSVG src={logoFooter.publicURL}/>
+							<ReactSVG src={logoFooter.publicURL} />
 						</div>
 					</div>
 					<div className="footer__row">
@@ -50,7 +50,7 @@ const Footer: FC<FooterProps> = () => {
 					</div>
 					<div className="footer__feedback">
 						<a className="page-svg" href="/">
-						{/* <ReactSVG src={logoFooter.publicURL}/> */}
+							{/* <ReactSVG src={logoFooter.publicURL}/> */}
 						</a>
 					</div>
 				</div>
@@ -60,5 +60,5 @@ const Footer: FC<FooterProps> = () => {
 }
 
 
-export default Footer;
+export { FooterComponent };
 
