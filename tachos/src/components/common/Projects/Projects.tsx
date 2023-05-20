@@ -5,6 +5,7 @@ import { ProjectItem, ProjectItemProps } from './ProjectItem';
 import './Projects.sass';
 
 const ProjectsComponent: FC = () => {
+     // FIXME: сделать фабрику по созданию картинок
     const {
         project1,
         project2,

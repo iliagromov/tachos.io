@@ -48,17 +48,17 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
             <div className="project-card__text">
                 <div className="project-card__title-box">
                     <div className="project-card__title">
-                        <div className="page-title page-title-h2">Хайс банк</div>
+                        <div className="page-title page-title-h2">{title}</div>
                         <div className="project-card__date">
-                            <div className="page-title-caption-4">2022</div>
+                            <div className="page-title-caption-4">{date}</div>
                         </div>
                     </div>
                     <div className="project-card__subtitle">
-                        <div className="page-title-caption page-title-caption-3">Edtech - Swift – 6 month</div>
+                        <div className="page-title-caption page-title-caption-3">{subtitle}</div>
                     </div>
                 </div>
                 <div className="project-card__description">
-                    <div className="page-text">EdTech platform which makes online learning engrossing.</div>
+                    <div className="page-text">{description}</div>
                 </div>
             </div>
         </a>

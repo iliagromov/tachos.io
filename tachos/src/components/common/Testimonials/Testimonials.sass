@@ -1,0 +1,305 @@
+@import '../../../styles/_imports'
+
+/*testimonials*/
+.testimonials
+
+    padding-top: 42px
+
+    +md-block
+        padding-top: 96px
+    .wrapper
+        +to($break_sm)
+            padding: 0
+    .page-title
+        color: $color_white
+        &-h1
+            +to($break_sm)
+                font-size: 32px
+
+        &-h3
+            line-height: 100%
+
+            +md-block
+                font-size: 42px
+    .page-title-caption-3
+        letter-spacing: -0.05em !important
+        padding-top: 10px
+
+    &-inner
+        overflow: hidden
+        background-color: $color_black
+
+        border-radius: 26px
+        padding: 71px 20px 48px
+        +md-block
+            padding: 84px 40px 48px
+    &-slider
+        padding-top: 12px
+        .swiper
+            position: relative
+            left: -32px
+        &__items
+            min-height: 387px
+            +md-block
+                min-height: 740px
+        &__toggles
+
+            display: flex
+
+            position: absolute
+
+            top: -51px
+            right: -68px
+            +md-block
+                top: -10%
+                right: -55%
+            .swiper-button-prev
+                left: -11px
+
+            .swiper-button-next
+                right: 0
+        &__btn
+
+            display: flex
+            position: relative
+            width: 45px
+            height: 45px
+            +md-block
+                width: 64px
+                height: 64px
+            &-prev
+                &::after
+                    transform: translate(-50%, -50%) rotate(180deg) !important
+            &-progress-bar
+                // border: 1px solid $color_orange !important
+                position: absolute
+                left: -1px
+                top: -1px
+                width: 66px
+                height: 66px
+                border-radius: 100%
+                // background: conic-gradient($color_orange 150.6deg, transparent 0deg)
+                transform: rotate(90deg)
+            &_playing
+                .page-btn
+                    border: 1px solid rgba($color_orange, .5) !important
+
+            .page-btn
+                display: inline-block
+                position: relative
+
+                background: #292930
+                border: 1px solid transparent
+                width: 45px
+                height: 45px
+                padding: 0
+                +md-block
+                    width: 64px
+                    height: 64px
+                top: 0
+                margin-top: 0
+                &[disabled]
+                    opacity: 1
+                    background: #30303F
+                    &::after
+                        opacity: 0.35
+                &::after
+                    display: flex
+                    content: ''
+                    // background: url(../assets/icons/svg/spriteSVG.svg)
+                    background-position: 97.47222222222223% 0
+                    width: 44px
+                    height: 44px
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+
+    &-slide
+        position: relative
+        display: flex
+        align-items: center
+        flex-direction: column
+        z-index: 10
+
+        +md-block
+            margin-right: -170px
+            margin-left: 170px
+
+        &.swiper-slide-prev,
+        &.swiper-slide-next
+            position: relative
+            z-index: 30
+
+        &.swiper-slide-active
+            right: 0
+            z-index: 50
+
+            margin-left: 0
+
+            ~ .testimonials-slide
+                // margin-left: -170px
+                margin-left: 12px
+            .testimonials-slide
+                &__name
+                    display: block
+                &__img_mask
+                    max-width: 312px
+                    max-height: 312px
+                    min-height: 312px
+                    +md-block
+                        max-width: 620px
+                        max-height: 620px
+                        min-height: 620px
+                &__img-poster
+                    display: none
+                &__img-video
+                    // display: block
+                    visibility: visible
+
+        //- img and video
+        &__img
+            width: 100%
+            height: 100%
+            &-poster
+                .page-picture
+                    // justify-content: center
+                    // width: 70%
+                    // height: 79%
+                    // object-fit: cover
+                    // position: absolute
+                    // left: 87px
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+            &-video
+                visibility: hidden
+                position: absolute
+                height: 100%
+                width: 100%
+                .page-video
+                    pointer-events: none
+                    object-fit: cover
+                    height: 100%
+                    width: 100%
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 3.24%, rgba(0, 0, 0, 0.56) 3.1%)
+                &-btn-play
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    #timer
+                        display: none
+            // mask for block img and video
+            &_mask
+
+                display: flex
+                align-items: center
+                position: relative
+
+                margin: 0 auto
+                overflow: hidden
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.24%, rgba(0, 0, 0, 0.56) 73.1%)
+                border-radius: 100%
+                mask-size: 100%
+
+                width: 100%
+                height: 100%
+
+                max-width: 312px
+                max-height: 312px
+                min-width: 312px
+                min-height: 312px
+                +md-block
+                    max-width: 580px
+                    max-height: 580px
+                    min-width: 580px
+                    min-height: 580px
+                +transitionBase
+
+                &.isActive
+                    max-width: 312px
+                    max-height: 312px
+                    +md-block
+                        max-width: 640px
+                        max-height: 740px !important
+                        // @supports(-webkit-mask-image: url(../assets/images/svg/testimonial-mask-img.svg)) or (mask-image: url(../assets/images/svg/testimonial-mask-img.svg))
+                        // mask-image: url(../assets/images/svg/testimonial-mask-img.svg)
+                        // mask-image: url(../assets/images/png/testimonial-mask-img.png)
+                        // mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%)
+                        // background-image: url(../assets/images/svg/testimonial-mask-img.svg)
+                        mask-repeat: no-repeat
+                        mask-position: center
+
+        &__name
+            text-align: center
+            position: absolute
+            bottom: 40px
+            display: none
+
+    &__steps
+        padding-top: 8%
+        &-title
+
+            position: relative
+            +md-block
+                width: 80%
+            &_marker-after
+                position: absolute
+                display: flex
+                width: 100%
+                height: 100%
+                background-repeat: no-repeat
+
+                max-width: 255px
+
+                max-height: 214px
+                top: 30%
+                right: 0
+                transform: rotate(342deg)
+                +md-block
+                    max-width: 507px
+                    max-height: 305px
+                    top: -24%
+                    right: -27%
+        .page-title
+            line-height: 105%
+    &-steps
+        display: flex
+        flex-wrap: wrap
+        +md-block
+            flex-wrap: nowrap
+        padding-top: 9%
+        &__nav
+            display: flex
+            flex-direction: column
+            +size(12)
+            +size-md(4.5)
+            +shift-md-right(1.5)
+            .page-text
+                cursor: pointer
+                color: $color_white
+                opacity: 0.4
+                border-bottom: 3px solid rgba($color_white, .2)
+                +transitionBase
+                padding-bottom: 30px
+                margin-bottom: 30px
+                &.isActive
+                    opacity: 1
+                    border-bottom: 3px solid rgba($color_white, 1)
+        &__contents
+
+            align-items: center
+            justify-content: center
+            display: none
+            +md-block
+                display: flex
+            +size(12)
+            +size-md(6)
+        &__content
+            // visibility: hidden
+            display: none
+            &.isActive
+                display: flex
+                // visibility: visible
