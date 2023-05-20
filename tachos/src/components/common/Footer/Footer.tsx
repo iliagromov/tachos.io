@@ -50,7 +50,7 @@ const Footer: FC<FooterProps> = () => {
 					</div>
 					<div className="footer__feedback">
 						<a className="page-svg" href="/">
-						<ReactSVG src={logoFooter.publicURL}/>
+						{/* <ReactSVG src={logoFooter.publicURL}/> */}
 						</a>
 					</div>
 				</div>

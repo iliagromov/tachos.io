@@ -5,7 +5,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `Tachos`,
     author: 'iliagromov',
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `http://tachos.ru/`,
     blog: 'my blog',
 
   },
@@ -103,16 +103,24 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        "icon": "src/images/icon.png"
+        "icon": "src/assets/icons/favicon-32.png"
       }
     }, 
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "images",
-        "path": `${__dirname}/src/images/`
+        "name": "png",
+        "path": `${__dirname}/src/assets/images/png`
       },
-    __key: "images"
+    __key: "png"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "svg",
+        "path": `${__dirname}/src/assets/images/svg`
+      },
+    __key: "svg"
     },
 ]
 };

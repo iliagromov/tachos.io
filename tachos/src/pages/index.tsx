@@ -12,13 +12,7 @@ const IndexPage: React.FC<PageProps> = (props) => {
     <Layout>
 
       <SEO title="Tachos main" />
-      <div>
-        test
-      </div>
-      {/* <Link to="/">Russian</Link>
-      <Link to="/en">English</Link> */}
-     
-      {/* {data.wpPage.content} */}
+      <PageMain/>
     </Layout>
   )
 }

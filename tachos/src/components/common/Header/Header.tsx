@@ -22,7 +22,9 @@ const Header: FC = () => {
         <div className="header-inner">
           <div className="header__logo">
               <a className="page-link" href="/">
-                <ReactSVG src={logoHeader.publicURL}/>
+                <ReactSVG 
+                  
+                  src={logoHeader.publicURL}/>
               </a>
           </div>
           <div className="header__nav">

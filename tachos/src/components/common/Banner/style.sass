@@ -1,0 +1,46 @@
+@import '../../../styles/_imports'
+
+/*banner*/
+.banner
+    padding-top: 110px
+    padding-bottom: 18px
+    +md-block
+        padding-top: 52px
+        
+    &__slogan
+        display: flex
+        justify-content: center
+        +md-block
+            height: 301px
+
+        .page-svg
+            width: 100%
+    &__description
+        text-align: center
+        &-subtitle
+            // FIXME: переопределение 
+            .page-title-caption-1
+                font-size: 46px
+                line-height: 57px
+                transform: rotate(-3.85deg)
+
+                +md-block
+                    position: relative
+                    left: -4px
+                    top: -4px
+                    font-size: 107.888px
+                    line-height: 93px
+                    letter-spacing: -0.085em
+                    transform: rotate(-4.34deg)
+        &-text
+            // FIXME: переопределение 
+            .page-text
+                font-size: 24px
+                line-height: 28px
+                letter-spacing: 0.0041em
+                padding-top: 4px
+                +md-block
+                    font-size: 40px
+                    line-height: 46px
+                    width: 60%
+                    margin: 10px auto
