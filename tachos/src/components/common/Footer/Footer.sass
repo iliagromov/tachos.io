@@ -1,0 +1,41 @@
+@import '../../../styles/_imports'
+/*footer*/
+.footer
+  padding: 30px 0 0
+  &-inner
+    position: relative
+
+  &__feedback
+    +to($break_sm)
+      margin-top: 30px
+    +md-block
+      position: absolute
+      left: 128px
+      bottom: -36px
+    // visibility: hidden
+  &__nav
+      width: 100%
+      +to($break_sm)
+        order: 0
+      .nav
+        display: flex
+        position: relative
+        z-index: 10
+        flex-direction: column
+        .page-link
+          margin: 12px 0
+          +md-block
+            margin: 0 13px
+  &__city 
+     +to($break_sm)
+        order: 1
+  &__author 
+     +to($break_sm)
+        order: 2
+  &__row
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-top: 18%
+   
+   
