@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-
 import { ReactSVG } from 'react-svg';
 import { useStaticQuery, graphql, Link, navigate } from "gatsby";
 
@@ -162,7 +161,4 @@ const OurStackComponent: FC = () => {
 
     );
 }
-
-
 export { OurStackComponent };
-

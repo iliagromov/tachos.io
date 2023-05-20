@@ -1,25 +1,13 @@
 import React, { FC } from 'react';
-
-// import { ReactSVG } from 'react-svg';
-// import { useStaticQuery, graphql, Link, navigate } from "gatsby";
+import { TestimonialItem } from './TestimonialItem';
 
 import './Testimonials.sass';
-import { TestimonialItem } from './TestimonialItem';
 
 const TestimonialsComponent: FC = () => {
 
-     // FIXME: сделать фабрику по созданию картинок
-    //   const { 
-    //     mainSlogan
-    //   } = useStaticQuery(graphql`
-    //     query  {
-    //       mainSlogan: file(relativePath: { eq: "Main-slogan.svg" }) {
-    //           publicURL
-    //           name
-    //       }
-    //     }`);
+    // FIXME: сделать фабрику по созданию картинок
+ 
     return (
-
         <section className="testimonials">
             <div className="wrapper">
                 <div className="testimonials-inner">
@@ -28,7 +16,7 @@ const TestimonialsComponent: FC = () => {
                         <div className="swiper testimonialSwiper">
                             <div className="testimonials-slider__toggles">
                                 <div className="testimonials-slider__btn"><button
-                                        className="swiper-button-prev page-btn testimonials-slider__btn-prev"></button>
+                                    className="swiper-button-prev page-btn testimonials-slider__btn-prev"></button>
                                 </div>
                                 <div className="testimonials-slider__btn" id="progress-bar">
                                     <div className="testimonials-slider__btn-progress-bar"></div><button
@@ -36,7 +24,7 @@ const TestimonialsComponent: FC = () => {
                                 </div>
                             </div>
                             <div className="testimonials-slider__items swiper-wrapper">
-                                { <TestimonialItem/>}
+                                {<TestimonialItem />}
                             </div>
                         </div>
                     </div>
@@ -45,33 +33,33 @@ const TestimonialsComponent: FC = () => {
                             <div className="page-title page-title-h1">Cоздаем решения, которые определяют и изменяют мир
                                 вокруг нас прямо здесь и сейчаc</div>
                             <div className="testimonials__steps-title_marker-after">
-                               
+
                             </div>
                         </div>
                         <div className="testimonials-steps">
                             <div className="testimonials-steps__nav">
-                                <div className="tab-link page-text isActive">Выстраиваем <br/>процесс разработки </div>
-                                <div className="tab-link page-text">Проводим <br/>технический аудит</div>
-                                <div className="tab-link page-text">Запускаем с нуля, <br/>поддерживаем и развиваем</div>
-                                <div className="tab-link page-text">Консультируем как лушче <br/>запустить продукт, фичу, на
+                                <div className="tab-link page-text isActive">Выстраиваем <br />процесс разработки </div>
+                                <div className="tab-link page-text">Проводим <br />технический аудит</div>
+                                <div className="tab-link page-text">Запускаем с нуля, <br />поддерживаем и развиваем</div>
+                                <div className="tab-link page-text">Консультируем как лушче <br />запустить продукт, фичу, на
                                     каких технологиях</div>
                             </div>
                             <div className="testimonials-steps__contents">
                                 <div className="testimonials-steps__content isActive">
                                     <picture className="page-picture"><img src="assets/images/png/testimonial-steps.png"
-                                            alt="testimonial-steps"/></picture>
+                                        alt="testimonial-steps" /></picture>
                                 </div>
                                 <div className="testimonials-steps__content">
                                     <picture className="page-picture"><img src="assets/images/png/testimonial-steps.png"
-                                            alt="testimonial-steps"/></picture>
+                                        alt="testimonial-steps" /></picture>
                                 </div>
                                 <div className="testimonials-steps__content">
                                     <picture className="page-picture"><img src="assets/images/png/testimonial-steps.png"
-                                            alt="testimonial-steps"/></picture>
+                                        alt="testimonial-steps" /></picture>
                                 </div>
                                 <div className="testimonials-steps__content">
                                     <picture className="page-picture"><img src="assets/images/png/testimonial-steps.png"
-                                            alt="testimonial-steps"/></picture>
+                                        alt="testimonial-steps" /></picture>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +70,4 @@ const TestimonialsComponent: FC = () => {
 
     );
 }
-
-
 export { TestimonialsComponent };
-

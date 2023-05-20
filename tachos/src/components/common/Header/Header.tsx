@@ -15,16 +15,14 @@ const HeaderComponent: FC = () => {
           name
       }
     }`);
-  return (
 
+  return (
     <header className="header">
       <div className="wrapper">
         <div className="header-inner">
           <div className="header__logo">
             <a className="page-link" href="/">
-              <ReactSVG
-
-                src={logoHeader.publicURL} />
+              <ReactSVG src={logoHeader.publicURL} />
             </a>
           </div>
           <div className="header__nav">
@@ -47,7 +45,4 @@ const HeaderComponent: FC = () => {
 
   );
 }
-
-
 export { HeaderComponent };
-

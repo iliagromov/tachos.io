@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
-
 import { useStaticQuery, graphql, Link, navigate } from "gatsby";
-
 import { ReactSVG } from 'react-svg';
 
 import './Footer.sass';
@@ -19,6 +17,7 @@ const FooterComponent: FC<FooterProps> = () => {
 			  name
 		  }
 		}`);
+
 	return (
 		<footer className="footer">
 			<div className="wrapper">
@@ -58,7 +57,4 @@ const FooterComponent: FC<FooterProps> = () => {
 		</footer>
 	);
 }
-
-
 export { FooterComponent };
-

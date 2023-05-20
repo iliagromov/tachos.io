@@ -89,7 +89,7 @@ const ProjectsComponent: FC = () => {
 					)
 				}
 			}
-        }`);
+    }`);
 
     const projects = [
         {
@@ -156,8 +156,7 @@ const ProjectsComponent: FC = () => {
             subtitle: 'Edtech - Swift – 6 month',
             description: 'Иммерсивная книга-игра с волшебством внутри, Игра дня в США и многих других странах',
         },
-    ]
-
+    ];
 
     const renderProjects = projects.map((project: ProjectItemProps, i: number) => {
         return (
@@ -170,9 +169,9 @@ const ProjectsComponent: FC = () => {
                 description={project.description}
             />
         )
-    })
-    return (
+    });
 
+    return (
         <section className="projects">
             <div className="wrapper">
                 <div className="projects-inner">
@@ -183,7 +182,4 @@ const ProjectsComponent: FC = () => {
 
     );
 }
-
-
 export { ProjectsComponent };
-

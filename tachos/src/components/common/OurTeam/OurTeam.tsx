@@ -23,8 +23,8 @@ const OurTeamComponent: FC = () => {
             }
     `);
     const image = getImage(imageTeam);
-    return (
 
+    return (
         <section className="our-team">
             <div className="wrapper">
                 <div className="our-team-inner">
@@ -50,10 +50,6 @@ const OurTeamComponent: FC = () => {
                 </div>
             </div>
         </section>
-
     );
 }
-
-
 export { OurTeamComponent };
-
