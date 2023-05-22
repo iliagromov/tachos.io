@@ -4,6 +4,7 @@ import { useStaticQuery, graphql, Link, navigate } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import './Testimonials.sass';
+import { SwiperSliderComponent } from '../SwiperSlider/SwiperSlider';
 
 const TestimonialsComponent: FC = () => {
 
@@ -25,25 +26,13 @@ const TestimonialsComponent: FC = () => {
     const image = getImage(testimonialSteps);
     return (
         <section className="testimonials">
+
+            
             <div className="wrapper">
                 <div className="testimonials-inner">
                     <div className="page-title page-title-h1">Отзывы</div>
-                    <div className="testimonials-slider">
-                        <div className="swiper testimonialSwiper">
-                            <div className="testimonials-slider__toggles">
-                                <div className="testimonials-slider__btn"><button
-                                    className="swiper-button-prev page-btn testimonials-slider__btn-prev"></button>
-                                </div>
-                                <div className="testimonials-slider__btn" id="progress-bar">
-                                    <div className="testimonials-slider__btn-progress-bar"></div><button
-                                        className="swiper-button-next page-btn testimonials-slider__btn-next"></button>
-                                </div>
-                            </div>
-                            <div className="testimonials-slider__items swiper-wrapper">
-                                {<TestimonialItem />}
-                            </div>
-                        </div>
-                    </div>
+                    <SwiperSliderComponent/>
+                    
                     <div className="testimonials__steps">
                         <div className="testimonials__steps-title">
                             <div className="page-title page-title-h1">Cоздаем решения, которые определяют и изменяют мир
