@@ -33,11 +33,16 @@ const FooterComponent: FC<FooterProps> = () => {
 			<div className="wrapper">
 				<div className="footer-inner">
 					<div className="footer__slogan">
-						<div className="page-svg">
-							<ReactSVG src={logoFooter.publicURL} />
-							<ReactSVG src={iconFire.publicURL} />
-							<ReactSVG src={iconFeedback.publicURL} />
+						<div className="footer__slogan-main">
+							<ReactSVG 
+							className="page-svg" 
+							src={logoFooter.publicURL} 
+							/>
 						</div>
+						<div className="footer__slogan-fire">
+							<ReactSVG className="page-svg" src={iconFire.publicURL} />
+						</div>
+						
 					</div>
 					<div className="footer__row">
 						<div className="footer__city">
@@ -61,9 +66,7 @@ const FooterComponent: FC<FooterProps> = () => {
 							</a></div>
 					</div>
 					<div className="footer__feedback">
-						<a className="page-svg" href="/">
-							{/* <ReactSVG src={logoFooter.publicURL}/> */}
-						</a>
+						<ReactSVG className="page-svg" src={iconFeedback.publicURL} />
 					</div>
 				</div>
 			</div>

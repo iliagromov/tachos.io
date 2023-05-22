@@ -2,11 +2,11 @@
 
 /*banner*/
 .banner
-    padding-top: 110px
+    padding-top: 70px
     padding-bottom: 18px
     +md-block
         padding-top: 52px
-        
+
     &__slogan
         display: flex
         justify-content: center
@@ -17,6 +17,10 @@
             width: 100%
     &__description
         text-align: center
+
+        +to($break_sm)
+            margin-top: -35px
+            
         &-subtitle
             // FIXME: переопределение 
             .page-title-caption-1

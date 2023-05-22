@@ -1,10 +1,33 @@
 @import '../../../styles/_imports'
 /*footer*/
 .footer
-  padding: 30px 0 0
+  padding: 60px 0 0
+  +md-block
+    padding: 130px 0 0
   &-inner
     position: relative
+  &__slogan
+    position: relative
+    &-main
+      position: relative
+      z-index: 10
+      .page-svg
+        align-items: center
+        justify-content: center
+    &-fire
+      position: absolute
+      z-index: 1
+      top: -41px
+      right: 0px
 
+      +md-block
+        top: -74px
+        right: 65px
+
+      .page-svg
+        width: 64px
+        +md-block
+          width: 100%
   &__feedback
     +to($break_sm)
       margin-top: 30px
@@ -14,28 +37,32 @@
       bottom: -36px
     // visibility: hidden
   &__nav
+
+    +to($break_sm)
+      order: 0
       width: 100%
-      +to($break_sm)
-        order: 0
+      margin-bottom: 18px
       .nav
         display: flex
         position: relative
         z-index: 10
-        flex-direction: column
+
+        +to($break_sm)
+          flex-direction: column
         .page-link
           margin: 12px 0
           +md-block
             margin: 0 13px
-  &__city 
-     +to($break_sm)
-        order: 1
-  &__author 
-     +to($break_sm)
-        order: 2
+  &__city
+    +to($break_sm)
+      order: 1
+  &__author
+    +to($break_sm)
+      order: 2
   &__row
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    padding-top: 18%
-   
-   
+    padding-top: 8%
+    +md-block
+      padding-top: 18%

@@ -2,9 +2,16 @@
 
 /*our-stack*/
 .our-stack
-    padding: 117px 0
+    padding: 43px 0 110px
+    +md-block
+        padding: 117px 0
+        
     .page-title
-        text-align: center
+        +to($break_sm)
+            font-size: 32px
+
+        +md-block
+            text-align: center
     &-inner
         &__items
             position: relative
