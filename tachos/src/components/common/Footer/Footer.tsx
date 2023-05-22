@@ -9,13 +9,23 @@ type FooterProps = {
 
 const FooterComponent: FC<FooterProps> = () => {
 	const {
-		logoFooter
+		logoFooter,
+		iconFire,
+		iconFeedback
 	} = useStaticQuery(graphql`
 		query  {
 			logoFooter: file(relativePath: { eq: "logo-footer.svg" }) {
 			  publicURL
 			  name
-		  }
+		  	}
+			iconFire: file(relativePath: { eq: "icon-fire.svg" }) {
+			  publicURL
+			  name
+		  	}
+			iconFeedback: file(relativePath: { eq: "icon-feedback.svg" }) {
+			  publicURL
+			  name
+		  	}
 		}`);
 
 	return (
@@ -24,7 +34,9 @@ const FooterComponent: FC<FooterProps> = () => {
 				<div className="footer-inner">
 					<div className="footer__slogan">
 						<div className="page-svg">
-							{/* <ReactSVG src={logoFooter.publicURL} /> */}
+							<ReactSVG src={logoFooter.publicURL} />
+							<ReactSVG src={iconFire.publicURL} />
+							<ReactSVG src={iconFeedback.publicURL} />
 						</div>
 					</div>
 					<div className="footer__row">
@@ -32,7 +44,8 @@ const FooterComponent: FC<FooterProps> = () => {
 							<div className="page-title-caption-4">Moscow, 2023</div>
 						</div>
 						<div className="footer__nav">
-							<nav className="nav"><a className="page-link" href="">
+							<nav className="nav">
+								<a className="page-link" href="">
 								<div className="page-title-caption-4">Главная </div>
 							</a><a className="page-link" href="">
 									<div className="page-title-caption-4">Кейсы </div>

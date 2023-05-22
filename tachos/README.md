@@ -7,6 +7,7 @@
   Gatsby Minimal TypeScript Starter
 </h1>
 
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
