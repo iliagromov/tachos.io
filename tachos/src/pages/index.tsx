@@ -5,8 +5,23 @@ import SEO from "../components/seo"
 import { PageMainContainer }  from "../components/containers/PageMain/PageMain";
 
 
+// export const query = graphql`
+//   query MyQuery {
+//     allMarkdownRemark {
+//       nodes {
+//         id
+//         frontmatter {
+//           category
+//           image
+//           title
+//           url
+//         }
+//       }
+//     }
+//   }
+// `
 
-const IndexPage: React.FC<PageProps> = (props) => {
+const IndexPage: React.FC<PageProps> = () => {
   
   return (
     <Layout>
@@ -18,4 +33,3 @@ const IndexPage: React.FC<PageProps> = (props) => {
 }
 
 export default IndexPage;
-

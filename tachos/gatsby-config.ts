@@ -1,3 +1,6 @@
+// const { resolve } = require(`path`)
+// const { platform } = require(`os`)
+
 import type { GatsbyConfig } from "gatsby";
 
 
@@ -31,8 +34,6 @@ const config: GatsbyConfig = {
     //     defer: false,
     //   },
     // },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-react-helmet`,
     // {
     //   resolve: 'gatsby-source-wordpress',
     //   options: {
@@ -95,17 +96,110 @@ const config: GatsbyConfig = {
     //     // },
     //   },
     // }, 
-    "gatsby-plugin-image", 
-    "gatsby-plugin-sharp", 
-    "gatsby-transformer-sharp", 
+  {
+    resolve: `gatsby-transformer-video`,
+    // options: {
+    //   /**
+    //    * Alternative directory for the video cache
+    //    * Default: '.cache-video'
+    //    */
+    //   cacheDirectory: resolve('node_modules', '.cache-video'),
+
+    //   /**
+    //    * Alternative directory for the ffmpeg binaries
+    //    * Default: resolve(`.bin`, `gatsby-transformer-video`)
+    //    */
+    //   cacheDirectoryBin: resolve('node_modules', '.cache-video-bin'),
+
+    //   /**
+    //    * Set if FFMPEG & FFPROBE should be downloaded if they are not found locally
+    //    *
+    //    * Downloaded binaries are stored in `.bin/gatsby-transformer-video/`
+    //    *
+    //    * Default: true
+    //    */
+    //   downloadBinaries: false,
+
+    //   /**
+    //    * Pass your own FFMPEG && FFPROBE binaries
+    //    *
+    //    * Assumes you store your binaries in the following pattern:
+    //    * ./bin/darwin/ffmpeg
+    //    * ./bin/darwin/ffprobe
+    //    * ./bin/linux/ffmpeg
+    //    * ./bin/linux/ffprobe
+    //    * ...
+    //    *
+    //    * Default: null
+    //    */
+    //   ffmpegPath: resolve(__dirname, 'bin', platform(), 'ffmpeg'),
+    //   ffprobePath: resolve(__dirname, 'bin', platform(), 'ffprobe'),
+
+    //   /**
+    //    * Define custom profiles to convert videos with full fluent-ffmpeg access
+    //    *
+    //    * Learn more: https://github.com/fluent-ffmpeg/node-fluent-ffmpeg
+    //    */
+    //   profiles: {
+    //     sepia: {
+    //       extension: `mp4`,
+    //       // converter: function({ ffmpegSession, videoStreamMetadata }) {
+    //         // Example:
+    //         // https://github.com/hashbite/gatsby-transformer-video/blob/main/packages/example/gatsby-config.js#L24-L55
+    //       },
+    //     },
+    //   },
+    },
+    "gatsby-plugin-ffmpeg",
+    "gatsby-transformer-ffmpeg",
+    "gatsby-plugin-image",
+    "gatsby-plugin-mdx",  
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-react-svg",
     "gatsby-plugin-sass", 
-    "gatsby-plugin-sitemap", 
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+              showCaptions: true
+            },
+          },
+        ],
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        // Defaults used for gatsbyImageData and StaticImage
+        defaults: {},
+        // Relates to "options.failOn" in https://sharp.pixelplumbing.com/api-constructor#parameters
+        failOn: `warning`,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-sharp", 
+
+      options: {
+        // The option defaults to true
+        checkSupportedExtensions: true,
+      },
+    },
+    "gatsby-plugin-sitemap",
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
         "icon": "src/assets/icons/favicon-32.png"
       }
     }, 
+   
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -121,6 +215,30 @@ const config: GatsbyConfig = {
         "path": `${__dirname}/src/assets/images/svg`
       },
     __key: "svg"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "posts",
+        "path": `${__dirname}/src/posts`
+      },
+    __key: "posts"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "images",
+        "path": `${__dirname}/src/images`
+      },
+    __key: "images"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "video",
+        "path": `${__dirname}/src/assets/video`
+      },
+    __key: "video"
     },
 ]
 };

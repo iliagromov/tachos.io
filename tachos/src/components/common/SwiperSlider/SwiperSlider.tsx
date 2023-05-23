@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-
+import { Video } from 'gatsby-video';
 import { ReactSVG } from 'react-svg';
 
 
@@ -23,7 +23,8 @@ const SwiperSliderComponent: FC = () => {
     const { 
         testimonial1,
         testimonial2,
-        testimonial3 
+        testimonial3,
+        videio1
     } =  useStaticQuery(graphql`
         query  {
             testimonial1:  file(relativePath: { eq: "testimonial-1.png" }) {
@@ -53,10 +54,50 @@ const SwiperSliderComponent: FC = () => {
                     )
                 }
             }
+            videio1:  file(relativePath: {eq: "video-testimonial.mp4"}) {
+                relativePath
+                name
+                id
+                publicURL
+                childVideoFfmpeg {
+                    webm: transcode(
+                        outputOptions: ["-crf 20", "-b:v 0"]
+                        maxWidth: 900
+                        maxHeight: 480
+                        fileExtension: "webm"
+                        codec: "libvpx-vp9"
+                        ) {
+                        width
+                        src
+                        presentationMaxWidth
+                        presentationMaxHeight
+                        originalName
+                        height
+                        fileExtension
+                        aspectRatio
+                    }
+                    mp4: transcode(
+                        maxWidth: 900
+                        maxHeight: 480
+                        fileExtension: "mp4"
+                    
+                    ){
+                        width
+                        src
+                        presentationMaxWidth
+                        presentationMaxHeight
+                        originalName
+                        height
+                        fileExtension
+                        aspectRatio
+                    }
+                }
+            }
         }`);
       const image1 = getImage(testimonial1);      
       const image2 = getImage(testimonial2);      
-      const image3 = getImage(testimonial3);      
+      const image3 = getImage(testimonial3);   
+      const videos = videio1.childVideoFfmpeg;
     return (
 
         <div className="testimonials-slider">
@@ -74,8 +115,18 @@ const SwiperSliderComponent: FC = () => {
                                 <GatsbyImage image={image2} alt={'img'} />
                             </div>
                             <div className="testimonials-slide__img-video">
+                                <Video
+                                    preload="true" 
+                                    poster={image2}
+                                    autoPlay
+                                    muted={false}
+                                    loop
+                                    controls
+                                    sources={[videos.webm, videos.mp4]}
+                                    />
                                 <div className="testimonials-slide__img-video-btn-play">
-                                    <div id="timer"></div><button className="page-btn" aria-label="Play"
+                                    <div id="timer"></div>
+                                    <button className="page-btn" aria-label="Play"
                                         role="button">►</button>
                                 </div>
                             </div>
@@ -91,6 +142,15 @@ const SwiperSliderComponent: FC = () => {
                                 <GatsbyImage image={image1} alt={'img'} />
                             </div>
                             <div className="testimonials-slide__img-video">
+                                <Video
+                                    preload="true" 
+                                    poster={image1}
+                                    autoPlay
+                                    muted={false}
+                                    loop
+                                    controls
+                                    sources={[videos.webm, videos.mp4]}
+                                    />
                                 <div className="testimonials-slide__img-video-btn-play">
                                     <div id="timer"></div><button className="page-btn" aria-label="Play"
                                         role="button">►</button>
@@ -108,6 +168,15 @@ const SwiperSliderComponent: FC = () => {
                                 <GatsbyImage image={image3} alt={'img'} />
                             </div>
                             <div className="testimonials-slide__img-video">
+                                <Video
+                                    preload="true" 
+                                    poster={image3}
+                                    autoPlay
+                                    muted={false}
+                                    loop
+                                    controls
+                                    sources={[videos.webm, videos.mp4]}
+                                    />
                                 <div className="testimonials-slide__img-video-btn-play">
                                     <div id="timer"></div><button className="page-btn" aria-label="Play"
                                         role="button">►</button>

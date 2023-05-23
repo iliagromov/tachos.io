@@ -1,10 +1,13 @@
 import React, { FC } from 'react';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
 
 import './Projects.sass';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 
 export type ProjectItemProps = {
-    imgSrc: any
+    category?: string
+    url?: string
+    image: any
     video?: string
     date: string
     title: string
@@ -14,19 +17,25 @@ export type ProjectItemProps = {
 
 const ProjectItem: FC<ProjectItemProps> = (props) => {
     const {
-        imgSrc,
+        category,
+        url,
+        image,
         date,
         title,
         subtitle,
         description
     } = props;
-    
-    const image = getImage(imgSrc);
 
+
+    // const image = getImage(imgSrc);
+    const projectLink = `/${category}/${url}`;
+    // console.log(image);
     return (
-        <a className="project-card" href="">
+        <Link className="project-card" to={projectLink}>
             <div className="project-card__img">
-                <GatsbyImage image={image} alt={'img'} />
+                {/* <StaticImage
+                src={image}
+                alt={'img'} /> */}
             </div>
             <div className="project-card__text">
                 <div className="project-card__title-box">
@@ -44,7 +53,7 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
                     <div className="page-text">{description}</div>
                 </div>
             </div>
-        </a>
+        </Link>
 
     );
 }
