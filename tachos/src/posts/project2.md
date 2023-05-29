@@ -6,7 +6,7 @@ video: ''
 date: '2022'
 title: 'Docmed'
 subtitle: 'Edtech - Swift – 6 month'
-description: 'EdTech platform which makes online learning '
+description: 'EdTech platform which makes online learning engrossing.'
 ---
 
 # Римские Каникулы

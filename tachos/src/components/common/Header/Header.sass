@@ -4,7 +4,7 @@
     position: sticky
     top: 0
     z-index: 1
-    padding: 23px 0
+    padding: 18px 0
     &-inner
         +row-flex()
         align-items: center
@@ -14,6 +14,7 @@
         +col
         .page-link
             display: flex
+
             svg
                 path
                     +transitionBase(all, 0.5)
@@ -28,6 +29,8 @@
     &__nav
         +md-block
             position: absolute
+            top: 50%
+            transform: translateY(-70%)
             width: 100%
         &_desktop
             display: none
@@ -49,4 +52,6 @@
        
 .nav
     .page-link
-        margin: 0 16px
+        margin: 0 14px
+        font-size: 16px
+        line-height: 19px

@@ -4,7 +4,7 @@ url: project8
 image: ../images/project-8.png
 video: ''
 date: '2022'
-title: 'Складно'
+title: 'Maginary'
 subtitle: 'Edtech - Swift – 6 month'
 description: 'EdTech platform which makes online learning engrossing.'
 ---

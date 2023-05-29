@@ -5,12 +5,16 @@ import cn from 'classnames';
 
 import './DebugGrid.sass';
 
-const DebugGridComponent: FC = () => {
+type DebugGridComponentProps = {
+    isVisible: boolean
+}
+
+const DebugGridComponent: FC<DebugGridComponentProps> = ({ isVisible = false }) => {
 
     const [debugGridIsOpen, setDebugGrid] = useState(false);
 
     const debugBtnGrid = debugGridIsOpen ? 'debugGrid-btn__remove' : 'debugGrid-btn__create';
-    const debugGridIsOpenClass =  debugGridIsOpen ? '' : 'debugGrid__hidden';
+    const debugGridIsOpenClass = debugGridIsOpen ? '' : 'debugGrid__hidden';
     // TODO: Сделать генерацию сетки
     // const measuredRef = useRef<HTMLElement>(null);
 
@@ -51,35 +55,37 @@ const DebugGridComponent: FC = () => {
 
     const onGrid = () => {
         setDebugGrid(!debugGridIsOpen);
-        createDebugGrid();
+        // createDebugGrid();
     }
 
     return (
         <>
-            <button className={cn('debugGrid-btn', debugBtnGrid)} onClick={onGrid}>
-            </button>
+            {isVisible && (
+                <>
+                    <button className={cn('debugGrid-btn', debugBtnGrid)} onClick={onGrid}>
+                    </button>
 
-            <div className={cn('debugGrid', 'debugGrid__z-index-negative',debugGridIsOpenClass )} >
-                <div className="wrapper">
-                    <div className="parentFlex">
-                        <div className="childFlex"></div>
-                        <div className="childFlex"></div>
-                        <div className="childFlex"></div>
-                        <div className="childFlex"></div>
-                        <div className="childFlex"></div>
-                        <div className="childFlex"></div>
-                        <div className="childFlex"></div>
-                        <div className="childFlex"></div>
-                        <div className="childFlex"></div>
-                        <div className="childFlex"></div>
-                        <div className="childFlex"></div>
-                        <div className="childFlex"></div>
+                    <div className={cn('debugGrid', 'debugGrid__z-index-negative', debugGridIsOpenClass)} >
+                        <div className="wrapper">
+                            <div className="parentFlex">
+                                <div className="childFlex"></div>
+                                <div className="childFlex"></div>
+                                <div className="childFlex"></div>
+                                <div className="childFlex"></div>
+                                <div className="childFlex"></div>
+                                <div className="childFlex"></div>
+                                <div className="childFlex"></div>
+                                <div className="childFlex"></div>
+                                <div className="childFlex"></div>
+                                <div className="childFlex"></div>
+                                <div className="childFlex"></div>
+                                <div className="childFlex"></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
+                </>
+            )}
         </>
-
     );
 }
 

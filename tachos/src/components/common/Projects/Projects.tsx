@@ -23,7 +23,7 @@ const ProjectsComponent: FC = () => {
         }
     } = useStaticQuery(graphql`
         query  {
-            allMarkdownRemark {
+            allMarkdownRemark(sort: {frontmatter: {url: ASC}}) {
                 nodes {
                     id
                     frontmatter {
