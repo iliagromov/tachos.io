@@ -11,7 +11,6 @@
 
 .wrapper
   +wrapper()
-  +scrollbar($color_scrollbar-track, $color_scrollbar-thumb)
 
 @font-face 
   +font($font, $fontBold)
@@ -32,9 +31,11 @@
   +font(SuisseIntl, SuisseIntl-Regular)
 
 
++scrollbar($color_scrollbar-track, $color_scrollbar-thumb)
+
 html
   scrollbar-color: $color_orange #fff
-  scrollbar-width: thin
+  scrollbar-width: auto
   &:not([data-scroll='0']) 
     // header
     //   background: rgba(2, 2, 2, 0.4)
