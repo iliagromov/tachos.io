@@ -54,7 +54,7 @@ const SwiperSliderComponent: FC = () => {
                     )
                 }
             }
-            videio1:  file(relativePath: {eq: "video-testimonial.mp4"}) {
+            videio1: file(relativePath: {eq: "video-testimonial.mp4"}) {
                 relativePath
                 name
                 id
@@ -97,7 +97,8 @@ const SwiperSliderComponent: FC = () => {
       const image1 = getImage(testimonial1);      
       const image2 = getImage(testimonial2);      
       const image3 = getImage(testimonial3);   
-      const videos = videio1.childVideoFfmpeg;
+      const videos = videio1;
+      console.log(videos);
     return (
 
         <div className="testimonials-slider">
@@ -115,7 +116,7 @@ const SwiperSliderComponent: FC = () => {
                                 <GatsbyImage image={image2} alt={'img'} />
                             </div>
                             <div className="testimonials-slide__img-video">
-                                <Video
+                                {/* <Video
                                     preload="true" 
                                     poster={image2}
                                     autoPlay
@@ -123,7 +124,7 @@ const SwiperSliderComponent: FC = () => {
                                     loop
                                     controls
                                     sources={[videos.webm, videos.mp4]}
-                                    />
+                                    /> */}
                                 <div className="testimonials-slide__img-video-btn-play">
                                     <div id="timer"></div>
                                     <button className="page-btn" aria-label="Play"
@@ -142,7 +143,7 @@ const SwiperSliderComponent: FC = () => {
                                 <GatsbyImage image={image1} alt={'img'} />
                             </div>
                             <div className="testimonials-slide__img-video">
-                                <Video
+                                {/* <Video
                                     preload="true" 
                                     poster={image1}
                                     autoPlay
@@ -150,7 +151,7 @@ const SwiperSliderComponent: FC = () => {
                                     loop
                                     controls
                                     sources={[videos.webm, videos.mp4]}
-                                    />
+                                    /> */}
                                 <div className="testimonials-slide__img-video-btn-play">
                                     <div id="timer"></div><button className="page-btn" aria-label="Play"
                                         role="button">►</button>
@@ -168,7 +169,7 @@ const SwiperSliderComponent: FC = () => {
                                 <GatsbyImage image={image3} alt={'img'} />
                             </div>
                             <div className="testimonials-slide__img-video">
-                                <Video
+                                {/* <Video
                                     preload="true" 
                                     poster={image3}
                                     autoPlay
@@ -176,7 +177,7 @@ const SwiperSliderComponent: FC = () => {
                                     loop
                                     controls
                                     sources={[videos.webm, videos.mp4]}
-                                    />
+                                    /> */}
                                 <div className="testimonials-slide__img-video-btn-play">
                                     <div id="timer"></div><button className="page-btn" aria-label="Play"
                                         role="button">►</button>
