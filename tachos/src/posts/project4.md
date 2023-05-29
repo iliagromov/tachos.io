@@ -1,7 +1,7 @@
 ---
 category: projects
 url: project4
-image: ../images/project4.png
+image: ../images/project-4.png
 video: ''
 date: '2022'
 title: 'Montetuning'

@@ -1,7 +1,7 @@
 ---
 category: projects
 url: project6
-image: ../images/project6.png
+image: ../images/project-6.png
 video: ''
 date: '2022'
 title: 'Полка'

@@ -27,11 +27,14 @@ const HeaderComponent: FC = () => {
           </div>
           <div className="header__nav">
             <div className="header__nav_desktop">
-              <nav className="nav"> <a className="page-link" href="">Проекты <span
-                className="page-link_counter">10</span></a><a className="page-link"
-                  href="">Команда </a><a className="page-link"
-                    href="">Услуги </a><a className="page-link"
-                      href="">Отзывы </a></nav>
+              <nav className="nav"> 
+              <a className="page-link" href="">Проекты 
+                <span className="page-link_counter">10</span>
+              </a>
+              <Link className="page-link" to={'/team'}>Команда </Link>
+              <Link className="page-link"  to={'/team'}>Услуги </Link>
+              <Link className="page-link"  to={'/team'}>Отзывы </Link>
+              </nav>
             </div>
             <div className="header__nav_mobile">
               <button className="page-link js-mobile-menu"

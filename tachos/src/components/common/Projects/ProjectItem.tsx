@@ -25,17 +25,13 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
         subtitle,
         description
     } = props;
-
-
-    // const image = getImage(imgSrc);
     const projectLink = `/${category}/${url}`;
-    // console.log(image);
     return (
         <Link className="project-card" to={projectLink}>
             <div className="project-card__img">
-                {/* <StaticImage
-                src={image}
-                alt={'img'} /> */}
+                <GatsbyImage
+                image={image}
+                alt={'img'} />
             </div>
             <div className="project-card__text">
                 <div className="project-card__title-box">

@@ -1,7 +1,7 @@
 ---
 category: projects
 url: project5
-image: ../images/project5.png
+image: ../images/project-5.png
 video: ''
 date: '2022'
 title: 'Life'

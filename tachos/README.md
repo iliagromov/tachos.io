@@ -48,3 +48,8 @@
 Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
 [<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+
+
+# BUG
+Отследил баг в graphql 
+Если я сделал ошибку в пути к изображени, то интерфейс не поддятнет это изображение вообще, он вернут только строку пути и боъект childImageSharp будет отсутвовать, а он нам нужен для вывода изображений

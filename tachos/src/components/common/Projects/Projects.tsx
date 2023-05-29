@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { ProjectItem, ProjectItemProps } from './ProjectItem';
 
 import './Projects.sass';
-import { getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
 
 type ProjectsItemProps = QueryProjectItemProps[];
 type QueryProjectItemProps = {
@@ -29,7 +29,14 @@ const ProjectsComponent: FC = () => {
                     frontmatter {
                         category
                         url
-                        image
+                        image {
+                            childImageSharp {
+                                gatsbyImageData(
+                                  formats:AUTO
+                                  placeholder:BLURRED
+                                )
+                            }
+                        }
                         video
                         date
                         title
@@ -41,15 +48,15 @@ const ProjectsComponent: FC = () => {
     }`);
     const renderProjects = nodes?.map((node: QueryProjectItemProps, i: number) => {
         const project = node.frontmatter;
-        const image = getImage(project.image);
-        console.log(project.image);
+        // INFO: getImage использую там где делаю запрос childImageSharp
+        const projectImage = getImage(project.image.childImageSharp.gatsbyImageData);
+     
         return (
             <ProjectItem
-                
                 key={`project__${i}`}
                 category={project.category}
                 url={project.url}
-                image={project.image}
+                image={projectImage}
                 date={project.date}
                 title={project.title}
                 subtitle={project.subtitle}

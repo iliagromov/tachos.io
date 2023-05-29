@@ -1,7 +1,7 @@
 ---
 category: projects
 url: project2
-image: ../images/project2.png
+image: ../images/project-2.png
 video: ''
 date: '2022'
 title: 'Docmed'

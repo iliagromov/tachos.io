@@ -1,7 +1,7 @@
 ---
 category: projects
 url: project7
-image: ../images/project7.png
+image: ../images/project-7.png
 video: ''
 date: '2022'
 title: 'Складно'

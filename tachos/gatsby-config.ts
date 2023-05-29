@@ -96,60 +96,61 @@ const config: GatsbyConfig = {
     //     // },
     //   },
     // }, 
+    /*
   {
     resolve: `gatsby-transformer-video`,
-    // options: {
-    //   /**
-    //    * Alternative directory for the video cache
-    //    * Default: '.cache-video'
-    //    */
-    //   cacheDirectory: resolve('node_modules', '.cache-video'),
+    options: {
+      /**
+       * Alternative directory for the video cache
+       * Default: '.cache-video'
+      
+      cacheDirectory: resolve('node_modules', '.cache-video'),
 
-    //   /**
-    //    * Alternative directory for the ffmpeg binaries
-    //    * Default: resolve(`.bin`, `gatsby-transformer-video`)
-    //    */
-    //   cacheDirectoryBin: resolve('node_modules', '.cache-video-bin'),
+      /**
+       * Alternative directory for the ffmpeg binaries
+       * Default: resolve(`.bin`, `gatsby-transformer-video`)
+       
+      cacheDirectoryBin: resolve('node_modules', '.cache-video-bin'),
 
-    //   /**
-    //    * Set if FFMPEG & FFPROBE should be downloaded if they are not found locally
-    //    *
-    //    * Downloaded binaries are stored in `.bin/gatsby-transformer-video/`
-    //    *
-    //    * Default: true
-    //    */
-    //   downloadBinaries: false,
+      /**
+       * Set if FFMPEG & FFPROBE should be downloaded if they are not found locally
+       *
+       * Downloaded binaries are stored in `.bin/gatsby-transformer-video/`
+       *
+       * Default: true
+       
+      downloadBinaries: false,
 
-    //   /**
-    //    * Pass your own FFMPEG && FFPROBE binaries
-    //    *
-    //    * Assumes you store your binaries in the following pattern:
-    //    * ./bin/darwin/ffmpeg
-    //    * ./bin/darwin/ffprobe
-    //    * ./bin/linux/ffmpeg
-    //    * ./bin/linux/ffprobe
-    //    * ...
-    //    *
-    //    * Default: null
-    //    */
-    //   ffmpegPath: resolve(__dirname, 'bin', platform(), 'ffmpeg'),
-    //   ffprobePath: resolve(__dirname, 'bin', platform(), 'ffprobe'),
+      /**
+       * Pass your own FFMPEG && FFPROBE binaries
+       *
+       * Assumes you store your binaries in the following pattern:
+       * ./bin/darwin/ffmpeg
+       * ./bin/darwin/ffprobe
+       * ./bin/linux/ffmpeg
+       * ./bin/linux/ffprobe
+       * ...
+       *
+       * Default: null
+      
+      ffmpegPath: resolve(__dirname, 'bin', platform(), 'ffmpeg'),
+      ffprobePath: resolve(__dirname, 'bin', platform(), 'ffprobe'),
 
-    //   /**
-    //    * Define custom profiles to convert videos with full fluent-ffmpeg access
-    //    *
-    //    * Learn more: https://github.com/fluent-ffmpeg/node-fluent-ffmpeg
-    //    */
-    //   profiles: {
-    //     sepia: {
-    //       extension: `mp4`,
-    //       // converter: function({ ffmpegSession, videoStreamMetadata }) {
-    //         // Example:
-    //         // https://github.com/hashbite/gatsby-transformer-video/blob/main/packages/example/gatsby-config.js#L24-L55
-    //       },
-    //     },
-    //   },
-    },
+      /**
+       * Define custom profiles to convert videos with full fluent-ffmpeg access
+       *
+       * Learn more: https://github.com/fluent-ffmpeg/node-fluent-ffmpeg
+      
+      profiles: {
+        sepia: {
+          extension: `mp4`,
+          // converter: function({ ffmpegSession, videoStreamMetadata }) {
+            // Example:
+            // https://github.com/hashbite/gatsby-transformer-video/blob/main/packages/example/gatsby-config.js#L24-L55
+          },
+        },
+      },
+    },*/
     "gatsby-plugin-ffmpeg",
     "gatsby-transformer-ffmpeg",
     "gatsby-plugin-image",

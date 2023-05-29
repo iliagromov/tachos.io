@@ -1,7 +1,7 @@
 ---
 category: projects
 url: project1
-image: ../images/project1.png
+image: ../images/project-1.png
 video: ''
 date: '2022'
 title: 'Хайс банк'
