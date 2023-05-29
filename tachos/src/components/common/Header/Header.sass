@@ -12,19 +12,12 @@
         position: relative
     &__logo 
         +col
+        z-index: 20
+
         .page-link
             display: flex
-
-            svg
-                path
-                    +transitionBase(all, 0.5)
-            &:hover
-                svg
-                    path
-                        &:nth-child(5)
-                            fill: $color_orange
                         
-        z-index: 20
+       
 
     &__nav
         +md-block

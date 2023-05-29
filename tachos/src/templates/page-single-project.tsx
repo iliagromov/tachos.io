@@ -3,16 +3,65 @@ import { graphql, Link, PageProps } from "gatsby";
 import Layout from "../layouts/Default";
 import SEO from "../components/seo"
 import { ProjectPageContainer } from "../components/containers/ProjectPage/ProjectPage";
+import path from "path";
 
 
-
-const ProjectPage: React.FC<PageProps> = (props) => {
-  
+export const query = graphql` 
+  query MyQuery($url:String) {
+    markdownRemark(frontmatter: { url: {eq: $url}}) {
+      frontmatter {
+        category
+        url
+        image {
+            childImageSharp {
+                gatsbyImageData(
+                  formats:AUTO
+                  placeholder:BLURRED
+                )
+            }
+        }
+        video
+        date
+        title
+        subtitle
+        description
+      }
+    }
+}`;
+const ProjectPage: React.FC<PageProps> = ({
+  path,
+  uri,
+  location,
+  pageContext,
+  data
+}) => {
+ 
+  const pageData = data?.markdownRemark?.frontmatter;
   return (
     <Layout>
-
-      <SEO title="Tachos project" />
-      <ProjectPageContainer/>
+      <SEO title={pageData.title} />
+      <ProjectPageContainer
+        path={path}
+        uri={uri}
+        location={location}
+        pageContext={pageContext}
+        data={pageData} 
+        children={undefined} 
+        params={undefined} 
+        pageResources={{
+          component: undefined,
+          json: {
+            data: undefined,
+            pageContext: undefined
+          },
+          page: {
+            componentChunkName: "",
+            path: "",
+            webpackCompilationHash: "",
+            matchPath: undefined
+          }
+        }} 
+        serverData={undefined}/>
     </Layout>
   )
 }

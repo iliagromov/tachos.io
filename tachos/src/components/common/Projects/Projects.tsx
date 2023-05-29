@@ -48,15 +48,13 @@ const ProjectsComponent: FC = () => {
     }`);
     const renderProjects = nodes?.map((node: QueryProjectItemProps, i: number) => {
         const project = node.frontmatter;
-        // INFO: getImage использую там где делаю запрос childImageSharp
-        const projectImage = getImage(project.image.childImageSharp.gatsbyImageData);
-     
+       
         return (
             <ProjectItem
                 key={`project__${i}`}
                 category={project.category}
                 url={project.url}
-                image={projectImage}
+                image={project.image}
                 date={project.date}
                 title={project.title}
                 subtitle={project.subtitle}

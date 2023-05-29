@@ -21,16 +21,16 @@ const HeaderComponent: FC = () => {
       <div className="wrapper">
         <div className="header-inner">
           <div className="header__logo">
-            <a className="page-link" href="/">
+            <Link className="page-link" to="/">
               <ReactSVG src={logoHeader.publicURL} />
-            </a>
+            </Link>
           </div>
           <div className="header__nav">
             <div className="header__nav_desktop">
               <nav className="nav"> 
-              <a className="page-link" href="">Проекты 
+              <Link className="page-link" to="/">Проекты 
                 <span className="page-link_counter">10</span>
-              </a>
+              </Link>
               <Link className="page-link" to={'/team'}>Команда </Link>
               <Link className="page-link"  to={'/team'}>Услуги </Link>
               <Link className="page-link"  to={'/team'}>Отзывы </Link>

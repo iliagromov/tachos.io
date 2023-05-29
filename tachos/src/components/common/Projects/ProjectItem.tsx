@@ -7,7 +7,11 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 export type ProjectItemProps = {
     category?: string
     url?: string
-    image: any
+    image: {
+        childImageSharp: {
+            gatsbyImageData: any
+        }
+    }
     video?: string
     date: string
     title: string
@@ -26,11 +30,15 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
         description
     } = props;
     const projectLink = `/${category}/${url}`;
+    // INFO: getImage использую там где делаю запрос childImageSharp
+    // INFO: getImage в корневом компоненете, придется проходит вверх и смотреть что было в запросе
+    const projectImage = getImage(image.childImageSharp.gatsbyImageData);
+  
     return (
         <Link className="project-card" to={projectLink}>
             <div className="project-card__img">
                 <GatsbyImage
-                image={image}
+                image={projectImage}
                 alt={'img'} />
             </div>
             <div className="project-card__text">
