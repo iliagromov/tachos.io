@@ -27,6 +27,7 @@
     "gatsby": "^5.6.1",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-ffmpeg": "^0.6.4",
+    "gatsby-plugin-gdpr-cookies": "^2.0.9",
     "gatsby-plugin-image": "^3.10.0",
     "gatsby-plugin-manifest": "^5.10.0",
     "gatsby-plugin-mdx": "^5.10.0",

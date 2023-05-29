@@ -2,25 +2,37 @@ import React, { FC } from 'react';
 
 // import { ReactSVG } from 'react-svg';
 // import { useStaticQuery, graphql, Link, navigate } from "gatsby";
+import { useCookies } from 'react-cookie'
 
 import './Cookies.sass';
+const COOKIE_KEY = 'notification';
 
 const CookiesComponent: FC = () => {
-    //   const { 
-    //     mainSlogan
-    //   } = useStaticQuery(graphql`
-    //     query  {
-    //       mainSlogan: file(relativePath: { eq: "Main-slogan.svg" }) {
-    //           publicURL
-    //           name
-    //       }
-    //     }`);
+    const [cookies, setCookie] = useCookies();
+
+    // если кука есть, то просто не рендерим кнопку
+    if (cookies[COOKIE_KEY]) {
+        return null;
+    }
+    
+    
     return (
 
-        <section className="template">
+         <section className="cookies" >
             <div className="wrapper">
-                <div className="template-inner">
-
+                <div className="cookies-inner">
+                        <div className="page-text">
+                            Пользуясь нашим сайтом, вы соглашаетесь с тем, что мы используем cookies
+                        </div>
+                        <button
+                            className={'cookies-trigger'}
+                            type="button"
+                            onClick={() => setCookie(COOKIE_KEY, true)}
+                        >
+                            <span>
+                                {'Окей'}
+                            </span>
+                        </button>
                 </div>
             </div>
         </section>

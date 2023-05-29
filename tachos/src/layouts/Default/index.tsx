@@ -8,13 +8,14 @@ import { loadingBody, toggleBodyScroll } from "../../shared/utils";
 import Lottie from 'react-lottie';
 import animationData from '../../lotties/video-preloader.json';
 import cn from 'classnames'
+import { CookiesComponent } from "../../components/common/Cookies/Cookies";
 
 const Layout = ({ children }) => {
 
   const [loading, setLoading] = useState(false);
   const [isLoaded, setLoaded] = useState(false);
   const [isComplite, setComplite] = useState(false);
-
+ 
 
   // сначала scale 
   // потом включаю контент
@@ -36,9 +37,9 @@ const Layout = ({ children }) => {
       setLoading(false);
     }, 1900);
 
-    setTimeout(() => {
-      setComplite(true);
-    }, 2500);
+    // setTimeout(() => {
+    //   setComplite(true);
+    // }, 2500);
 
   }, []);
 
@@ -54,12 +55,10 @@ const Layout = ({ children }) => {
   };
   return (
     <>
-  
-    <div className={cn("loader-container")} >
-    {!isComplite && <div className={cn("preloader", !loading && 'preloaderLoaded')}>
-       (<Lottie options={defaultOptions} isStopped={!loading} />)
-      </div>}
-      
+      {!isComplite && <div className={cn("preloader", !loading && 'preloaderLoaded')}>
+       <Lottie options={defaultOptions} isStopped={!loading} />
+      </div>
+      }  
       <div className={cn("page-body", isLoaded && 'contentLoaded')}>
         <DebugGridComponent/>
         <HeaderComponent />
@@ -68,8 +67,8 @@ const Layout = ({ children }) => {
         </main>
         <FooterComponent />
       </div>
+      <CookiesComponent/>
       
-     </div>
     </>
   );
 }
