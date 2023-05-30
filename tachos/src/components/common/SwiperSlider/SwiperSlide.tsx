@@ -1,22 +1,12 @@
-import React, { FC, useRef, useState } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import React, { FC,  } from 'react';
 
-import {  ControlBar,
-    CurrentTimeDisplay,
-    DurationDisplay,
-    Player,
-    PlayerProps,
-    PlayerState,
-    ProgressControl,
-    TimeDivider, } from 'video-react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { SwiperSlide, useSwiper } from "swiper/react";
-import { ReactSVG } from 'react-svg';
 
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 // style
 import './SwiperSlide.sass';
 import CustomPlayer from '../Player/Player';
+import { graphql, useStaticQuery } from 'gatsby';
 type SwiperSlideComponentProps = {
     video: string
     image: any
@@ -38,28 +28,9 @@ const SwiperSlideComponent: FC<SwiperSlideComponentProps> = ({
                 publicURL
 			    name
             }
-        }`);     
+        }`);  
+  
 
-
-    const testProps: PlayerProps = { 
-        autoPlay: true,
-        src: video,
-        preload: 'auto',
-        muted: true,
-        aspectRatio: '4:3',
-    };
-
-    const [isPlay, setPlay] = useState(false);
-
-
-    const playerRef = useRef<PlayerState>(null);
-
-
-
-    function onPlay(){
-        console.log('test');
-        setPlay(!isPlay);
-    }
     return (
             <>
                 <div className="testimonials-slide__img testimonials-slide__img_mask">
@@ -69,19 +40,9 @@ const SwiperSlideComponent: FC<SwiperSlideComponentProps> = ({
                     <div className="testimonials-slide__img-video">
                             <CustomPlayer 
                             video={video}
-                            isPlay={isPlay}
+                            iconBtn={iconPlay.publicURL}
                         />
-                        <div className="testimonials-slide__img-video-btn-play">
-                            <div id="timer"></div>
-                            <button 
-                                className="page-btn" 
-                                aria-label="Play"
-                                role="button"
-                                onClick={onPlay}
-                                >
-                                    <ReactSVG className="page-svg" src={iconPlay.publicURL} />
-                                </button>
-                        </div>
+                        
                     </div>
                 </div>
                 <div className="testimonials-slide__name">

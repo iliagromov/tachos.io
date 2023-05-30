@@ -63,7 +63,10 @@ const SwiperSliderComponent: FC = () => {
                 }
             }
         }`);     
+    const [swiper, setSwiper]  = useState(null);
 
+    // console.log(swiper.activeIndex)
+ 
     const renderTestimonial = nodes?.map((node: any, i: number) => {
         const testimonial = node.frontmatter;
         const image = getImage(testimonial.image.childImageSharp.gatsbyImageData);
@@ -81,6 +84,8 @@ const SwiperSliderComponent: FC = () => {
             
         )
     });
+
+   
     return (
         <div className="testimonials-slider">
             <Swiper
@@ -88,6 +93,8 @@ const SwiperSliderComponent: FC = () => {
                 modules={[Navigation, Pagination]}
                 spaceBetween={0}
                 slidesPerView={1}
+                initialSlide={1}
+                onSwiper={(swiper) => setSwiper(swiper)}
                 
                 className="testimonialSwiper" >
                 <SwiperToggles />

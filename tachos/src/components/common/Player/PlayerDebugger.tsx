@@ -171,7 +171,7 @@ export default class PlayerControlExample extends Component {
           </Button>
         </div>
         <div>State</div>
-      </div>
+      </div>  
     );
   }
 }
