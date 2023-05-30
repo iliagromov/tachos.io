@@ -14,13 +14,9 @@ const VideoComponent: FC<VideoComponentProps> = ({ videoSrcURL, videoTitle, ...p
     return (
 
         <div className="video">
-            <iframe
-            src={videoSrcURL}
-            title={videoTitle}
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            frameBorder="0"
-            allowFullScreen
-            />
+             <video controls style={{ width: `100%` }}>
+                    <source src={videoSrcURL} type="video/mp4" />
+                </video>
       </div>
 
     );

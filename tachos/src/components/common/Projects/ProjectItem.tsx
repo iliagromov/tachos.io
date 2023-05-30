@@ -3,6 +3,8 @@ import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
 
 import './Projects.sass';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import { Player } from 'video-react';
+
 
 export type ProjectItemProps = {
     category?: string
@@ -27,20 +29,23 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
         date,
         title,
         subtitle,
-        description
+        description,
+        video
     } = props;
     const projectLink = `/${category}/${url}`;
     // INFO: getImage использую там где делаю запрос childImageSharp
     // INFO: getImage в корневом компоненете, придется проходит вверх и смотреть что было в запросе
     const projectImage = getImage(image.childImageSharp.gatsbyImageData);
-  
+    // console.log(video);
     return (
+        <>
         <Link className="project-card" to={projectLink}>
             <div className="project-card__img">
                 <GatsbyImage
                 image={projectImage}
                 alt={'img'} />
             </div>
+           
             <div className="project-card__text">
                 <div className="project-card__title-box">
                     <div className="project-card__title">
@@ -58,6 +63,7 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
                 </div>
             </div>
         </Link>
+        </>
 
     );
 }

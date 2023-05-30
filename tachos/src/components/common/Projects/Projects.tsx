@@ -23,7 +23,10 @@ const ProjectsComponent: FC = () => {
         }
     } = useStaticQuery(graphql`
         query  {
-            allMarkdownRemark(sort: {frontmatter: {url: ASC}}) {
+            allMarkdownRemark(
+                sort: {frontmatter: {url: ASC}}
+                filter: {frontmatter: {category: {eq: "projects"}}}
+            ) {
                 nodes {
                     id
                     frontmatter {
@@ -37,7 +40,23 @@ const ProjectsComponent: FC = () => {
                                 )
                             }
                         }
-                        video
+                        video {
+                            id
+                            absolutePath
+                            publicURL
+                            childVideoFfmpeg {
+                                transcode {
+                                width
+                                src
+                                presentationMaxWidth
+                                presentationMaxHeight
+                                originalName
+                                height
+                                fileExtension
+                                aspectRatio
+                                }
+                            }
+                        }
                         date
                         title
                         subtitle
@@ -52,6 +71,7 @@ const ProjectsComponent: FC = () => {
         return (
             <ProjectItem
                 key={`project__${i}`}
+                video={project.video}
                 category={project.category}
                 url={project.url}
                 image={project.image}
@@ -65,6 +85,7 @@ const ProjectsComponent: FC = () => {
 
     return (
         <section className="projects">
+
             <div className="wrapper">
                 <div className="projects-inner">
                     {renderProjects}

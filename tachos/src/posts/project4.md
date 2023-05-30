@@ -2,7 +2,7 @@
 category: projects
 url: project4
 image: ../images/project-4.png
-video: ''
+video: ../assets/video/video-testimonial.mp4
 date: '2022'
 title: 'Montetuning'
 subtitle: 'Edtech - Swift – 6 month'

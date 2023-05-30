@@ -2,7 +2,7 @@
 category: projects
 url: project5
 image: ../images/project-5.png
-video: ''
+video: ../assets/video/video-testimonial.mp4
 date: '2022'
 title: 'Life'
 subtitle: 'Edtech - Swift – 6 month'

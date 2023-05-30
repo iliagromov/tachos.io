@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@craco/craco": "^7.1.0",
+    "@types/video-react": "^0.15.1",
     "antd": "^5.5.1",
     "classnames": "^2.3.2",
     "dotenv": "^16.0.3",
@@ -59,7 +60,8 @@
     "react-preloaders": "^3.0.3",
     "react-svg": "^16.1.12",
     "sass": "^1.58.3",
-    "swiper": "^9.1.0"
+    "swiper": "^9.1.0",
+    "video-react": "^0.16.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",

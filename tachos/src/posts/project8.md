@@ -2,7 +2,7 @@
 category: projects
 url: project8
 image: ../images/project-8.png
-video: ''
+video: ../assets/video/video-testimonial.mp4
 date: '2022'
 title: 'Maginary'
 subtitle: 'Edtech - Swift – 6 month'

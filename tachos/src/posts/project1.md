@@ -2,7 +2,7 @@
 category: projects
 url: project1
 image: ../images/project-1.png
-video: ''
+video: ../assets/video/video-testimonial.mp4
 date: '2022'
 title: 'Хайс банк'
 subtitle: 'Edtech - Swift – 6 month'

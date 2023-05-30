@@ -18,9 +18,7 @@ const TestimonialItem: FC<TestimonialItemProps> = (props) => {
         <div className="testimonials-slide swiper-slide">
             <div className="testimonials-slide__img testimonials-slide__img_mask">
                 <div className="testimonials-slide__img-poster">
-                    <picture className="page-picture">
-                        <img src="assets/images/png/testimonial-2.png"
-                            alt=""/></picture>
+                    
                 </div>
                 <div className="testimonials-slide__img-video">
                    

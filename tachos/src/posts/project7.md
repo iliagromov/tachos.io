@@ -2,7 +2,7 @@
 category: projects
 url: project7
 image: ../images/project-7.png
-video: ''
+video: ../assets/video/video-testimonial.mp4
 date: '2022'
 title: 'Складно'
 subtitle: 'Edtech - Swift – 6 month'

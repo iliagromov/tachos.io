@@ -20,7 +20,7 @@ export const query = graphql`
                 )
             }
         }
-        video
+        
         date
         title
         subtitle

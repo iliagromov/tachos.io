@@ -1,13 +1,13 @@
 ---
-category: projects
-url: project3
-image: ../images/project-3.png
+category: testimonial
+url: testimonial1
+image: ../assets/images/png/testimonial/testimonial-3.png
 video: ../assets/video/video-testimonial.mp4
 date: '2022'
-title: 'Складно'
-subtitle: 'Edtech - Swift – 6 month'
-description: 'EdTech platform which makes online learning engrossing.'
+title: 'Дима Энтелис 3'
+subtitle: 'CTO Entelis team'
+description: 'description'
 ---
 
-# Цезарь
+# Афины
 **Lorem ipsum dolor** sit amet consectetur adipisicing elit. Porro dolores incidunt minima, animi corporis distinctio, nobis impedit ratione laboriosam saepe magni quis sed magnam soluta. Laudantium fugiat quaerat placeat voluptatibus?
