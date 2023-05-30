@@ -24,7 +24,8 @@ type SwiperSlideComponentProps = {
 }
 const SwiperSlideComponent: FC<SwiperSlideComponentProps> = ({
     video,
-    image
+    image,
+    testimonial
 
 }) => {
      
@@ -58,7 +59,7 @@ const SwiperSlideComponent: FC<SwiperSlideComponentProps> = ({
 
     return (
             <>
-                  <Player {...testProps} >
+                <Player {...testProps} >
                     <ControlBar>
                         <CurrentTimeDisplay order={1} />
                         <DurationDisplay order={2} />
@@ -95,8 +96,8 @@ const SwiperSlideComponent: FC<SwiperSlideComponentProps> = ({
                     </div>
                 </div>
                 <div className="testimonials-slide__name">
-                    <h3 className="page-title page-title-h3">Дима Энтелис</h3>
-                    <div className="page-title-caption page-title-caption-3">CTO Entelis team</div>
+                    <h3 className="page-title page-title-h3">{testimonial.title}</h3>
+                    <div className="page-title-caption page-title-caption-3">{testimonial.subtitle}</div>
                 </div>
             </>
 

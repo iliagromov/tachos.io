@@ -87,6 +87,7 @@ const SwiperSliderComponent: FC = () => {
                 modules={[Navigation, Pagination]}
                 spaceBetween={0}
                 slidesPerView={1}
+                
                 className="testimonialSwiper" >
                 <SwiperToggles />
                 <div className="testimonials-slider__items swiper-wrapper">

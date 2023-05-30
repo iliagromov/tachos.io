@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import { ReactSVG } from 'react-svg';
 import { useStaticQuery, graphql, Link, navigate } from "gatsby";
 
-import './SwiperSlider.sass';
+import './SwiperToggles.sass';
 import { useSwiper } from 'swiper/react';
 
 const SwiperToggles: FC = () => {
