@@ -58,7 +58,9 @@
     "react-helmet": "^6.1.0",
     "react-lottie": "^1.2.3",
     "react-preloaders": "^3.0.3",
+    "react-prism": "^4.3.2",
     "react-svg": "^16.1.12",
+    "reactstrap": "^9.1.10",
     "sass": "^1.58.3",
     "swiper": "^9.1.0",
     "video-react": "^0.16.0"

@@ -14,6 +14,8 @@ import './SwiperSlider.sass';
 import { SwiperToggles } from './SwiperToggles';
 import { SwiperSlideComponent } from './SwiperSlide';
 import { getImage } from 'gatsby-plugin-image';
+import PlayerControlExample from '../Player/Player';
+import CustomPlayer from '../Player/Player';
 
 
 
@@ -79,7 +81,6 @@ const SwiperSliderComponent: FC = () => {
             
         )
     });
-
     return (
         <div className="testimonials-slider">
             <Swiper

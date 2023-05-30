@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react';
+import React, { FC, useRef, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import {  ControlBar,
@@ -16,6 +16,7 @@ import { ReactSVG } from 'react-svg';
 
 // style
 import './SwiperSlide.sass';
+import CustomPlayer from '../Player/Player';
 type SwiperSlideComponentProps = {
     video: string
     image: any
@@ -48,6 +49,8 @@ const SwiperSlideComponent: FC<SwiperSlideComponentProps> = ({
         aspectRatio: '4:3',
     };
 
+    const [isPlay, setPlay] = useState(false);
+
 
     const playerRef = useRef<PlayerState>(null);
 
@@ -55,33 +58,19 @@ const SwiperSlideComponent: FC<SwiperSlideComponentProps> = ({
 
     function onPlay(){
         console.log('test');
+        setPlay(!isPlay);
     }
-
     return (
             <>
-                <Player {...testProps} >
-                    <ControlBar>
-                        <CurrentTimeDisplay order={1} />
-                        <DurationDisplay order={2} />
-                        <ProgressControl order={3} />
-                        <TimeDivider order={4} />
-                    </ControlBar>
-                </Player>
-                {/* <Video
-                    preload="true" 
-                    poster={image}
-                    autoPlay
-                    muted={false}
-                    loop
-                    controls
-                    sources={[video]}
-                    /> */}
                 <div className="testimonials-slide__img testimonials-slide__img_mask">
                     <div className="testimonials-slide__img-poster">
                         <GatsbyImage image={image} alt={'img'} />
                     </div>
                     <div className="testimonials-slide__img-video">
-                       
+                            <CustomPlayer 
+                            video={video}
+                            isPlay={isPlay}
+                        />
                         <div className="testimonials-slide__img-video-btn-play">
                             <div id="timer"></div>
                             <button 
