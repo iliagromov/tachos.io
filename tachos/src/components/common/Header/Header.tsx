@@ -10,6 +10,13 @@ import {
 } from "react-hide-on-scroll";
 // FIXME: вынести меню в компонент
 
+// Check if window is defined (so if in the browser or in node.js).
+const isBrowser = typeof window !== "undefined"
+
+
+// TODO: global window polyfill
+var isBtn = typeof window !== 'undefined' && window.document.querySelector('#third');
+
 const HeaderComponent: FC = () => {
   const {
     logoHeader
@@ -46,8 +53,8 @@ const HeaderComponent: FC = () => {
     toggleBodyNavShowed(!stateMenu)
   }, [stateMenu])
 
-  const isBtn = document.querySelector('#third');
-  
+
+
   const menuTitle = stateMenu ? "На главную" : "Меню";
   return (
     <header className="header">

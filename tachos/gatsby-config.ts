@@ -8,9 +8,16 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `Tachos`,
     author: 'iliagromov',
-    siteUrl: `http://tachos.ru/`,
-    blog: 'my blog',
+    siteUrl: `https://tachos.gromov-studio.site`,
+    blog: 'Tachos dev',
 
+  },
+   flags: {
+    // FAST_DEV: true,
+    // FAST_REFRESH: true,
+    DEV_SSR: true,
+    // QUERY_ON_DEMAND: false,
+    // LAZY_IMAGES: false
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
