@@ -5,7 +5,9 @@ import { useStaticQuery, graphql, Link, navigate } from "gatsby";
 
 import './Header.sass';
 import { getScrollbarSize, toggleBodyScroll } from '../../../shared/utils';
-
+import {
+  HideBetween,
+} from "react-hide-on-scroll";
 // FIXME: вынести меню в компонент
 
 const HeaderComponent: FC = () => {
@@ -44,7 +46,8 @@ const HeaderComponent: FC = () => {
     toggleBodyNavShowed(!stateMenu)
   }, [stateMenu])
 
-
+  const isBtn = document.querySelector('#third');
+  
   const menuTitle = stateMenu ? "На главную" : "Меню";
   return (
     <header className="header">
@@ -80,7 +83,16 @@ const HeaderComponent: FC = () => {
             </div>
           </div>
           <div className="header__action">
-            <button className="page-btn" type="button">Обсудить проект</button>
+              {/** FIXME: сделать в однну кнопку */}
+            <div className="header__action_desktop">
+              <button className="page-btn" type="button">Обсудить проект</button>
+            </div>
+            
+            <div className="header__action_mobile">
+              {isBtn && <HideBetween div inverse startDivID="first" endDivID="third">
+                <button className="page-btn" type="button">Обсудить проект</button>
+              </HideBetween>}
+            </div>
           </div>
 
           <nav className={cn('menu', stateMenu && 'navShowed')} >
@@ -96,7 +108,6 @@ const HeaderComponent: FC = () => {
                     <Link className="page-link" to={'/team'}>Отзывы </Link>
                   </ul>
                 </div>
-                
                 <div className="menu__footer">
                   <button className="page-btn" type="button">Обсудить проект</button>
                 </div> 

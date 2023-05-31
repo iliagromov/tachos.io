@@ -6,6 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { ReactSVG } from 'react-svg';
 
 import './Player.sass';
+import { useSwiper } from 'swiper/react';
 
 const sources = {
   sintelTrailer: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
@@ -58,22 +59,39 @@ type PlayerProps = {
 
 type CustomPlayerProps = {
     video: string
-    iconBtn: string
-    player?: any
+    autoPlay: boolean
 }
 
+/**
+ * TODO:  
+ * MAinBOX - посмотреть пример
+ * https://scrumtrek.ru/about/
+ * Видео изначально проигрывается, 
+ * по нажатию на Плей, 
+ * кнопка скрывается, 
+ * видео начинается сначала, 
+ * появляется звук, 
+ * По клику на видео появляется конпка плей,
+ * Если видео уже проигрывалось, то продолжаю его воспроизводить
+ * Loader на кнопки 
+ */
+
+
 export default class CustomPlayer extends Component<CustomPlayerProps> {
+  player: any;
   constructor(props: any, context: any) {
     super(props, context);
     
     this.state = {
-        source: sources.bunnyMovie,
+        source: this.props.video,
         loop: true,
         isActive: false,
+        autoPlay: false,
+        muted: true,
+        player: {}
     };
 
     this.play = this.play.bind(this);
-    this.playToggle = this.play.bind(this);
     this.pause = this.pause.bind(this);
     this.load = this.load.bind(this);
     this.setMuted = this.setMuted.bind(this);
@@ -92,18 +110,21 @@ export default class CustomPlayer extends Component<CustomPlayerProps> {
 
   handleStateChange(state: any) {
     // copy player state to this component's state
+    // console.log(state.paused);
     this.setState({
       player: state,
     });
+    if(state.paused){
+      this.player.muted = true;
+    }
   }
 
   play() {
+
     this.player.play();
+    this.player.muted = false;
   }
 
-  playToggle() {
-    this.player.load();
-  }
 
   pause() {
     this.player.pause();
@@ -115,30 +136,34 @@ export default class CustomPlayer extends Component<CustomPlayerProps> {
 
 
   render() {
+    // console.log(this.state.player);
+    
     return (
       <div>
         <Player
           ref={player => {
             this.player = player;
           }}
-          autoPlay={false}
-          muted={true}
+          autoPlay={true}
+          muted={this.state.muted}
         >
-          <source src={this.props.video} />
-          <ControlBar autoHide={true} />
+          <source src={this.state.source} />
         </Player>
+
         <div className="testimonials-slide__img-video-btn-play">              
-            { this.state.player?.paused && <button 
+            {  this.state.player.muted &&
+            (<button 
                 className="page-btn" 
                 aria-label="Play"
                 role="button"
-                onClick={this.playToggle} 
+                onClick={this.play} 
                 >
                     <div className="page-btn_bg"></div>
                     <ReactSVG className="page-svg" src={this.props.iconBtn} />
-                </button>
+                </button>)
             }
         </div>
+        
       </div>
     );
   }

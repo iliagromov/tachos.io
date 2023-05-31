@@ -31,7 +31,7 @@ export const toggleBodyScroll = (isFixed: boolean) => {
     if (isFixed) {
       if (hasScroll) {
         const scrollBarSize = getScrollbarSize()
-        body.style.marginRight = scrollBarSize + 'px'
+        // body.style.marginRight = scrollBarSize + 'px'
       }
       body.style.overflow = 'hidden'
     } else {

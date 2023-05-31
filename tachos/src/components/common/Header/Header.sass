@@ -37,12 +37,27 @@
 
     &__action
         z-index: 20
-        display: none
+
+      
+        +to($break_md)
+            position: fixed
+            right: 20px
+            bottom: 20px
+
         +md-block
             display: block
+
         .page-btn
             font-size: 16px
             line-height: 19px
+
+        &_desktop
+            display: none
+            +md-block
+                display: block
+        &_mobile
+            +md-block
+                display: none
 
 .nav-menu
     .page-link
@@ -77,8 +92,6 @@
         flex-wrap: wrap
         flex-direction: column
         height: 100%
-
-
 
     &__list
         flex-grow: 1

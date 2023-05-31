@@ -7,17 +7,17 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import './SwiperSlide.sass';
 import CustomPlayer from '../Player/Player';
 import { graphql, useStaticQuery } from 'gatsby';
+import { useSwiper } from 'swiper/react';
 type SwiperSlideComponentProps = {
     video: string
     image: any
-    testimonial: any
+    testimonial: AnyNsRecord
 
 }
 const SwiperSlideComponent: FC<SwiperSlideComponentProps> = ({
     video,
     image,
     testimonial
-
 }) => {
      
     const { 
@@ -29,7 +29,8 @@ const SwiperSlideComponent: FC<SwiperSlideComponentProps> = ({
 			    name
             }
         }`);  
-  
+    // const selfSwiper = useSwiper();
+    // console.log(selfSwiper);
 
     return (
             <>

@@ -16,7 +16,7 @@ const BannerComponent: FC = () => {
     }`);
 
   return (
-    <section className="banner">
+    <section className="banner" id="first">
       <div className="wrapper">
         <div className="banner-inner">
           <div className="banner__description-text">

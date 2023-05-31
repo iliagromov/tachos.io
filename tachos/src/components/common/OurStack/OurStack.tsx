@@ -53,7 +53,7 @@ const OurStackComponent: FC = () => {
 
     return (
 
-        <section className="our-stack">
+        <section className="our-stack"  id="third">
             <div className="wrapper">
                 <div className="our-stack-inner">
                     <div className="page-title page-title-h1">Технологии <br/> которыми владеем</div>

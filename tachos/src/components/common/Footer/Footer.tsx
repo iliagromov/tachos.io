@@ -39,28 +39,28 @@ const defaultOptions = {
     },
   };
 
-  const ref = useRef();
-  const [ imagePos, setImagePos ] = useState({ x: 0, y: 0 });
+//   const ref = useRef();
+//   const [ imagePos, setImagePos ] = useState({ x: 0, y: 0 });
 
-  const handlerMoveMouse = useCallback((e) => {
-	  const rect = ref.current.getBoundingClientRect();
-	  setImagePos({ x: e.x - rect.x, y: e.y - rect.y });
-  }, []);
+//   const handlerMoveMouse = useCallback((e) => {
+// 	  const rect = ref.current.getBoundingClientRect();
+// 	  setImagePos({ x: e.x - rect.x, y: e.y - rect.y });
+//   }, []);
 
-  useEffect(() => {
-	  const _ref = ref.current;
-	  _ref.addEventListener('mousemove', handlerMoveMouse);
-	  return () => {
-		  _ref.removeEventListener('mousemove', handlerMoveMouse);
-	  }
-  }, [ handlerMoveMouse ]);
+//   useEffect(() => {
+// 	  const _ref = ref.current;
+// 	  _ref.addEventListener('mousemove', handlerMoveMouse);
+// 	  return () => {
+// 		  _ref.removeEventListener('mousemove', handlerMoveMouse);
+// 	  }
+//   }, [ handlerMoveMouse ]);
 
 
 	return (
 		<footer className="footer">
-			<div ref={ ref } className='draw-container'>
+			{/* <div ref={ ref } className='draw-container'>
 		  <span className='image' style={{ left: imagePos.x, top: imagePos.y }}/>
-	  </div>
+	  </div> */}
 			<div className="wrapper">
 				<div className="footer-inner">
 					<div className="footer__slogan">

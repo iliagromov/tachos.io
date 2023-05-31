@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
 import { ReactSVG } from 'react-svg';
 import { useStaticQuery, graphql, Link, navigate } from "gatsby";
@@ -10,6 +10,11 @@ const SwiperToggles: FC = () => {
     const selfSwiper = useSwiper();
     const onPrev = () => selfSwiper.slidePrev();
     const onNext = () => selfSwiper.slideNext();
+    // const [swiper, setSwiper]  = useState(null);
+    // console.log(selfSwiper);
+    
+ 
+
     const {
 		iconArrow
 	} = useStaticQuery(graphql`
