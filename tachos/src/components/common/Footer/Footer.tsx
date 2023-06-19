@@ -1,10 +1,10 @@
-import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
-import { useStaticQuery, graphql, Link, navigate } from "gatsby";
+import React, { FC } from 'react';
+import { useStaticQuery, graphql } from "gatsby";
 import { ReactSVG } from 'react-svg';
-import Lottie from 'react-lottie';
 import animationData from '../../../lotties/project_guy.json';
 
 import './Footer.sass';
+import Lottie from 'react-lottie';
 
 type FooterProps = {
 }

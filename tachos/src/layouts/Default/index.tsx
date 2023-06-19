@@ -13,7 +13,7 @@ import { CookiesComponent } from "../../components/common/Cookies/Cookies";
 const Layout = ({ children }) => {
 
   const [loading, setLoading] = useState(false);
-  const [isLoaded, setLoaded] = useState(false);
+  const [isLoaded, setLoaded] = useState(true);
   const [isComplite, setComplite] = useState(false);
  
 
@@ -37,9 +37,9 @@ const Layout = ({ children }) => {
       setLoading(false);
     }, 1900);
 
-    // setTimeout(() => {
-    //   setComplite(true);
-    // }, 2500);
+    setTimeout(() => {
+      setComplite(true);
+    }, 2500);
 
   }, []);
 
@@ -60,7 +60,6 @@ const Layout = ({ children }) => {
       </div>
       }  
       <div className={cn("page-body", isLoaded && 'contentLoaded')}>
-        <DebugGridComponent/>
         <HeaderComponent />
         <main className="page">
           {children}

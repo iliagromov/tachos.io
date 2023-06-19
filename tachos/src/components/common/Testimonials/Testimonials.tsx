@@ -1,29 +1,12 @@
 import React, { FC } from 'react';
-import { TestimonialItem } from './TestimonialItem';
-import { useStaticQuery, graphql, Link, navigate } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 import './Testimonials.sass';
 import { SwiperSliderComponent } from '../SwiperSlider/SwiperSlider';
 
 const TestimonialsComponent: FC = () => {
 
-    // FIXME: сделать фабрику по созданию картинок
-    const {
-        testimonialSteps,
-    } = useStaticQuery(graphql`
-        query  {  
-            testimonialSteps:  file(relativePath: { eq: "testimonial-steps.png" }) {
-                    childImageSharp {
-                        gatsbyImageData(
-                            placeholder: BLURRED
-                            formats: [AUTO, WEBP, AVIF]
-                        )
-                    }
-                }
-            }
-    `);
-    const image = getImage(testimonialSteps);
+   
     return (
         <section className="testimonials">
 
@@ -51,16 +34,20 @@ const TestimonialsComponent: FC = () => {
                             </div>
                             <div className="testimonials-steps__contents">
                                 <div className="testimonials-steps__content isActive">
-                                    <GatsbyImage image={image} alt={'img'} />
+                                    <StaticImage
+                                     src={'../../../assets/images/png/testimonial-steps.png'} alt={'img'} />
                                 </div>
                                 <div className="testimonials-steps__content">
-                                    <GatsbyImage image={image} alt={'img'} />
+                                    <StaticImage
+                                     src={'../../../assets/images/png/testimonial-steps.png'} alt={'img'} />
                                 </div>
                                 <div className="testimonials-steps__content">
-                                    <GatsbyImage image={image} alt={'img'} />
+                                    <StaticImage
+                                     src={'../../../assets/images/png/testimonial-steps.png'} alt={'img'} />
                                 </div>
                                 <div className="testimonials-steps__content">
-                                    <GatsbyImage image={image} alt={'img'} />
+                                    <StaticImage
+                                     src={'../../../assets/images/png/testimonial-steps.png'} alt={'img'} />
                                 </div>
                             </div>
                         </div>

@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@craco/craco": "^7.1.0",
+    "@types/react-lottie": "^1.2.6",
     "@types/video-react": "^0.15.1",
     "antd": "^5.5.1",
     "classnames": "^2.3.2",
@@ -67,11 +68,23 @@
     "video-react": "^0.16.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.4",
     "@babel/plugin-proposal-decorators": "^7.22.3",
-    "@types/node": "^18.11.18",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
+    "@svgr/webpack": "^7.0.0",
+    "@types/classnames": "^2.3.1",
+    "@types/node": "^18.14.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-scroll": "^1.8.6",
+    "@types/recharts": "^1.8.24",
+    "babel-loader": "^9.1.2",
     "babel-preset-gatsby": "^3.10.0",
+    "babel-preset-react-app": "^10.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.7",
+    "react-arc-progress": "^1.0.2",
+    "sass-loader": "^13.2.2",
     "typescript": "^4.9.5"
   }
 }

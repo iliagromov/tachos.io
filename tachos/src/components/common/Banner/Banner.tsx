@@ -1,19 +1,9 @@
 import React, { FC } from 'react';
-import { ReactSVG } from 'react-svg';
-import { useStaticQuery, graphql, Link, navigate } from "gatsby";
 
 import './Banner.sass';
 
 const BannerComponent: FC = () => {
-  const {
-    mainSlogan
-  } = useStaticQuery(graphql`
-    query  {
-      mainSlogan: file(relativePath: { eq: "Main-slogan.svg" }) {
-          publicURL
-          name
-      }
-    }`);
+ 
 
   return (
     <section className="banner" id="first">

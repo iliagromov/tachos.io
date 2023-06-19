@@ -1,18 +1,11 @@
 import React, { FC, useCallback, useState } from 'react';
 import cn from 'classnames'
-// import { ReactSVG } from 'react-svg';
-// import { useStaticQuery, graphql, Link, navigate } from "gatsby";
 
 import './Menu.sass';
 
 const MenuComponent: FC = () => {
     
     const [stateMenu, setState] = useState(false);
-
-    const setMenuShowed = (menuShowed: boolean) => ({
-        type: 'HEADER_SET_MENU_SHOWED',
-        payload: menuShowed,
-    });
 
 
     const setMenuVisibility = (value: boolean) => {
@@ -72,12 +65,6 @@ const MenuComponent: FC = () => {
     }
 
 
-    const toggleMenu = useCallback(() => {
-        console.log('menu-trigger');
-        setMenuVisibility(!stateMenu)
-        toggleBodyNavShowed(!stateMenu)
-    }, [stateMenu])
-  
     return (
 
         <nav className={cn('nav', stateMenu && 'navShowed')} >

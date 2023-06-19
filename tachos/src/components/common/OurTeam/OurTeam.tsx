@@ -1,28 +1,11 @@
 import React, { FC } from 'react';
 
-// import { ReactSVG } from 'react-svg';
-import { useStaticQuery, graphql, Link, navigate } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {  StaticImage } from "gatsby-plugin-image"
 
 import './OurTeam.sass';
 
 const OurTeamComponent: FC = () => {
-    const {
-        imageTeam,
-    } = useStaticQuery(graphql`
-        query  {  
-            imageTeam:  file(relativePath: { eq: "image-team.png" }) {
-                    childImageSharp {
-                        gatsbyImageData(
-                            placeholder: BLURRED
-                            formats: [AUTO, WEBP, AVIF]
-                        )
-                    }
-                }
-            }
-    `);
-    const image = getImage(imageTeam);
-
+ 
     return (
         <section className="our-team">
             <div className="wrapper">
@@ -31,7 +14,7 @@ const OurTeamComponent: FC = () => {
                     <div className="page-title page-title-h1">Здесь работают <br /> лучшие специалисты</div>
                     <div className="our-team__info">
                         <div className="our-team__img">
-                            <GatsbyImage image={image} alt={'img'} />
+                            <StaticImage src={'../../../assets/images/png/image-team.png'} alt={'img'} />
                         </div>
                         <div className="our-team__some-text">
                             <div className="page-title-caption page-title-caption-2">Frontend Developer</div>

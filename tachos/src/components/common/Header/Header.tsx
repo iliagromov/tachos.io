@@ -5,9 +5,7 @@ import { useStaticQuery, graphql, Link, navigate } from "gatsby";
 
 import './Header.sass';
 import { getScrollbarSize, toggleBodyScroll } from '../../../shared/utils';
-import {
-  HideBetween,
-} from "react-hide-on-scroll";
+
 // FIXME: вынести меню в компонент
 
 // Check if window is defined (so if in the browser or in node.js).
@@ -95,11 +93,11 @@ const HeaderComponent: FC = () => {
               <button className="page-btn" type="button">Обсудить проект</button>
             </div>
             
-            <div className="header__action_mobile">
+            {/* <div className="header__action_mobile">
               {isBtn && <HideBetween div inverse startDivID="first" endDivID="third">
                 <button className="page-btn" type="button">Обсудить проект</button>
               </HideBetween>}
-            </div>
+            </div> */}
           </div>
 
           <nav className={cn('menu', stateMenu && 'navShowed')} >

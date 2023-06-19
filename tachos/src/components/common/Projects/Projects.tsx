@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import { ProjectItem, ProjectItemProps } from './ProjectItem';
 
 import './Projects.sass';
-import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
 
 type ProjectsItemProps = QueryProjectItemProps[];
 type QueryProjectItemProps = {

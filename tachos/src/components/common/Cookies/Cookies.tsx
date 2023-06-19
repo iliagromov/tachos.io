@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
 
-// import { ReactSVG } from 'react-svg';
-// import { useStaticQuery, graphql, Link, navigate } from "gatsby";
 import { useCookies } from 'react-cookie'
 
 import './Cookies.sass';
